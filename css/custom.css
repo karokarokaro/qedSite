@@ -1,4 +1,9 @@
+* {
+    background: none !important;
+    text-shadow: none;
+    color: red;
+}
 body {
-    background-color: none;
-    background-image: ;
+    background: none !important;
+    background-image: url('../img/backgrounds/office.png') !important;
 }
