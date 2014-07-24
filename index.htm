@@ -4,7 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Название</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/jquery.mobile.custom.theme.css">
+    <link rel="stylesheet" href="css/jquery.mobile.custom.structure.min.css">
     <link rel="stylesheet" href="css/custom.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery.mobile.custom.min.js"></script>
 
 
 </head>
@@ -12,14 +17,26 @@
 <div data-role="page">
 
     <div data-role="content" class="ui-content">
-        <div class="row">
+        <div>
             <div class="pull-left">
                 <a href=""><img src="img/images/Logo.png"/></a>
             </div>
             <div class="pull-right">
-                <div class="row">df sdf sdf sdf sdf sdfd123</div>
-                <div class="row">
-                    <input type="text" class="form-control" placeholder="twitterhandle">
+                <div class="overflowHidden">
+                    <div class="pull-left">
+                        <a href="" class="profileLink">
+                            <img src="img/images/Lock.png"/>
+                            <span>Личный кабинет</span>
+                        </a>
+                    </div>
+                    <div class="langDiv pull-left">
+                        <a href="">
+                            <span>In English</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <input data-mini="true" type="text" placeholder="Поиск" >
                 </div>
             </div>
         </div>
