@@ -20,9 +20,9 @@ body {
 }
 .searchInput {
     padding-right: 30px !important;
-    background-image: url('../img/images/Search icon.png') !important;
+    background-image: url('../img/images/Search icon.png');
     background-repeat: no-repeat !important;
-    background-position: right 7px center;
+    background-position: right center;
     background-size: 18px 18px;
 }
 .mainImage {
