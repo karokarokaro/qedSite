@@ -25,3 +25,33 @@ body {
     background-position: right 7px center;
     background-size: 18px 18px;
 }
+.mainImage {
+    height: 300px;
+    position: relative;
+    /*overflow: hidden;*/
+}
+.mainImage .container {
+    background-position: 0px 0px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.maxVol {
+    width: 100%;
+    height: 100%;
+}
+.mainImage > div.whiteCont.active,
+.mainImage > div.whiteCont.active,
+.mainImage > div.whiteCont.active {
+    background-color: white;
+}
+.homeImage .container {
+    background-image: url('../img/images/Columns.png');
+}
+.customMargin {
+    margin: 10px 20px;
+}
