@@ -18,3 +18,10 @@ body {
 .overflowHidden {
     overflow: hidden;
 }
+.searchInput {
+    padding-right: 30px !important;
+    background-image: url('../img/images/Search icon.png') !important;
+    background-repeat: no-repeat !important;
+    background-position: right 7px center;
+    background-size: 18px 18px;
+}

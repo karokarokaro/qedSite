@@ -1986,7 +1986,7 @@ textarea.ui-input-text {
 	min-height: 2.2em;
 	text-align: left; /* Opera aligns type="date" right by default */
 	border: 0;
-	/*background: transparent none;*/
+	background: transparent none;
 	-webkit-appearance: none;
 	-webkit-border-radius: inherit;
 	border-radius: inherit;
@@ -2001,7 +2001,7 @@ textarea.ui-input-text {
 .ui-input-search.ui-mini input,
 .ui-mini textarea.ui-input-text,
 textarea.ui-mini {
-	font-size: 12px;
+	font-size: 14px;
 }
 /* Same margin for mini textareas as other mini sized widgets (12.5/14 * 0.5em) */
 .ui-mini textarea.ui-input-text,
