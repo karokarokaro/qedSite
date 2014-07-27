@@ -123,3 +123,33 @@ body {
 .menuButtons .item:hover > .redActive {
     background-color: #a52c25;
 }
+.presentText {
+    text-align: justify;
+    color: #dddddd;
+}
+.presentText p.header {
+    text-align: center;
+    font-size: 25px;
+}
+.presentText p.author {
+    text-align: right;
+}
+.addMenu {
+    background-image: url('../img/backgrounds/subtle_zebra_3d.png');
+    overflow: hidden;
+}
+
+.addMenuIcon {
+    margin: 10px auto;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.addMenuIcon.iconBag {
+    background-image: url("../img/images/Warranty.png");
+}
+.addMenuText {
+    text-align: center;
+}

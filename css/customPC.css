@@ -2,5 +2,8 @@
     .onlyPhone {
         display: none !important;
     }
-
+    .addMenu > div > .ui-grid-a {
+        float: left;
+        width: 50%;
+    }
 }
