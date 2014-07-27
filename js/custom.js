@@ -1,11 +1,23 @@
 function hoverMainImageItem(_this, isHover) {
     var uiBlockX = $(_this).hasClass("ui-block-a") ? ".ui-block-a" : ".ui-block-b";
     if (isHover) {
-        $(_this).parents(".mainImage").find(uiBlockX + ".whiteCont").addClass("active")
-        $(_this).addClass("active");
+        var $whiteCont = $(_this).parents(".mainImage").find(uiBlockX + ".whiteCont");
+        $whiteCont.stop(true);
+        $whiteCont.fadeTo(50, 1, function() {
+            $whiteCont.addClass("active");
+            $(_this).addClass("active");
+        });
+
     } else {
-        $(_this).parents(".mainImage").find(uiBlockX + ".whiteCont").removeClass("active");
+        var $whiteCont = $(_this).parents(".mainImage").find(uiBlockX + ".whiteCont");
+        $whiteCont.stop(true);
+        $whiteCont.removeClass("active");
         $(_this).removeClass("active");
+        $whiteCont.fadeTo(250, 0, function() {
+
+        });
+
+
     }
 }
 $(function() {

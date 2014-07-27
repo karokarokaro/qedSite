@@ -44,14 +44,82 @@ body {
     width: 100%;
     height: 100%;
 }
-.mainImage > div.whiteCont.active,
-.mainImage > div.whiteCont.active,
-.mainImage > div.whiteCont.active {
+.mainImage > div.whiteCont,
+.mainImage > div.whiteCont,
+.mainImage > div.whiteCont {
     background-color: white;
+    filter: Alpha(Opacity=0);
+    opacity: 0;
 }
 .homeImage .container {
     background-image: url('../img/images/Columns.png');
 }
 .customMargin {
     margin: 10px 20px;
+}
+.mainImage .container > div {
+    position: relative;
+
+}
+.mainImage .container > div.active {
+
+}
+
+.mainImage .container > div .uslList {
+    max-height: 200px;
+    overflow: hidden;
+
+    padding-left: 30px;
+    list-style: none;
+    filter: Alpha(Opacity=0);
+    opacity: 0;
+}
+.mainImage .container > div.active .uslList {
+    filter: Alpha(Opacity=100);
+    opacity: 1;
+}
+.mainImage .container > div .uslHeader {
+    position: absolute;
+    left: 30px;
+    bottom: 20px;
+    font-size: 30px;
+    color: white;
+}
+.mainImage .container > div.active .uslHeader {
+    color: #a52c25;
+}
+.menuButtons {
+    position: relative;
+    overflow: hidden;
+}
+.menuButtons .item {
+    float: left;
+    display: block;
+    width: 22%;
+    height: 35px;
+    margin-left: 4%;
+    position: relative;
+    background-color: white;
+    text-align: center;
+    padding-top: 15px;
+}
+.menuButtons .item:first-child {
+    margin-left: 0px;
+}
+.menuButtons .item > span {
+    font-size: 14px;
+    line-height: 1;
+}
+.menuButtons .item:hover > span {
+    color: #a52c25;
+}
+.menuButtons .item > .redActive {
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    left: 0px;
+    top: 45px;
+}
+.menuButtons .item:hover > .redActive {
+    background-color: #a52c25;
 }
