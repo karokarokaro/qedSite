@@ -55,7 +55,16 @@ body {
     background-image: url('../img/images/Columns.png');
 }
 .customMargin {
-    margin: 10px 20px;
+    margin: 0% 1% 10px 1%;
+}
+.newsDiv {
+
+}
+.newsDiv .header {
+
+}
+.newsDiv .toolbar {
+    text-align: right
 }
 .mainImage .container > div {
     position: relative;
