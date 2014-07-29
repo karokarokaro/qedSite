@@ -57,21 +57,45 @@ body {
 .customMargin {
     margin: 0% 1% 10px 1%;
 }
+.customPadding {
+    padding: 10px 1% 10px 1%;
+}
 .newsDiv {
-
+    overflow: hidden;
 }
 .newsDiv .header {
-
+    height: 30px;
+    margin: 0px;
+    padding: 10px 0px 10px 50px;
+    background-image: url("../img/images/News-icon.png");
+    background-repeat: no-repeat;
+    background-position: left top;
+    border-bottom: 1px solid #dddddd;
+    color: #dddddd;
+    font-size: 18px
 }
 .newsDiv .toolbar {
-    text-align: right
+    text-align: right;
+}
+.newsDiv .toolbar a {
+    color: #dddddd;
+    text-decoration: underline
+}
+.newsDiv .content .item {
+    margin: 10px 0px 15px 0px;
+}
+.newsDiv .content .item p {
+    margin: 0px 30px 0px 0px;
+    font-size: 14px;
+}
+.newsDiv .content .item p.text {
+    color: #dddddd;
+}
+.newsDiv .content .item p.date {
+    color: #a52c25;
 }
 .mainImage .container > div {
     position: relative;
-
-}
-.mainImage .container > div.active {
-
 }
 
 .mainImage .container > div .uslList {
@@ -143,11 +167,26 @@ body {
 .presentText p.author {
     text-align: right;
 }
-.addMenu {
+.addMenu, .linkPanel {
     background-image: url('../img/backgrounds/subtle_zebra_3d.png');
     overflow: hidden;
 }
-
+.linkPanel > p.header {
+    margin: 10px auto;
+    text-align: center;
+    color: #333333;
+    font-weight: bold;
+}
+.linkPanel .container {
+    margin: 0px auto 10px auto;
+    width: 70%;
+}
+.linkPanel .container .item {
+    width: 20%;
+    text-align: center;
+    float: left;
+    overflow: hidden;
+}
 .addMenuIcon {
     margin: 10px auto;
     width: 50px;
@@ -161,4 +200,32 @@ body {
 }
 .addMenuText {
     text-align: center;
+}
+.footerDiv {
+
+}
+.footerDiv ul.footerMenu {
+    float: left;
+    list-style: none;
+    color: #dddddd;
+    padding: 0px;
+    margin-right: 20px;
+}
+.footerDiv .info {
+    float: right;
+}
+.footerDiv .info .socLinks{
+    text-align: right;
+}
+.footerDiv .level1, .footerDiv .level2 {
+    overflow: hidden;
+}
+.footerDiv .level2 {
+    color: #dddddd;
+    text-align: center
+}
+.footerDiv .info p {
+    text-align: right;
+    margin: 0px;
+    color: #a52c25;
 }

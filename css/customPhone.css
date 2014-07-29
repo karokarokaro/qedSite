@@ -2,5 +2,10 @@
     .onlyPC {
         display: none !important;
     }
-
+    .footerDiv .level1 {
+        float: right;
+    }
+    .footerDiv .level2 {
+        float: left;
+    }
 }

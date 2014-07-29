@@ -6,4 +6,15 @@
         float: left;
         width: 50%;
     }
+    .newsDiv .newsContainer {
+        width: 49%;
+        overflow: hidden;
+        float: left;
+    }
+    .newsDiv .newsContainer.news {
+        padding-right: 1%;
+    }
+    .newsDiv .newsContainer.reviews {
+        padding-left: 1%;
+    }
 }
