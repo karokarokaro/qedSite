@@ -1,3 +1,53 @@
+@font-face {
+    font-family: 'PFDinDisplayPro-XThin';
+    src: url('../fonts/PFDinDisplayPro-XThin.eot');
+    src: local('☺'), url('../fonts/PFDinDisplayPro-XThin.woff') format('woff'), url('../fonts/PFDinDisplayPro-XThin.ttf') format('truetype'), url('../fonts/PFDinDisplayPro-XThin.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PFDinDisplayPro-XThinIt';
+    src: url('../fonts/PFDinDisplayPro-XThinIt.eot');
+    src: local('☺'), url('../fonts/PFDinDisplayPro-XThinIt.woff') format('woff'), url('../fonts/PFDinDisplayPro-XThinIt.ttf') format('truetype'), url('../fonts/PFDinDisplayPro-XThinIt.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PFDinDisplayPro-Thin';
+    src: url('fonts/PFDinDisplayPro-Thin.eot');
+    src: local('☺'), url('../fonts/PFDinDisplayPro-Thin.woff') format('woff'), url('../fonts/PFDinDisplayPro-Thin.ttf') format('truetype'), url('../fonts/PFDinDisplayPro-Thin.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PFDinDisplayPro-ThinItal';
+    src: url('../fonts/PFDinDisplayPro-ThinItal.eot');
+    src: local('☺'), url('../fonts/PFDinDisplayPro-ThinItal.woff') format('woff'), url('../fonts/PFDinDisplayPro-ThinItal.ttf') format('truetype'), url('../fonts/PFDinDisplayPro-ThinItal.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PFDinDisplayPro-Black';
+    src: url('../fonts/PFDinDisplayPro-Black.eot');
+    src: local('☺'), url('../fonts/PFDinDisplayPro-Black.woff') format('woff'), url('../fonts/PFDinDisplayPro-Black.ttf') format('truetype'), url('../fonts/PFDinDisplayPro-Black.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.profileLink {
+    font-family: 'PFDinDisplayPro-XThin';
+}
+.langDiv,
+.searchInput,
+.presentText {
+    font-family: 'PFDinDisplayPro-XThinIt';
+}
+.uslHeader,
+.menuButtons .item > span {
+    font-family: 'PFDinDisplayPro-Thin';
+}
+.mainImage .container > div .uslList {
+    font-family: 'PFDinDisplayPro-ThinItal';
+}
 .pull-right {
     float: right !important;
 }
@@ -11,24 +61,38 @@ body {
 .profileLink img {
     height: 20px;
 }
+.profileLink {
+    color: #939293;
+    font-size: 18px;
+    font-weight: bold;
+}
 .langDiv {
     margin-left: 50px;
     margin-top: 6px;
+}
+.langDiv a {
+    text-decoration: underline;
+    color: white;
+    font-size: 18px;
 }
 .overflowHidden {
     overflow: hidden;
 }
 .searchInput {
     padding-right: 30px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    line-height: 1.3 !important;
+    min-height: 1em !important;
+    font-size: 18px !important;
     background-image: url('../img/images/Search icon.png');
     background-repeat: no-repeat !important;
     background-position: right center;
-    background-size: 18px 18px;
+    background-size: 25px 18px;
 }
 .mainImage {
     height: 300px;
     position: relative;
-    /*overflow: hidden;*/
 }
 .mainImage .container {
     background-position: 0px 0px;
@@ -92,20 +156,29 @@ body {
     color: #dddddd;
 }
 .newsDiv .content .item p.date {
-    color: #a52c25;
+    color: #840633;
 }
 .mainImage .container > div {
     position: relative;
 }
 
 .mainImage .container > div .uslList {
-    max-height: 200px;
+    max-height: 230px;
+    margin: 20px 0px;
+    line-height: 1;
     overflow: hidden;
-
+    font-size: 20px;
+    font-weight: bold;
     padding-left: 30px;
     list-style: none;
     filter: Alpha(Opacity=0);
     opacity: 0;
+}
+.mainImage .container > div .uslList a {
+    color: #3c3b3b;
+}
+.mainImage .container > div .uslList a:hover {
+    color: #717070;
 }
 .mainImage .container > div.active .uslList {
     filter: Alpha(Opacity=100);
@@ -114,12 +187,12 @@ body {
 .mainImage .container > div .uslHeader {
     position: absolute;
     left: 30px;
-    bottom: 20px;
-    font-size: 30px;
+    bottom: 10px;
+    font-size: 36px;
     color: white;
 }
 .mainImage .container > div.active .uslHeader {
-    color: #a52c25;
+    color: #840633;
 }
 .menuButtons {
     position: relative;
@@ -132,7 +205,7 @@ body {
     height: 35px;
     margin-left: 4%;
     position: relative;
-    background-color: white;
+    background-color: #efeeef;
     text-align: center;
     padding-top: 15px;
 }
@@ -140,11 +213,13 @@ body {
     margin-left: 0px;
 }
 .menuButtons .item > span {
-    font-size: 14px;
+    font-size: 18px;
+    font-weight: bold;
     line-height: 1;
+    color: #1e1e1e;
 }
 .menuButtons .item:hover > span {
-    color: #a52c25;
+    color: #840633;
 }
 .menuButtons .item > .redActive {
     width: 100%;
@@ -154,18 +229,26 @@ body {
     top: 45px;
 }
 .menuButtons .item:hover > .redActive {
-    background-color: #a52c25;
+    background-color: #840633;
 }
 .presentText {
-    text-align: justify;
-    color: #dddddd;
+    margin: 0px auto;
+    width: 80%;
+    color: #858585;
 }
 .presentText p.header {
     text-align: center;
-    font-size: 25px;
+    font-size: 36px;
+    font-weight: bold;
+}
+.presentText p.text {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: justify;
 }
 .presentText p.author {
     text-align: right;
+    font-weight: bold;
 }
 .addMenu, .linkPanel {
     background-image: url('../img/backgrounds/subtle_zebra_3d.png');
@@ -198,8 +281,12 @@ body {
 .addMenuIcon.iconBag {
     background-image: url("../img/images/Warranty.png");
 }
+a:hover .addMenuText {
+    color: #840633;
+}
 .addMenuText {
     text-align: center;
+    color: #939293;
 }
 .footerDiv {
 
@@ -227,5 +314,5 @@ body {
 .footerDiv .info p {
     text-align: right;
     margin: 0px;
-    color: #a52c25;
+    color: #840633;
 }
