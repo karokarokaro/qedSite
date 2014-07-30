@@ -33,12 +33,15 @@
     font-weight: normal;
     font-style: normal;
 }
-.profileLink {
+.profileLink,
+.newsDiv .header,
+.newsDiv .content {
     font-family: 'PFDinDisplayPro-XThin';
 }
 .langDiv,
 .searchInput,
-.presentText {
+.presentText,
+.newsDiv .toolbar {
     font-family: 'PFDinDisplayPro-XThinIt';
 }
 .uslHeader,
@@ -47,6 +50,9 @@
 }
 .mainImage .container > div .uslList {
     font-family: 'PFDinDisplayPro-ThinItal';
+}
+.linkPanel > p.header {
+    font-family: 'PFDinDisplayPro-Black';
 }
 .pull-right {
     float: right !important;
@@ -136,13 +142,14 @@ body {
     background-position: left top;
     border-bottom: 1px solid #dddddd;
     color: #dddddd;
+    font-weight: bold;
     font-size: 18px
 }
 .newsDiv .toolbar {
     text-align: right;
 }
 .newsDiv .toolbar a {
-    color: #dddddd;
+    color: white;
     text-decoration: underline
 }
 .newsDiv .content .item {
@@ -150,13 +157,15 @@ body {
 }
 .newsDiv .content .item p {
     margin: 0px 30px 0px 0px;
+
     font-size: 14px;
 }
 .newsDiv .content .item p.text {
-    color: #dddddd;
+    color: white;
 }
 .newsDiv .content .item p.date {
     color: #840633;
+    font-weight: bold;
 }
 .mainImage .container > div {
     position: relative;
@@ -257,8 +266,8 @@ body {
 .linkPanel > p.header {
     margin: 10px auto;
     text-align: center;
-    color: #333333;
-    font-weight: bold;
+    color: #50544b;
+    font-size: 18px;
 }
 .linkPanel .container {
     margin: 0px auto 10px auto;
@@ -294,9 +303,16 @@ a:hover .addMenuText {
 .footerDiv ul.footerMenu {
     float: left;
     list-style: none;
-    color: #dddddd;
+    font-size: 13px;
+    /*font-weight: bold;*/
     padding: 0px;
     margin-right: 20px;
+}
+.footerDiv ul.footerMenu a {
+    color: #939293;
+}
+.footerDiv ul.footerMenu a:hover {
+    color: #840633;
 }
 .footerDiv .info {
     float: right;
