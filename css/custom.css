@@ -45,10 +45,13 @@
     font-family: 'PFDinDisplayPro-XThinIt';
 }
 .uslHeader,
-.menuButtons .item > span {
+.menuButtons .item > span,
+.uslCollapsible a.ui-collapsible-heading-toggle,
+#leftMenu  {
     font-family: 'PFDinDisplayPro-Thin';
 }
-.mainImage .container > div .uslList {
+.mainImage .container > div .uslList,
+.uslCollapsible .ui-collapsible-content {
     font-family: 'PFDinDisplayPro-ThinItal';
 }
 .linkPanel > p.header {
@@ -75,6 +78,7 @@ body {
 .langDiv {
     margin-left: 50px;
     margin-top: 6px;
+    text-align: right;
 }
 .langDiv a {
     text-decoration: underline;
@@ -187,7 +191,7 @@ body {
     color: #3c3b3b;
 }
 .mainImage .container > div .uslList a:hover {
-    color: #717070;
+    color: #840633;
 }
 .mainImage .container > div.active .uslList {
     filter: Alpha(Opacity=100);
@@ -214,7 +218,7 @@ body {
     height: 35px;
     margin-left: 4%;
     position: relative;
-    background-color: #efeeef;
+    background-color: #dfdfdf;
     text-align: center;
     padding-top: 15px;
 }
@@ -242,7 +246,6 @@ body {
 }
 .presentText {
     margin: 0px auto;
-    width: 80%;
     color: #858585;
 }
 .presentText p.header {
@@ -330,5 +333,73 @@ a:hover .addMenuText {
 .footerDiv .info p {
     text-align: right;
     margin: 0px;
+    color: #840633;
+}
+#leftMenu {
+    background-color: #cccccc;
+}
+#leftMenu .header {
+    color: #939293;
+    font-size: 20px;
+    background-color: white;
+    text-align: center;
+    padding: 10px 0px;
+}
+#leftMenu .list {
+    margin: 0px;
+    padding: 0px;
+    background-color: white;
+}
+#leftMenu .list a {
+    display: block;
+    padding-right: 30px;
+    background-image: url('../img/images/menuArr.png');
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 15px 30px;
+}
+#leftMenu .list .item {
+    margin: 0px;
+    border-top: 1px solid #939293;
+    padding: 10px 0px 10px 60px;
+    color: #840633;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: left;
+}
+#leftMenu .list a:hover .item {
+    background-color: #eeeeee;
+}
+.menuLink {
+    float: left;
+    display: block;
+    margin: 10px;
+    width: 40px;
+    height: 30px;
+    background-image: url('../img/images/Menu.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0px 0px;
+}
+.uslCollapsible,
+.uslCollapsible a.ui-collapsible-heading-toggle {
+    text-align: center;
+    font-size: 26px;
+    color: #840633;
+}
+.uslCollapsible .ui-collapsible-collapsed a.ui-collapsible-heading-toggle {
+    color: black;
+}
+.uslCollapsible .ui-collapsible-content {
+    /*background: none;*/
+}
+.uslCollapsible .ui-collapsible-content p {
+    margin: 5px auto;
+    font-size: 18px;
+}
+.uslCollapsible .ui-collapsible-content p a {
+    color: white;
+}
+.uslCollapsible .ui-collapsible-content p a:hover {
     color: #840633;
 }

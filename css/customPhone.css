@@ -9,4 +9,33 @@
         float: left;
         padding-top: 17px;
     }
+    .presentText {
+        width: 95%;
+    }
+    .top1 {
+        background-color: #840633;
+        padding: 0px 1% 0px 1%;
+        overflow: hidden;
+        margin-bottom: 30px;
+    }
+    .top1 .links {
+        float: right;
+    }
+    .top .socLinks {
+        padding-top: 10px;
+        padding-right: 1%;
+    }
+    .top2 {
+        padding: 0px 1% 0px 1%;
+    }
+    .top2 .logo {
+        height: 65px;
+    }
+    .thisPage {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+    }
 }

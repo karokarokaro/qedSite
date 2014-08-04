@@ -6,6 +6,15 @@
         float: left;
         width: 50%;
     }
+    .profileDiv {
+        float: left;
+    }
+    .langDiv {
+        float: right;
+    }
+    .presentText {
+        width: 80%;
+    }
     .newsDiv .newsContainer {
         width: 49%;
         overflow: hidden;
@@ -16,5 +25,14 @@
     }
     .newsDiv .newsContainer.reviews {
         padding-left: 1%;
+    }
+    .top {
+        padding: 10px 1% 10px 1%;
+    }
+    .top1 {
+        float: right;
+    }
+    .top2 .logo {
+        height: 90px;
     }
 }

@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Название</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Название</title>
     <link rel="stylesheet" href="css/jquery.mobile.custom.theme.css">
     <link rel="stylesheet" href="css/jquery.mobile.custom.structure.css">
     <link rel="stylesheet" href="css/custom.css" />
@@ -17,31 +17,72 @@
 
 </head>
 <body>
-<div data-role="page">
+<div data-role="page" class="thisPage">
 
+    <div data-role="panel" id="leftMenu" data-display="push" data-position="left">
+        <div class="header">Меню</div>
+        <div class="list">
+            <a href=""><div class="item item-beuro">О бюро</div></a>
+            <a href=""><div class="item item-beuro">О бюро</div></a>
+            <a href=""><div class="item item-beuro">О бюро</div></a>
+            <a href=""><div class="item item-beuro">О бюро</div></a>
+            <a href=""><div class="item item-beuro">О бюро</div></a>
+            <a href=""><div class="item item-beuro">О бюро</div></a>
+            <a href=""><div class="item item-beuro">О бюро</div></a>
+            <a href=""><div class="item item-beuro">О бюро</div></a>
+            <a href=""><div class="item item-beuro">О бюро</div></a>
+        </div>
+    </div>
     <div data-role="content" class="ui-content">
-        <div class="overflowHidden customPadding">
-            <div class="pull-left">
-                <a href=""><img src="img/images/Logo.png"/></a>
-            </div>
-            <div class="pull-right">
-                <div class="overflowHidden">
-                    <div class="pull-left">
-                        <a href="httpvkcom/" class="profileLink">
+        <div class="top overflowHidden">
+            <div class="top1">
+                <div class="links overflowHidden">
+                    <div class="langDiv">
+                        <a href="">In English</a>
+                    </div>
+                    <div class="profileDiv">
+                        <a href="httpvkcom/" class="profileLink onlyPC">
                             <img src="img/images/Lock.png"/>
                             <span>Личный кабинет</span>
                         </a>
                     </div>
-                    <div class="langDiv pull-right">
-                        <a href="">In English</a>
-                    </div>
                 </div>
-                <div>
+                <a href="#leftMenu" class="menuLink onlyPhone"></a>
+                <div class="onlyPC">
                     <form action="" method="post">
                         <input class="searchInput" data-mini="true" type="text" placeholder="Поиск..." >
                     </form>
                 </div>
             </div>
+            <div class="top2 pull-left">
+                <a href=""><img class="logo" src="img/images/Logo.png"/></a>
+            </div>
+            <div class="socLinks onlyPhone pull-right">
+                <a href=""><img src="img/images/Facebook-icon.png"/></a>
+                <a href=""><img src="img/images/LinkedIn-icon.png"/></a>
+                <a href=""><img src="img/images/Twitter-icon.png"/></a>
+            </div>
+        </div>
+        <div data-role="collapsible-set" class="uslCollapsible onlyPhone">
+            <div data-role="collapsible" data-inset="false">
+                <h3>Физическим лицам</h3>
+                <p><a href="">Банкротство</a></p>
+                <p><a href="">Банкротство</a></p>
+                <p><a href="">Наледование</a></p>
+                <p><a href="">Банкротство и наследование</a></p>
+                <p><a href="">Уголовное преследование</a></p>
+                <p><a href="">Банкротство</a></p>
+                <p><a href="">Банкротство</a></p>
+            </div>
+
+            <div data-role="collapsible">
+                <h3>Юридическим лицам</h3>
+                <p><a href="">Банкротство</a></p>
+                <p><a href="">Банкротство</a></p>
+                <p><a href="">Наледование</a></p>
+                <p><a href="">Банкротство и наследование</a></p>
+            </div>
+
         </div>
         <div class="mainImage ui-grid-a onlyPC homeImage customMargin">
             <div class="ui-block-a whiteCont maxVol"></div>
@@ -283,9 +324,9 @@
             </ul>
             <div class="info">
                 <div class="socLinks onlyPC">
+                    <a href=""><img src="img/images/Facebook-icon.png"/></a>
                     <a href=""><img src="img/images/LinkedIn-icon.png"/></a>
-                    <a href=""><img src="img/images/LinkedIn-icon.png"/></a>
-                    <a href=""><img src="img/images/LinkedIn-icon.png"/></a>
+                    <a href=""><img src="img/images/Twitter-icon.png"/></a>
                 </div>
                 <p>Тверская, 7</p>
                 <p>123322, Москва, Россия</p>

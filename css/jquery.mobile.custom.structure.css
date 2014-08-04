@@ -1550,17 +1550,17 @@ li.ui-block-e {
 	margin: 0;	
 	padding: .5em 1em;
 }
-.ui-collapsible-themed-content .ui-collapsible-content {
-	border-left-width: 0;
-	border-right-width: 0;
-	border-top-width: 0;
-	border-bottom-width: 1px;
-	border-style: solid;
-}
-.ui-collapsible-inset.ui-collapsible-themed-content .ui-collapsible-content {
-	border-left-width: 1px;
-	border-right-width: 1px;
-}
+/*.ui-collapsible-themed-content .ui-collapsible-content {*/
+	/*border-left-width: 0;*/
+	/*border-right-width: 0;*/
+	/*border-top-width: 0;*/
+	/*border-bottom-width: 1px;*/
+	/*border-style: solid;*/
+/*}*/
+/*.ui-collapsible-inset.ui-collapsible-themed-content .ui-collapsible-content {*/
+	/*border-left-width: 1px;*/
+	/*border-right-width: 1px;*/
+/*}*/
 .ui-collapsible-inset .ui-collapsible-content {
 	margin: 0;
 }
@@ -2955,9 +2955,9 @@ ol.ui-listview > li img:first-child + * ~ * {
 .ui-panel-display-overlay {
 	z-index: 1001; /* Fixed toolbars have z-index 1000 */
 }
-.ui-panel-inner {
-	padding: 1em;
-}
+/*.ui-panel-inner {*/
+	/*padding: 1em;*/
+/*}*/
 
 /* Container, page and wrapper */
 .ui-panel-page-container {
