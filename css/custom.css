@@ -99,6 +99,9 @@ body {
     background-repeat: no-repeat !important;
     background-position: right center;
     background-size: 25px 18px;
+    border: none !important;
+    webkit-border-radius: .3125em !important;
+    border-radius: .3125em !important;
 }
 .mainImage {
     height: 300px;
@@ -340,7 +343,7 @@ a:hover .addMenuText {
 }
 #leftMenu .header {
     color: #939293;
-    font-size: 20px;
+    font-size: 17px;
     background-color: white;
     text-align: center;
     padding: 10px 0px;
@@ -356,18 +359,18 @@ a:hover .addMenuText {
     background-image: url('../img/images/menuArr.png');
     background-position: right center;
     background-repeat: no-repeat;
-    background-size: 15px 30px;
+    background-size: 20px 20px;
+    border-top: 1px solid #939293;
 }
 #leftMenu .list .item {
     margin: 0px;
-    border-top: 1px solid #939293;
-    padding: 10px 0px 10px 60px;
+    padding: 10px 0px 10px 40px;
     color: #840633;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 20px;
     text-align: left;
 }
-#leftMenu .list a:hover .item {
+#leftMenu .list a:hover {
     background-color: #eeeeee;
 }
 .menuLink {
