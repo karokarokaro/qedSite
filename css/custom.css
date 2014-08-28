@@ -100,8 +100,6 @@ body {
     background-position: right center;
     background-size: 25px 18px;
     border: none !important;
-    webkit-border-radius: .3125em !important;
-    border-radius: .3125em !important;
 }
 .mainImage {
     height: 300px;
@@ -218,12 +216,15 @@ body {
     float: left;
     display: block;
     width: 22%;
-    height: 35px;
+    height: 30px;
     margin-left: 4%;
     position: relative;
     background-color: #dfdfdf;
     text-align: center;
-    padding-top: 15px;
+    padding-top: 11px;
+}
+.menuButtons .item:active {
+    background-color: #aaaaaa;
 }
 .menuButtons .item:first-child {
     margin-left: 0px;
@@ -234,16 +235,18 @@ body {
     line-height: 1;
     color: #1e1e1e;
 }
+.menuButtons .item.active > span,
 .menuButtons .item:hover > span {
     color: #840633;
 }
 .menuButtons .item > .redActive {
     width: 100%;
-    height: 5px;
+    height: 4px;
     position: absolute;
     left: 0px;
-    top: 45px;
+    top: 38px;
 }
+.menuButtons .item.active > .redActive,
 .menuButtons .item:hover > .redActive {
     background-color: #840633;
 }
@@ -294,8 +297,29 @@ body {
     background-position: center center;
 }
 .addMenuIcon.iconBag {
-    background-image: url("../img/images/Warranty.png");
+    background-image: url("../img/images/Suit-case.png");
 }
+.addMenuIcon.iconDialog {
+    background-image: url("../img/images/Dialog-cloud.png");
+}
+.addMenuIcon.iconUmbrella {
+    background-image: url("../img/images/Umbrella.png");
+}
+.addMenuIcon.iconChart {
+    background-image: url("../img/images/Pie-chart.png");
+}
+.addMenuIcon.iconBooks {
+    background-image: url("../img/images/Books.png");
+}
+.addMenuIcon.iconColumns {
+    background-image: url("../img/images/Column-building.png");
+}
+/*.addMenuIcon.iconBag {*/
+    /*background-image: url("../img/images/Warranty.png");*/
+/*}*/
+/*.addMenuIcon.iconBag {*/
+    /*background-image: url("../img/images/Warranty.png");*/
+/*}*/
 a:hover .addMenuText {
     color: #840633;
 }
