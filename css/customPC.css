@@ -35,4 +35,16 @@
     .top2 .logo {
         height: 90px;
     }
+    .contactsCont .contForm,
+    .contactsCont .contInfo {
+        width: 48%;
+        float: left;
+    }
+    .contactsCont .contForm {
+        padding-right: 2%;
+    }
+    .contactsCont .contInfo {
+        padding-left: 2%;
+    }
+
 }

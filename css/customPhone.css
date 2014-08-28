@@ -38,4 +38,7 @@
         -o-user-select: none;
         user-select: none;
     }
+    .contactsCont .contForm {
+        margin-bottom: 5px;
+    }
 }

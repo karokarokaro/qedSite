@@ -35,7 +35,11 @@
 }
 .profileLink,
 .newsDiv .header,
-.newsDiv .content {
+.newsDiv .content,
+.pageHeader,
+.contactsCont .contForm label,
+.contactsCont .contForm input,
+.contactsCont .contForm textarea {
     font-family: 'PFDinDisplayPro-XThin';
 }
 .langDiv,
@@ -75,15 +79,20 @@ body {
     font-size: 18px;
     font-weight: bold;
 }
+.profileLink:hover {
+    text-decoration: underline;
+}
 .langDiv {
     margin-left: 50px;
     margin-top: 6px;
     text-align: right;
 }
 .langDiv a {
-    text-decoration: underline;
     color: white;
     font-size: 18px;
+}
+.langDiv a:hover {
+    text-decoration: underline;
 }
 .overflowHidden {
     overflow: hidden;
@@ -208,47 +217,53 @@ body {
 .mainImage .container > div.active .uslHeader {
     color: #840633;
 }
+.qedButton {
+    float: left;
+    display: block;
+    position: relative;
+    background-color: #dfdfdf;
+    text-align: center;
+}
+.qedButton > span {
+    font-weight: bold;
+    line-height: 1;
+    color: #1e1e1e;
+}
+.qedButton:active {
+    background-color: #aaaaaa;
+}
+
+
+.qedButton.active > span,
+.qedButton:hover > span {
+    color: #840633;
+}
+.qedButton > .redActive {
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+.qedButton.active > .redActive,
+.qedButton:hover > .redActive {
+    background-color: #840633;
+}
 .menuButtons {
     position: relative;
     overflow: hidden;
 }
 .menuButtons .item {
-    float: left;
-    display: block;
     width: 22%;
     height: 30px;
     margin-left: 4%;
-    position: relative;
-    background-color: #dfdfdf;
-    text-align: center;
     padding-top: 11px;
-}
-.menuButtons .item:active {
-    background-color: #aaaaaa;
-}
-.menuButtons .item:first-child {
-    margin-left: 0px;
 }
 .menuButtons .item > span {
     font-size: 18px;
-    font-weight: bold;
-    line-height: 1;
-    color: #1e1e1e;
 }
-.menuButtons .item.active > span,
-.menuButtons .item:hover > span {
-    color: #840633;
-}
-.menuButtons .item > .redActive {
-    width: 100%;
-    height: 4px;
-    position: absolute;
-    left: 0px;
-    top: 38px;
-}
-.menuButtons .item.active > .redActive,
-.menuButtons .item:hover > .redActive {
-    background-color: #840633;
+.menuButtons .item:first-child {
+    margin-left: 0px;
 }
 .presentText {
     margin: 0px auto;
@@ -429,4 +444,34 @@ a:hover .addMenuText {
 }
 .uslCollapsible .ui-collapsible-content p a:hover {
     color: #840633;
+}
+.pageHeader {
+    text-align: center;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+.contactsCont .contForm label {
+    color: white;
+    margin-bottom: 1px;
+}
+.contactsCont .contForm input,
+.contactsCont .contForm textarea {
+    color: #000000;
+    background-color: #c8c8c8;
+    margin-bottom: 5px;
+}
+.contForm .submitButton {
+    width: 25%;
+    height: 26px;
+    padding-top: 6px;
+    float: right;
+    min-width: 120px;
+}
+.contForm textarea {
+    min-height: 100px;
+}
+.contForm .submitButton > span {
+    font-size: 14px;
 }
