@@ -13,7 +13,27 @@
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/jquery.mobile.custom.min.js"></script>
     <script src="js/custom.js"></script>
-
+    <script type="text/javascript"
+            src="https://maps.google.com/maps/api/js?sensor=true">
+    </script>
+    <script type="text/javascript">
+        function initialize() {
+            var myLatlng = new google.maps.LatLng(55.761599, 37.613925);
+            var myOptions = {
+                zoom: 15,
+                center: myLatlng,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
+            var map = new google.maps.Map(document.getElementById("contMap"), myOptions);
+            var image = 'img/images/map_ico.png';
+            var myLatLng = new google.maps.LatLng(55.761630, 37.613925);
+            new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                icon: image
+            });
+        }
+    </script>
 
 </head>
 <body>
@@ -61,70 +81,10 @@
         <a href=""><img src="img/images/Twitter-icon.png"/></a>
     </div>
 </div>
-<!--<div data-role="collapsible-set" class="uslCollapsible onlyPhone">-->
-    <!--<div data-role="collapsible" data-inset="false">-->
-        <!--<h3>Физическим лицам</h3>-->
-        <!--<p><a href="">Услуга: личный адвокат</a></p>-->
-        <!--<p><a href="">Адвокатские расследования</a></p>-->
-        <!--<p><a href="">Защита от неправомерных действий</a></p>-->
-        <!--<p><a href="">Защита чести, достоинства и деловой репутации</a></p>-->
-        <!--<p><a href="">Защита прав в судах, органах следствия и иных гос.учреждениях</a></p>-->
-        <!--<p><a href="">Урегулирование споров, участие в переговорах</a></p>-->
-        <!--<p><a href="">Сопровождение сделок</a></p>-->
-        <!--<p><a href="">Индивидуальные программы и услуги </a></p>-->
-    <!--</div>-->
 
-    <!--<div data-role="collapsible">-->
-        <!--<h3>Юридическим лицам</h3>-->
-        <!--<p><a href="">Полное юридическое сопровождение бизнеса</a></p>-->
-        <!--<p><a href="">Адвокатские расследования</a></p>-->
-        <!--<p><a href="">Сопровождение любых видов сделок</a></p>-->
-        <!--<p><a href="">Слияние поглощение банкротство</a></p>-->
-        <!--<p><a href="">Защита бизнеса от неправомерных действий</a></p>-->
-        <!--<p><a href="">Юридический аудит</a></p>-->
-        <!--<p><a href="">Налоговая практика</a></p>-->
-        <!--<p><a href="">Защита прав в судах, органах следствия и иных гос.учреждениях</a></p>-->
-        <!--<p><a href="">Медиация, урегулирование споров участие в переговорах</a></p>-->
-        <!--<p><a href="">Индивидуальные программы и услуги</a></p>-->
-    <!--</div>-->
-
-<!--</div>-->
 <div class="mainImage ui-grid-a onlyPC homeImage customMargin">
-    <!--<div class="ui-block-a whiteCont maxVol"></div>-->
-    <!--<div class="ui-block-b whiteCont maxVol"> </div>-->
     <div class="container ui-grid-a">
-        <!--<div class="ui-block-a maxVol">-->
-        <!--<ul class="uslList">-->
-        <!--<li><a href="">Услуга: личный адвокат</a></li>-->
-        <!--<li><a href="">Адвокатские расследования</a></li>-->
-        <!--<li><a href="">Защита от неправомерных действий</a></li>-->
-        <!--<li><a href="">Защита чести, достоинства и деловой репутации</a></li>-->
-        <!--<li><a href="">Защита прав в судах, органах следствия и иных гос.учреждениях</a></li>-->
-        <!--<li><a href="">Урегулирование споров, участие в переговорах</a></li>-->
-        <!--<li><a href="">Сопровождение сделок</a></li>-->
-        <!--<li><a href="">Индивидуальные программы и услуги </a></li>-->
-        <!--</ul>-->
-        <!--<span class="uslHeader">-->
-        <!--Физическим лицам-->
-        <!--</span>-->
-        <!--</div>-->
-        <!--<div class="ui-block-b maxVol">-->
-        <!--<ul class="uslList">-->
-        <!--<li><a href="">Полное юридическое сопровождение бизнеса</a></li>-->
-        <!--<li><a href="">Адвокатские расследования</a></li>-->
-        <!--<li><a href="">Сопровождение любых видов сделок</a></li>-->
-        <!--<li><a href="">Слияние поглощение банкротство</a></li>-->
-        <!--<li><a href="">Защита бизнеса от неправомерных действий</a></li>-->
-        <!--<li><a href="">Юридический аудит</a></li>-->
-        <!--<li><a href="">Налоговая практика</a></li>-->
-        <!--<li><a href="">Защита прав в судах, органах следствия и иных гос.учреждениях</a></li>-->
-        <!--<li><a href="">Медиация, урегулирование споров участие в переговорах</a></li>-->
-        <!--<li><a href="">Индивидуальные программы и услуги</a></li>-->
-        <!--</ul>-->
-        <!--<span class="uslHeader">-->
-        <!--Юридическим лицам-->
-        <!--</span>-->
-        <!--</div>-->
+
     </div>
 </div>
 <div class="menuButtons onlyPC customMargin">
@@ -166,179 +126,30 @@
         </form>
     </div>
     <div class="contInfo">
-        sdfs
+        <p>
+            Мы будем рабы рассмотреть и ответить на любые Ваши вопросы, замечания, предложения о сотруничестве.
+        </p>
+        <p>
+            Наш офис работает с 10.00 до 19.00
+        </p>
+        <p class="infBlock">
+            <span class="mark">АДРЕС</span><br/>
+            123100, Россия, Москва<br/>
+            Серпуховской переулок<br/>
+            Дом 5, стр.3, офис 401<br/>
+        </p>
+        <p class="infBlock">
+            <span class="mark">ТЕЛЕФОН</span><br/>
+            +7 (495) 123-45-67
+        </p>
+        <p class="infBlock">
+            <span class="mark">SKYPE</span><br/>
+            qedinfo
+        </p>
     </div>
 </div>
-<!--<div class="presentText customMargin">-->
-<!--<p class="header">"Что и требовалось доказать"</p>-->
-<!--<p class="text">Адвокаты Бюро на протяжении многих лет входят в российские и международные рейтинги.-->
-<!--Адвокаты Бюро накопили значительный опыт, оказывая юридическую помощь доверителям по-->
-<!--различным отраслям права и представляя их интересы в арбитражных судах и судах общей-->
-<!--юрисдикции.-->
-<!--Защищая интересы как российских, так и иностранных клиентов, адвокаты Бюро не раз-->
-<!--добивались изменения практики российских судов и внесения изменений в действующее-->
-<!--законодательство.</p>-->
-<!--<p class="author">Наша команда</p>-->
-<!--</div>-->
-<!--<div class="addMenu customPadding">-->
-<!--<div class="overflowHidden customPadding">-->
-<!--<div class="ui-grid-a">-->
-<!--<div class="ui-block-a">-->
-<!--<a href="">-->
-<!--<div class="addMenuIcon iconDialog"></div>-->
-<!--<div class="addMenuText">Задать вопрос</div>-->
-<!--</a>-->
-<!--</div>-->
-<!--<div class="ui-block-b">-->
-<!--<a href="">-->
-<!--<div class="addMenuIcon iconBag"></div>-->
-<!--<div class="addMenuText">Подборка документов</div>-->
-<!--</a>-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="ui-grid-a">-->
-<!--<div class="ui-block-a">-->
-<!--<a href="">-->
-<!--<div class="addMenuIcon icon"></div>-->
-<!--<div class="addMenuText">Фотогалерея</div>-->
-<!--</a>-->
-<!--</div>-->
-<!--<div class="ui-block-b">-->
-<!--<a href="">-->
-<!--<div class="addMenuIcon iconUmbrella"></div>-->
-<!--<div class="addMenuText">Конфиденциальность</div>-->
-<!--</a>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="overflowHidden customPadding">-->
-<!--<div class="ui-grid-a">-->
-<!--<div class="ui-block-a">-->
-<!--<a href="">-->
-<!--<div class="addMenuIcon iconColumns"></div>-->
-<!--<div class="addMenuText">Сопровождение в суде</div>-->
-<!--</a>-->
-<!--</div>-->
-<!--<div class="ui-block-b">-->
-<!--<a href="">-->
-<!--<div class="addMenuIcon iconChart"></div>-->
-<!--<div class="addMenuText">Статистика</div>-->
-<!--</a>-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="ui-grid-a">-->
-<!--<div class="ui-block-a">-->
-<!--<a href="">-->
-<!--<div class="addMenuIcon icon"></div>-->
-<!--<div class="addMenuText">Гарантия</div>-->
-<!--</a>-->
-<!--</div>-->
-<!--<div class="ui-block-b">-->
-<!--<a href="">-->
-<!--<div class="addMenuIcon iconBooks"></div>-->
-<!--<div class="addMenuText">Полезная литература</div>-->
-<!--</a>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="newsDiv customPadding">-->
-<!--<div class="newsContainer news">-->
-<!--<div class="header">Новости</div>-->
-<!--<div class="content">-->
-<!--<div class="item">-->
-<!--<p class="text">sdfdshfjhsdj fhkf hkhfd fgd gdfgdf gdfg  erdfg dfg-->
-<!--df gdg dfgdfg dfg dfgd ger  er gerkwje hjkwehf jkhf jhsjdhf jksdhfjh-->
-<!--kjfhsdjsfk hjshdjf h rfuegr fyughjsdgfsdfsdf</p>-->
-<!--<p class="date">02/05/2014</p>-->
-<!--</div>-->
-<!--<div class="item">-->
-<!--<p class="text">sdfdshfjhsdj fhkf hkhfdfg dfgd fgd fgdfg dfgdfgdf gdfg dfg fd-->
-<!--d gdf gdfgdfg dfgdfgd gdfg dfg dfgkwje hjkwehf jkhf jhsjdhf jksdhfjh-->
-<!--kjfhsdjsfk hjshdjf h rfuegr fyughjsdgfsdfsdf</p>-->
-<!--<p class="date">02/05/2014</p>-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="toolbar">-->
-<!--<a href="">Подробнее</a>-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="newsContainer reviews onlyPC">-->
-<!--<div class="header">Отзывы</div>-->
-<!--<div class="content">-->
-<!--<div class="item">-->
-<!--<p class="text">sdfdshfjhsdj fhkf hkhfd fgd gdfgdf gdfg  erdfg dfg-->
-<!--df gdg dfgdfg dfg dfgd ger  er gerkwje hjkwehf jkhf jhsjdhf jksdhfjh-->
-<!--kjfhsdjsfk hjshdjf h rfuegr fyughjsdgfsdfsdf</p>-->
-<!--<p class="date">02/05/2014</p>-->
-<!--</div>-->
-<!--<div class="item">-->
-<!--<p class="text">sdfdshfjhsdj fhkf hkhfdfg dfgd fgd fgdfg dfgdfgdf gdfg dfg fd-->
-<!--d gdf gdfgdfg dfgdfgd gdfg dfg dfgkwje hjkwehf jkhf jhsjdhf jksdhfjh-->
-<!--kjfhsdjsfk hjshdjf h rfuegr fyughjsdgfsdfsdf</p>-->
-<!--<p class="date">02/05/2014</p>-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="toolbar">-->
-<!--<a href="">Подробнее</a>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="linkPanel customPadding">-->
-<!--<p class="header">Наши партнеры</p>-->
-<!--<div class="container">-->
-<!--<div class="item">-->
-<!--<a href="">-->
-<!--<img src="img/images/Umbrella.png"/>-->
-<!--</a>-->
-<!--</div>-->
-<!--<div class="item">-->
-<!--<a href="">-->
-<!--<img src="img/images/Umbrella.png"/>-->
-<!--</a>-->
-<!--</div>-->
-<!--<div class="item">-->
-<!--<a href="">-->
-<!--<img src="img/images/Umbrella.png"/>-->
-<!--</a>-->
-<!--</div>-->
-<!--<div class="item">-->
-<!--<a href="">-->
-<!--<img src="img/images/Umbrella.png"/>-->
-<!--</a>-->
-<!--</div>-->
-<!--<div class="item">-->
-<!--<a href="">-->
-<!--<img src="img/images/Umbrella.png"/>-->
-<!--</a>-->
-<!--</div>-->
-<!--<div class="item">-->
-<!--<a href="">-->
-<!--<img src="img/images/Umbrella.png"/>-->
-<!--</a>-->
-<!--</div>-->
-<!--<div class="item">-->
-<!--<a href="">-->
-<!--<img src="img/images/Umbrella.png"/>-->
-<!--</a>-->
-<!--</div>-->
-<!--<div class="item">-->
-<!--<a href="">-->
-<!--<img src="img/images/Umbrella.png"/>-->
-<!--</a>-->
-<!--</div>-->
-<!--<div class="item">-->
-<!--<a href="">-->
-<!--<img src="img/images/Umbrella.png"/>-->
-<!--</a>-->
-<!--</div>-->
-<!--<div class="item">-->
-<!--<a href="">-->
-<!--<img src="img/images/Umbrella.png"/>-->
-<!--</a>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
+<div id="contMap"></div>
+<script>initialize();</script>
 <div class="footerDiv customPadding">
     <div class="level1">
         <ul class="footerMenu onlyPC">
@@ -369,8 +180,6 @@
 </div>
 </div>
 </div>
-
-<!--<script src="js/bootstrap.min.js"></script>-->
 
 </body>
 </html>

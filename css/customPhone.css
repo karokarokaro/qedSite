@@ -39,6 +39,13 @@
         user-select: none;
     }
     .contactsCont .contForm {
-        margin-bottom: 5px;
+        margin-bottom: 15px;
+    }
+    .pageHeader {
+        font-size: 34px;
+    }
+    .contactsCont .contInfo .infBlock {
+        margin: 0px 20px 10px 0px;
+        float: left;
     }
 }
