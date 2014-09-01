@@ -484,15 +484,22 @@ a:hover .addMenuText {
 }
 .contactsCont .contInfo p {
     margin: 0px 0px 15px 0px;
-    color: #ffffff;
+    color: #bbbbbb;
     line-height: 1.1;
     text-align: justify;
     font-size: 18px;
 }
 .contactsCont .contInfo span.mark {
-    color: #ff1065;
+    color: #ffffff;
     font-weight: bold;
 }
 #contMap {
     height: 400px;
+}
+.loader {
+    background-image: url('../img/images/loading.gif');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
 }
