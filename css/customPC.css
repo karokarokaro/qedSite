@@ -15,16 +15,20 @@
     .presentText {
         width: 80%;
     }
-    .newsDiv .newsContainer {
-        width: 49%;
+    .newsDiv .newsContainer,
+    .infoDiv .infoContainer {
+        width: 48%;
         overflow: hidden;
+    }
+    .newsDiv .newsContainer.left,
+    .infoDiv .infoContainer.left {
+        padding-right: 2%;
         float: left;
     }
-    .newsDiv .newsContainer.news {
-        padding-right: 1%;
-    }
-    .newsDiv .newsContainer.reviews {
-        padding-left: 1%;
+    .newsDiv .newsContainer.right,
+    .infoDiv .infoContainer.right {
+        padding-left: 2%;
+        float: right;
     }
     .top {
         padding: 10px 1% 10px 1%;
