@@ -293,18 +293,18 @@ div.ui-mobile-viewport {
 	vertical-align: middle;
 	margin-right: .625em;
 }
-.ui-btn-icon-left {
-	padding-left: 2.5em;
-}
-.ui-btn-icon-right {
-	padding-right: 2.5em;
-}
-.ui-btn-icon-top {
-	padding-top: 2.5em;
-}
-.ui-btn-icon-bottom {
-	padding-bottom: 2.5em;
-}
+/*.ui-btn-icon-left {*/
+	/*padding-left: 2.5em;*/
+/*}*/
+/*.ui-btn-icon-right {*/
+	/*padding-right: 2.5em;*/
+/*}*/
+/*.ui-btn-icon-top {*/
+	/*padding-top: 2.5em;*/
+/*}*/
+/*.ui-btn-icon-bottom {*/
+	/*padding-bottom: 2.5em;*/
+/*}*/
 .ui-header .ui-btn-icon-top,
 .ui-footer .ui-btn-icon-top,
 .ui-header .ui-btn-icon-bottom,

@@ -52,7 +52,8 @@
 .contactsCont .contForm label,
 .contactsCont .contForm input,
 .contactsCont .contForm textarea,
-.contactsCont .contInfo {
+.contactsCont .contInfo,
+.waitInfo {
     font-family: 'PFDinDisplayPro-Thin';
 }
 .mainImage .container > div .uslList,
@@ -113,6 +114,8 @@ body {
 }
 .mainImage {
     height: 300px;
+    max-width: 1300px;
+    margin: 0px auto;
     position: relative;
 }
 .mainImage .container {
@@ -138,6 +141,9 @@ body {
 }
 .homeImage .container {
     background-image: url('../img/images/Columns.png');
+}
+.waitImage .container {
+    background-image: url('../img/images/waitImage.png');
 }
 .customMargin {
     margin: 0% 1% 10px 1%;
@@ -331,10 +337,10 @@ body {
     background-image: url("../img/images/Column-building.png");
 }
 /*.addMenuIcon.iconBag {*/
-    /*background-image: url("../img/images/Warranty.png");*/
+/*background-image: url("../img/images/Warranty.png");*/
 /*}*/
 /*.addMenuIcon.iconBag {*/
-    /*background-image: url("../img/images/Warranty.png");*/
+/*background-image: url("../img/images/Warranty.png");*/
 /*}*/
 a:hover .addMenuText {
     color: #840633;
@@ -502,4 +508,44 @@ a:hover .addMenuText {
     background-size: contain;
     width: 50px;
     height: 50px;
+}
+.waitInfo {
+    max-width: 1300px;
+    margin: 50px auto;
+    color: #cccccc;
+    overflow: hidden;
+    border-top: 1px solid #840633;
+    border-bottom: 1px solid #840633;
+}
+.waitInfo .level1 {
+    margin-top: 50px;
+    font-size: 25px;
+    margin-bottom: 40px;
+    margin-left: 15%;
+}
+.waitInfo .level2 {
+    font-size: 26px;
+    padding-left: 12%;
+    margin-bottom: 60px;
+    text-align: justify;
+    margin-left: 13%;
+    margin-right: 28%;
+}
+.waitInfo .level3 {
+    padding-left: 12%;
+    margin-left: 13%;
+    font-size: 20px;
+    float: left;
+    margin-bottom: 50px;
+}
+.waitInfo .level4 {
+    float: right;
+    background-image: url("../img/images/sign.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 28%;
+    height: 100px;
+}
+.bold {
+    font-weight: bold;
 }

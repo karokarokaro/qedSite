@@ -48,4 +48,34 @@
         margin: 0px 20px 10px 0px;
         float: left;
     }
+    .waitInfo .level1 {
+        font-size: 21px;
+        margin-bottom: 30px;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 20px;
+    }
+    .waitInfo .level2 {
+        font-size: 23px;
+        padding-left: 10%;
+        margin-bottom: 50px;
+        margin-left: 0px;
+        margin-right: 5%;
+    }
+    .waitInfo .level3 {
+        padding-left: 10%;
+        font-size: 17px;
+        float: left;
+        margin-left: 0px;
+        margin-bottom: 20px;
+    }
+    .waitInfo .level4 {
+        float: right;
+        background-image: url("../img/images/sign.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 28%;
+        height: 100px;
+        margin-right: 5%;
+    }
 }
