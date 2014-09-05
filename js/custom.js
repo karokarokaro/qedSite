@@ -53,11 +53,13 @@ SearchCache = {
     _refreshCache: function(){
         var sCache = ObjectCache.get("search");
     },
-    search: function(query, callbackSuccess, callbackError) {
+    search: function(searchBox, query, callbackSuccess) {
         this._refreshCache();
         if (typeof this._cache[query] != "undefined") {
             callbackSuccess(this._cache[query]);
+            return;
         }
+        searchBox.find(".searchInput").addClass("loading");
         $.ajax({
             url: "/search/",
             dataType: "json",
@@ -92,10 +94,13 @@ SearchCache = {
                     description: "2wekyrwuey nu ew e",
                     url: "http://vk.com"
                 }]}};
-                SearchCache._cache[response.query] = response.result;
+                SearchCache._cache[response.query] = response;
                 ObjectCache.set("search", SearchCache._cache);
-                callbackSuccess(response);
-//                callbackError(response);
+                callbackSuccess(response, searchBox);
+//                callbackError(response, searchBox);
+            },
+            complete: function() {
+                searchBox.find(".searchInput").removeClass("loading");
             }
         });
     }
@@ -119,7 +124,10 @@ $(document).on("pagecreate", ".thisPage", function(e) {
             }
         });
     }
-    initSearch($(e.target));
+    initSearch($($(e.target).find(".searchBox")[0]));
+    if (e.target.id == "searchPage") {
+        initSearch($($(e.target).find(".searchBox")[1]));
+    }
 });
 function createAdviceLi(advice) {
     var res = $('<li class="advice">' +
@@ -130,21 +138,25 @@ function createAdviceLi(advice) {
         '</li>');
     if (typeof advice.url != "undefined") res.find("input.url").val(advice.url);
     if (typeof advice.text != "undefined") res.find("input.text").val(advice.text);
-    initMiniAdviceHandlers(res);
+    initAdviceHandlers(res);
     return res;
 
 }
 function initAdviceHandlers(advice) {
+    var searchBox = advice.closest(".searchBox");
     advice.on("click", function(e){
+        var advice = $(this);
+        var searchBox = advice.closest(".searchBox");
         if (advice.find("input.text").val() != "") {
-            advice.closest(".searchBox").find(".searchInput").val(advice.find("input.text").val());
+            searchBox.find(".searchInput").val(advice.find("input.text").val());
         }
         if (advice.find("input.url").val() != "") {
             $.mobile.changePage(advice.find("input.url").val());
         }
     });
     advice.on("mouseenter", function(e){
-        $(".advice").removeClass("active");
+        var searchBox = $(this).closest(".searchBox");
+        searchBox.find(".advice").removeClass("active");
         advice.addClass("active");
     });
 
@@ -157,46 +169,51 @@ function hideAdvices() {
 }
 function showAdvices(searchBox) {
     var adviceBox = searchBox.find(".adviceBox");
-    adviceBox.addClass("active");
-    adviceBox.slideDown();
+    if (adviceBox.find(".advice").length > 0) {
+        adviceBox.addClass("active");
+        adviceBox.slideDown();
+    }
 }
-
-
 function tryAdvice(searchBox, callback) {
-    searchBox.find(".searchInput").addClass("loading");
-    SearchCache.search(searchBox.find(".searchInput").val(), function(response) {
-
+    SearchCache.search(searchBox, searchBox.find(".searchInput").val(), function(response) {
         if (searchBox.find(".searchInput").val() == response.query) {
             var adviceBox = searchBox.find(".adviceBox");
             adviceBox.html("");
             for (var i = 0; i < response.result.items.length; ++i) {
-                var elem = createMiniAdviceLi(response.result.items[i]);
+                var elem = createAdviceLi(response.result.items[i]);
                 initAdviceHandlers(elem);
                 adviceBox.append(elem);
             }
-            showAdvices(searchBox);
-            thisPage.find('.top input[name="searchQuery"]').val(response.query);
-            if (typeof callback != "undefined") callback();
+            if (!searchBox.find(".adviceBox").is(".active")) showAdvices(searchBox);
+            searchBox.find('input[name="searchQuery"]').val(response.query);
+            if (typeof callback != "undefined") callback(searchBox);
         }
-        searchBox.find(".searchInput").removeClass("loading");
-    }, function(response){
-        searchBox.find(".searchInput").removeClass("loading");
+
     });
 }
 function initSearch(searchBox) {
     searchBox.find(".searchInput").on("input click", function(e){
+        var searchBox = $(this).closest(".searchBox");
         if (searchBox.find('input[name="searchQuery"]').val() != searchBox.find(".searchInput").val()) {
+            searchBox.find(".adviceBox").html("");
+            searchBox.find('input[name="searchQuery"]').val("");
             tryAdvice(searchBox);
         } else {
-            if (!searchBox.find(".adviceBox").is(".active")) {
-                showAdvices(searchBox);
+            if (searchBox.find('input[name="searchQuery"]').val() == "") {
+                hideAdvices();
+            } else {
+                if (!searchBox.find(".adviceBox").is(".active")) {
+                    showAdvices(searchBox);
+                }
             }
+
         }
         e.preventDefault();
         e.stopPropagation();
     });
-    $(searchBox).on("keydown", function(e) {
-        if (searchBox.find(".adviceBox").is(".active") && searchBox.find(".searchInput").is(":focus")) return;
+    searchBox.on("keydown", function(e) {
+        var searchBox = $(this);
+        if (!$(document.activeElement).is(".searchInput")) return;
         var isActive = searchBox.find(".advice").is(".active");
         var isActiveBox = searchBox.find(".adviceBox").is(".active");
         var adviceBox = searchBox.find(".adviceBox");
@@ -216,11 +233,7 @@ function initSearch(searchBox) {
                 hideAdvices();
                 break;
             case 27: // escape
-                hideAdvices();
-                if (isActive) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                }
+                searchBox.closest(".thisPage").click();
                 break;
             case 38: // стрелка вверх
                 if (isActive) {
@@ -235,59 +248,54 @@ function initSearch(searchBox) {
                     }
                 } else {
                     if (!isActiveBox) {
-                        tryAdvice(function(){
-                            if (adviceBox.find("li.advice").length > 0) {
+                        tryAdvice(searchBox, function(searchBox){
+                            var adviceBox = searchBox.find(".adviceBox");
+                            if (adviceBox.find(".advice").length > 0) {
                                 adviceBox.addClass("active");
                                 adviceBox.show();
-                                $(".advice").removeClass("active");
-                                $(adviceBox.find("li.advice")[adviceBox.find("li.advice").length-1]).addClass("active");
+                                searchBox.find(".advice").removeClass("active");
+                                $(adviceBox.find(".advice")[adviceBox.find(".advice").length-1]).addClass("active");
                             }
                         });
-
-
-
+                    } else {
+                        adviceBox.find(".advice").removeClass("active");
+                        $(adviceBox.find(".advice")[adviceBox.find(".advice").length-1]).addClass("active");
                     }
-                    $(".advice").removeClass("active");
-                    $(adviceBox.find("li.advice")[adviceBox.find("li.advice").length-1]).addClass("active");
                 }
                 e.preventDefault();
                 e.stopPropagation();
                 break;
             case 40: // стрелка вниз
                 if (isActive) {
-                    var advice = $(".advice.active");
-                    var adviceBox = advice.closest("ul.adviceBox");
-                    if(adviceBox.find("li").length > 1){
+                    var advice = searchBox.find(".advice.active");
+                    if(adviceBox.find(".advice").length > 1){
                         var subl = advice.next();
-                        if (subl == null || !subl.is("li.advice")) {
-                            subl = $(adviceBox.find("li")[0]);
+                        if (subl == null || !subl.is(".advice")) {
+                            subl = $(adviceBox.find(".advice")[0]);
                         }
-                        $(".advice").removeClass("active");
+                        searchBox.find(".advice").removeClass("active");
                         subl.addClass("active");
                     }
                 } else {
-                    var adviceBox = thisPage.find(".top .searchInput").closest(".top").find("ul.adviceBox");
                     if (!isActiveBox) {
-                        tryMiniAdvice(function(){
-                            var adviceBox = thisPage.find(".top .searchInput").closest(".top").find("ul.adviceBox");
-                            if (adviceBox.find("li.advice").length > 0) {
+                        tryAdvice(searchBox, function(searchBox){
+                            var adviceBox = searchBox.find(".adviceBox");
+                            if (adviceBox.find(".advice").length > 0) {
                                 adviceBox.addClass("active");
                                 adviceBox.show();
-                                $(".advice").removeClass("active");
-                                $(adviceBox.find("li.advice")[0]).addClass("active");
+                                searchBox.find(".advice").removeClass("active");
+                                $(adviceBox.find(".advice")[0]).addClass("active");
                             }
                         });
-
-
+                    } else {
+                        adviceBox.find(".advice").removeClass("active");
+                        $(adviceBox.find(".advice")[0]).addClass("active");
                     }
-                    $(".advice").removeClass("active");
-                    $(adviceBox.find("li.advice")[0]).addClass("active");
                 }
                 e.preventDefault();
                 e.stopPropagation();
                 break;
         }
-
     });
 
     $('html').on("click", function(e){

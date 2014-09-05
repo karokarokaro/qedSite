@@ -17,7 +17,7 @@
 
 </head>
 <body>
-<div data-role="page" class="thisPage" id="mainPage">
+<div data-role="page" class="thisPage" id="searchPage">
 
     <div data-role="panel" id="leftMenu" data-display="push" data-position="left">
         <div class="header">Меню</div>
@@ -45,11 +45,11 @@
                     </div>
                 </div>
                 <a href="#leftMenu" class="menuLink onlyPhone"></a>
-                <div class="onlyPC">
-                    <form action="" method="post">
-                        <input class="searchInput" data-mini="true" type="text" placeholder="Поиск..." >
-                    </form>
-                </div>
+                <form class="searchBox onlyPC" action="" method="post">
+                    <input class="searchInput" name="query" data-mini="true" type="text" placeholder="Поиск..." />
+                    <input type="hidden" name="searchQuery"/>
+                    <ul class="adviceBox"></ul>
+                </form>
             </div>
             <div class="top2 pull-left">
                 <a href="."><img class="logo" src="img/images/Logo.png"/></a>
@@ -106,8 +106,10 @@
                 </div>
             </div>
             <div class="infoContainer left">
-                <form>
-                    <input class="searchInput" data-mini="true" type="text" placeholder="Введите запрос" >
+                <form class="searchBox" action="" method="post">
+                    <input class="searchInput" name="query" data-mini="true" type="text" placeholder="Поиск..." />
+                    <input type="hidden" name="searchQuery"/>
+                    <ul class="adviceBox"></ul>
                 </form>
             </div>
         </div>
