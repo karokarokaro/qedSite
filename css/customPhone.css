@@ -78,4 +78,27 @@
         height: 100px;
         margin-right: 5%;
     }
+    .teamBlock {
+        margin-bottom: 10px;
+    }
+    .teamBlock .infoText {
+        padding-left: 5%;
+    }
+    .teamBlock .infoText p.detLink {
+        text-align: center;
+    }
+    .teamBlock .infoText p.detLink a {
+        display: block;
+        padding: 5px;
+        color: black;
+        background-color: #ffffff;
+    }
+    .teamBlock .infoText p.detLink a:hover {
+        color: #840633;
+    }
+    .teamBlock .infoText p.detLink a:active {
+        background-color: #aaaaaa;
+
+    }
+
 }

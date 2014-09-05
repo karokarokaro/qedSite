@@ -50,5 +50,13 @@
     .contactsCont .contInfo {
         padding-left: 2%;
     }
-
+    .teamBlock .infoText p.detLink {
+        text-align: right;
+    }
+    .teamBlock .infoText p.detLink a {
+        color: #840633;
+    }
+    .teamBlock .infoText p.detLink a:hover {
+        text-decoration: underline;
+    }
 }

@@ -39,7 +39,6 @@
     font-family: 'PFDinDisplayPro-XThin';
 }
 .langDiv,
-.searchInput,
 .presentText,
 .newsDiv .toolbar {
     font-family: 'PFDinDisplayPro-XThinIt';
@@ -54,7 +53,9 @@
 .contactsCont .contForm textarea,
 .contactsCont .contInfo,
 .waitInfo,
-.infoDiv {
+.searchInput,
+.infoDiv,
+.top ul.adviceBox li.advice p {
     font-family: 'PFDinDisplayPro-Thin';
 }
 .mainImage .container > div .uslList,
@@ -112,6 +113,7 @@ body {
     background-position: right center;
     background-size: 21px 15px;
     border: none !important;
+    color: black;
 }
 .mainImage {
     height: 300px;
@@ -437,11 +439,18 @@ a:hover .addMenuText {
     font-size: 26px;
     color: #840633;
 }
+.uslCollapsible .ui-collapsible {
+    margin-top: 3px;
+}
+.uslCollapsible a.ui-collapsible-heading-toggle {
+    border: none;
+    background-color: #f6f6f6;
+}
 .uslCollapsible .ui-collapsible-collapsed a.ui-collapsible-heading-toggle {
     color: black;
 }
 .uslCollapsible .ui-collapsible-content {
-    /*background: none;*/
+   /*background: none;*/
 }
 .uslCollapsible .ui-collapsible-content p {
     margin: 5px auto;
@@ -545,7 +554,7 @@ a:hover .addMenuText {
     background-size: contain;
     background-repeat: no-repeat;
     width: 28%;
-    height: 100px;
+    height: 120px;
 }
 .bold {
     font-weight: bold;
@@ -564,4 +573,112 @@ a:hover .addMenuText {
 }
 .maxWidthOut {
 
+}
+.teamDiv {
+    overflow: hidden;
+}
+.teamCollapsible,
+.arrCollapsible a.ui-collapsible-heading-toggle {
+    /*text-align: center;*/
+    font-size: 22px;
+    color: #ffffff;
+}
+.arrCollapsible .ui-collapsible {
+    margin-top: 10px;
+}
+.arrCollapsible a.ui-collapsible-heading-toggle {
+    border: none;
+    border-bottom: 1px solid white;
+    padding: 3px 0px;
+    background-image: url("../img/images/arrTop.png");
+    background-repeat: no-repeat;
+    background-size: 40px 20px;
+    background-position: right center;
+}
+.arrCollapsible .ui-collapsible-collapsed a.ui-collapsible-heading-toggle {
+    background-image: url("../img/images/arrBottom.png");
+}
+.arrCollapsible a.ui-collapsible-heading-toggle:hover {
+    color: #840633;
+}
+.arrCollapsible .ui-collapsible-content {
+    padding: 0px;
+}
+.teamDiv .arrCollapsible .ui-collapsible-content p {
+    margin: 5px auto;
+    font-size: 18px;
+}
+.teamDiv .arrCollapsible .ui-collapsible-content p a {
+    color: white;
+}
+.teamDiv .arrCollapsible .ui-collapsible-content p a:hover {
+    color: #840633;
+}
+.teamDiv .arrCollapsible .ui-collapsible-content .infoDiv {
+    margin: 5px 0px;
+}
+.teamBlock {
+    overflow: hidden;
+}
+.teamBlock .photo {
+    float: left;
+    width: 45%;
+}
+.teamBlock .photo img {
+    width: 100%;
+    /*height: 200px;*/
+}
+.teamBlock .infoText {
+    padding-left: 10%;
+    overflow: hidden;
+    min-width: 100px
+}
+.teamBlock .infoText p.detLink a {
+    font-weight: bold;
+}
+.mainSearch .searchInput {
+    font-size: 19px !important;
+}
+.loading {
+    background-image: url("../img/images/loading.gif");
+}
+.searchBox {
+    /*position: relative;*/
+}
+.top ul.adviceBox {
+    background-color: #ffffff;
+    position: absolute;
+    z-index: 10000;
+    margin: 0px;
+    right: 1%;
+    top: 67px;
+    min-width: 256px;
+    padding: 0px;
+}
+.top ul.adviceBox li.advice {
+    margin: 0px;
+    list-style: none;
+    border: 1px solid #bbbbbb;
+    border-top: none;
+    text-align: right;
+    cursor: pointer;
+}
+.top ul.adviceBox li.advice p {
+    margin: 0px;
+}
+.top ul.adviceBox li.advice p.header {
+    color: #000000;
+    font-weight: bold;
+    font-size: 16px;
+}
+.top ul.adviceBox li.advice p.description {
+    color: #666666;
+    font-size: 14px;
+}
+.top ul.adviceBox li.advice:first-child {
+    border-top: 1px solid #bbbbbb;
+}
+
+.top ul.adviceBox li.active {
+    background-color: #cccccc;
 }

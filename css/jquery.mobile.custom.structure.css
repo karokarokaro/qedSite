@@ -1507,13 +1507,13 @@ li.ui-block-e {
 }
 
 
-.ui-collapsible {
-	margin: 0 -1em;
-}
-.ui-collapsible-inset,
-.ui-collapsible-set {
-	margin: .5em 0;
-}
+/*.ui-collapsible {*/
+	/*margin: 0 -1em;*/
+/*}*/
+/*.ui-collapsible-inset,*/
+/*.ui-collapsible-set {*/
+	/*margin: .5em 0;*/
+/*}*/
 .ui-collapsible-heading {
 	display: block;
 	margin: 0;
@@ -1598,10 +1598,10 @@ li.ui-block-e {
 	border-bottom-left-radius: 0;		
 }
 .ui-collapsible-set .ui-collapsible {
-	margin: -1px -1em 0;
+	margin: 0px 0em 0;
 }
 .ui-collapsible-set .ui-collapsible-inset {
-	margin: -1px 0 0;
+	margin: 0px 0 0;
 }
 .ui-collapsible-set .ui-collapsible.ui-first-child {
 	margin-top: 0;

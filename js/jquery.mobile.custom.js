@@ -7441,13 +7441,39 @@ $.widget( "mobile.collapsible", {
 			.toggleClass( "ui-icon-" + opts.collapsedIcon, ( isCollapse || opts.expandedIcon === opts.collapsedIcon ) )
 			.removeClass( $.mobile.activeBtnClass );
 
-		this.element.toggleClass( "ui-collapsible-collapsed", isCollapse );
-		ui.content
-			.toggleClass( "ui-collapsible-content-collapsed", isCollapse )
-			.attr( "aria-hidden", isCollapse )
-			.trigger( "updatelayout" );
-		this.options.collapsed = isCollapse;
-		this._trigger( isCollapse ? "collapse" : "expand" );
+
+		if (isCollapse) {
+            _this = this;
+            _this._trigger( isCollapse ? "collapse" : "expand" );
+            ui.content.stop(true);
+            ui.content.slideUp(300, function() {
+                ui.content
+                    .toggleClass( "ui-collapsible-content-collapsed", isCollapse )
+                    .attr( "aria-hidden", isCollapse )
+                    .trigger( "updatelayout" );
+                _this.options.collapsed = isCollapse;
+
+            });
+        } else {
+            _this = this;
+            _this._trigger( isCollapse ? "collapse" : "expand" );
+            ui.content.stop(true);
+            ui.content.slideDown(300, function(){
+                ui.content
+                    .toggleClass( "ui-collapsible-content-collapsed", isCollapse )
+                    .attr( "aria-hidden", isCollapse )
+                    .trigger( "updatelayout" );
+                _this.options.collapsed = isCollapse;
+
+            });
+        }
+        this.element.toggleClass( "ui-collapsible-collapsed", isCollapse );
+//        ui.content
+//			.toggleClass( "ui-collapsible-content-collapsed", isCollapse )
+//			.attr( "aria-hidden", isCollapse )
+//			.trigger( "updatelayout" );
+//		this.options.collapsed = isCollapse;
+//		this._trigger( isCollapse ? "collapse" : "expand" );
 	},
 
 	expand: function() {
