@@ -48,10 +48,20 @@ ObjectCache = {
         return prevValue;
     }
 };
-SearchCache = {
+SearchEngine = {
     _cache: {},
+    params: {},
     _refreshCache: function(){
-        var sCache = ObjectCache.get("search");
+        var sCache = ObjectCache.get(Config.cacheSearch);
+    },
+    init: function() {
+        this.params = {
+            type: "111|1221"
+        };
+    },
+    pushParams: function(object) {
+        object.type = this.params.type;
+        return object;
     },
     search: function(searchBox, query, callbackSuccess) {
         this._refreshCache();
@@ -61,15 +71,15 @@ SearchCache = {
         }
         searchBox.find(".searchInput").addClass("loading");
         $.ajax({
-            url: "/search/",
+            url: Config.URLajaxSearch,
             dataType: "json",
-            data: {
+            data: this.pushParams({
                 query: query
-            },
+            }),
             success: function(response) {
                 if (typeof response.result != "undefined") {
-                    SearchCache._cache[response.query] = response.result;
-                    ObjectCache.set("search", SearchCache._cache);
+                    SearchEngine._cache[response.query] = response.result;
+                    ObjectCache.set(Config.cacheSearch, SearchEngine._cache);
                     callbackSuccess(response);
                 }
             },
@@ -94,8 +104,8 @@ SearchCache = {
                     description: "2wekyrwuey nu ew e",
                     url: "http://vk.com"
                 }]}};
-                SearchCache._cache[response.query] = response;
-                ObjectCache.set("search", SearchCache._cache);
+                SearchEngine._cache[response.query] = response;
+                ObjectCache.set(Config.cacheSearch, SearchEngine._cache);
                 callbackSuccess(response, searchBox);
 //                callbackError(response, searchBox);
             },
@@ -107,10 +117,13 @@ SearchCache = {
 
 };
 $(document).on("pagecreate", ".thisPage", function(e) {
-    $(".mainImage .container > .ui-block-a, .mainImage .container > .ui-block-b").hover(
+    $(".mainImage .container > .ui-block-a, .mainImage .container > .ui-block-b").on("mouseenter",
         function() {
             hoverMainImageItem(this, true)
-        }, function() {
+        }
+    );
+    $(".mainImage .container > .ui-block-a, .mainImage .container > .ui-block-b").on("mouseleave",
+        function() {
             hoverMainImageItem(this, false)
         }
     );
@@ -124,6 +137,7 @@ $(document).on("pagecreate", ".thisPage", function(e) {
             }
         });
     }
+    SearchEngine.init();
     initSearch($($(e.target).find(".searchBox")[0]));
     if (e.target.id == "searchPage") {
         initSearch($($(e.target).find(".searchBox")[1]));
@@ -175,7 +189,7 @@ function showAdvices(searchBox) {
     }
 }
 function tryAdvice(searchBox, callback) {
-    SearchCache.search(searchBox, searchBox.find(".searchInput").val(), function(response) {
+    SearchEngine.search(searchBox, searchBox.find(".searchInput").val(), function(response) {
         if (searchBox.find(".searchInput").val() == response.query) {
             var adviceBox = searchBox.find(".adviceBox");
             adviceBox.html("");

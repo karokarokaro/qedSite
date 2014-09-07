@@ -118,8 +118,9 @@ body {
 .mainImage {
     height: 300px;
     max-width: 1300px;
-    margin: 0px auto;
+    margin: 10px auto;
     position: relative;
+    padding: 0px;
 }
 .mainImage .container {
     background-position: 0px 0px;
@@ -641,6 +642,7 @@ a:hover .addMenuText {
 }
 .loading {
     background-image: url("../img/images/loading.gif");
+    background-repeat: no-repeat;
 }
 .searchBox {
     /*position: relative;*/
@@ -662,6 +664,7 @@ a:hover .addMenuText {
     border-top: none;
     text-align: right;
     cursor: pointer;
+    padding: 5px;
 }
 .top ul.adviceBox li.advice p {
     margin: 0px;
