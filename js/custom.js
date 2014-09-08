@@ -52,9 +52,10 @@ SearchEngine = {
     _cache: {},
     params: {},
     _refreshCache: function(){
-        var sCache = ObjectCache.get(Config.cacheSearch);
+        var cache = ObjectCache.get(Config.cacheSearch);
+        if (cache != null) this._cache = cache;
     },
-    init: function() {
+    init: function(thisPage) {
         this.params = {
             type: "111|1221"
         };
@@ -78,7 +79,7 @@ SearchEngine = {
             }),
             success: function(response) {
                 if (typeof response.result != "undefined") {
-                    SearchEngine._cache[response.query] = response.result;
+                    SearchEngine._cache[response.query] = response;
                     ObjectCache.set(Config.cacheSearch, SearchEngine._cache);
                     callbackSuccess(response);
                 }
@@ -114,7 +115,91 @@ SearchEngine = {
             }
         });
     }
+};
+TabEngine = {
+    _cache: {},
+    params: {},
+    _refreshCache: function(){
+        var cache = ObjectCache.get(Config.cacheTabs);
+        if (cache != null) this._cache = cache;
+    },
+    init: function(thisPage) {
+        var contents = $(".qed-tab-content").parent();
+        contents.each(function(index, elem) {
+            var tabContents = $(elem).children(".qed-tab-content");
+            if (tabContents.length > 0) {
+                tabContents.hide();
+                $(tabContents[0]).show();
+            }
 
+        });
+        var ok = true;
+        var tabs = $(".qed-tab");
+        tabs.on("click", function(e) {
+            TabEngine._refreshCache();
+            var tab = $(e.target);
+            var href = tab.attr("href");
+            if (typeof href == "undefined" || $(href).length == 0) return false;
+            var isAjax = typeof $(href).attr("ajax") != "undefined";
+            if (isAjax) {
+
+                var cacheDisabled = typeof $(href).attr("noCache") != "undefined";
+                if (typeof TabEngine._cache[href] != "undefined") {
+                    $(href).html(TabEngine._cache[href].result);
+                    $(href).parent().children(".qed-tab-content").hide();
+                    $(href).show();
+                } else {
+                    $(href).html("");
+                    $(href).addClass("loading");
+                    $(href).parent().children(".qed-tab-content").hide();
+                    $(href).show();
+
+                    $.ajax({
+                        url: Config.URLajaxTab,
+                        dataType: "json",
+                        data: {
+                            id: href.substr(1)
+                        },
+                        success: function(response) {
+                            if (typeof response.result != "undefined") {
+                                if (!cacheDisabled) {
+                                    TabEngine._cache["#" + response.id] = response;
+                                    ObjectCache.set(Config.cacheSearch, SearchEngine._cache);
+                                }
+                                $(href).html(response.result);
+                            }
+                        },
+                        error: function(response) {
+                            response = {
+                                id: href.substr(1),
+                                result: href + ": dfgdfgdfg dfgd fgdf gdf"
+                            };
+                            if (typeof response.result != "undefined") {
+                                if (!cacheDisabled) {
+                                    TabEngine._cache["#" + response.id] = response;
+                                    ObjectCache.set(Config.cacheTabs, TabEngine._cache);
+                                }
+                                $(href).html(response.result);
+                            }
+//                            MessageEngine.error("nonnonno");
+                        },
+                        complete: function() {
+                            $(href).removeClass("loading");
+                        }
+                    });
+                }
+            } else {
+                $(href).parent().children(".qed-tab-content").hide();
+                $(href).show()
+            }
+            return false;
+        })
+    }
+};
+MessageEngine = {
+    error: function(msg) {
+        alert(msg);
+    }
 };
 $(document).on("pagecreate", ".thisPage", function(e) {
     $(".mainImage .container > .ui-block-a, .mainImage .container > .ui-block-b").on("mouseenter",
@@ -137,7 +222,8 @@ $(document).on("pagecreate", ".thisPage", function(e) {
             }
         });
     }
-    SearchEngine.init();
+    SearchEngine.init($(e.target));
+    TabEngine.init($(e.target));
     initSearch($($(e.target).find(".searchBox")[0]));
     if (e.target.id == "searchPage") {
         initSearch($($(e.target).find(".searchBox")[1]));

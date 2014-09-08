@@ -681,7 +681,6 @@ a:hover .addMenuText {
 .top ul.adviceBox li.advice:first-child {
     border-top: 1px solid #bbbbbb;
 }
-
 .top ul.adviceBox li.active {
     background-color: #cccccc;
 }

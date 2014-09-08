@@ -17,18 +17,60 @@
     }
     .newsDiv .newsContainer,
     .infoDiv .infoContainer {
-        width: 48%;
         overflow: hidden;
     }
+    .infoDiv .infoContainer-a {
+        float: left;
+    }
+    .infoDiv-a .infoContainer-b {
+        float: right;
+    }
+    .infoDiv-b .infoContainer-c,
+    .infoDiv-c .infoContainer-c,
+    .infoDiv-d .infoContainer-c {
+        float: right;
+    }
+    .infoDiv-a .infoContainer-a {
+        width: 48%;
+        padding-right: 2%;
+    }
+    .infoDiv-a .infoContainer-b {
+        width: 48%;
+        padding-left: 2%;
+    }
+    .infoDiv-b .infoContainer-b,
+    .infoDiv-c .infoContainer-b,
+    .infoDiv-b .infoContainer-b {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+    .infoDiv-b .infoContainer,
+    .infoDiv-c .infoContainer,
+    .infoDiv-d .infoContainer {
+        width: 22%;
+    }
+    .infoDiv-b .infoContainer-a,
+    .infoDiv-c .infoContainer-b,
+    .infoDiv-d .infoContainer-c {
+        width: 48%;
+    }
+    .infoDiv-e .infoContainer {
+        width: 22%;
+        padding-left: 4%;
+        float: left;
+    }
+    .infoDiv-e .infoContainer-a {
+        width: 22%;
+        padding-left: 0%;
+    }
+
     .newsDiv .newsContainer.left,
     .infoDiv .infoContainer.left {
         padding-right: 2%;
-        float: left;
     }
     .newsDiv .newsContainer.right,
     .infoDiv .infoContainer.right {
         padding-left: 2%;
-        float: right;
     }
     .top {
         padding: 10px 1% 10px 1%;

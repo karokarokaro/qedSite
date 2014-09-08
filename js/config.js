@@ -1,5 +1,7 @@
 Config = {
     URLajaxSearch: "search/",
+    URLajaxTab: "tab/",
 
-    cacheSearch: "search"
+    cacheSearch: "search",
+    cacheTabs: "tabs"
 };

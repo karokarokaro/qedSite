@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/customPhone.css" />
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/jquery.mobile.custom.js"></script>
+    <script src="js/config.js"></script>
     <script src="js/custom.js"></script>
 
 
@@ -89,20 +90,18 @@
         <div class="pageHeader customPadding onlyPC">
             <span>НОВОСТИ</span>
         </div>
-        <div class="customPadding overflowHidden" data-role="tabs">
-            <div class="infoDiv infoDiv-c">
+        <div class="customPadding overflowHidden">
+            <div class="infoDiv infoDiv-e">
                 <div class="infoContainer infoContainer-a">&nbsp;</div>
                 <div class="infoContainer infoContainer-b">
-                    <div data-role="n1avbar">
-                        <ul>
-                            <li><a href="#news-tab-1">One</a></li>
-                            <li><a href="#news-tab-2">Two</a></li>
-                        </ul>
-                    </div>
+                    <a class="qed-tab" href="#news-tab-1">but1</a>
+                </div>
+                <div class="infoContainer infoContainer-c">
+                    <a class="qed-tab" href="#news-tab-2">but1</a>
                 </div>
             </div>
 
-            <div id="news-tab-1">
+            <div class="qed-tab-content" id="news-tab-1">
                 <div class="infoDiv infoDiv-c">
                     <div class="infoContainer infoContainer-a">фото1</div>
                     <div class="infoContainer infoContainer-b">
@@ -114,7 +113,7 @@
                     </div>
                 </div>
             </div>
-            <div id="news-tab-2">
+            <div class="qed-tab-content" id="news-tab-2">
                 <div class="infoDiv infoDiv-c">
                     <div class="infoContainer infoContainer-a">фото2</div>
                     <div class="infoContainer infoContainer-b">
@@ -169,3 +168,4 @@
     </div>
 </div>
 </body>
+                                                                                   
