@@ -46,7 +46,7 @@
 .uslHeader,
 .menuButtons .item > span,
 .uslCollapsible a.ui-collapsible-heading-toggle,
-#leftMenu,
+.leftMenu,
 .pageHeader,
 .contactsCont .contForm label,
 .contactsCont .contForm input,
@@ -415,15 +415,35 @@ a:hover .addMenuText {
     border-top: 1px solid #939293;
 }
 #leftMenu .list .item {
-    margin: 0px;
-    padding: 10px 0px 10px 40px;
+    margin: 0px 0px 0px 8px;
+    padding: 10px 0px 10px 42px;
     color: #840633;
     font-weight: bold;
     font-size: 20px;
     text-align: left;
+    background-position: left center;
+    background-repeat: no-repeat;
 }
 #leftMenu .list a:hover {
     background-color: #eeeeee;
+}
+#leftMenu .item-beuro {
+    background-image: url("../img/images/o-buro.png");
+    background-size: 31px 21px;
+}
+#leftMenu .item-team {
+    background-image: url("../img/images/o-komande.png");
+    background-size: 32px 21px;
+}
+#leftMenu .item-events {
+    background-image: url("../img/images/Meropriyatiya.png");
+    background-size: 21px 21px;
+    margin-left: 13px !important;
+}
+#leftMenu .item-reviews {
+    background-image: url("../img/images/Otzivi.png");
+    background-size: 21px 21px;
+    margin-left: 13px !important;
 }
 .menuLink {
     float: left;
