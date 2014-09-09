@@ -811,6 +811,9 @@ a:hover .addMenuText {
     border: none !important;
     width: 30% !important;
     margin-right: 3px !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    letter-spacing: 1px !important;
     -moz-appearance: none !important;
     -webkit-appearance: none !important;
     appearance: none !important;
@@ -821,6 +824,8 @@ a:hover .addMenuText {
     border: none !important;
     width: 30% !important;
     margin-left: 3px !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
     -moz-appearance: none !important;
     -webkit-appearance: none !important;
     appearance: none !important;
@@ -834,10 +839,16 @@ a:hover .addMenuText {
 
 }
 /*: The table that contains the calendar itself.*/
-
+.ui-datepicker-calendar tr th {
+    font-size: 12px;
+}
+.ui-datepicker-calendar tr td:hover:not(.ui-datepicker-other-month) {
+    background-color: #c2c2c2 !important;
+}
 .ui-datepicker-calendar tr td a,
 .ui-datepicker-calendar tr td span {
     text-align: center;
+    font-size: 14px;
 }
 .ui-datepicker-calendar tr td.ui-datepicker-other-month span {
     color: #cccccc !important;
