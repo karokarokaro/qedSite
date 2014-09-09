@@ -55,7 +55,8 @@
 .waitInfo,
 .searchInput,
 .infoDiv,
-.top ul.adviceBox li.advice p {
+.top ul.adviceBox li.advice p,
+.ui-datepicker * {
     font-family: 'PFDinDisplayPro-Thin';
 }
 .mainImage .container > div .uslList,
@@ -114,6 +115,7 @@ body {
     background-size: 21px 15px;
     border: none !important;
     color: black;
+    width: 256px !important;
 }
 .mainImage {
     height: 300px;
@@ -684,3 +686,201 @@ a:hover .addMenuText {
 .top ul.adviceBox li.active {
     background-color: #cccccc;
 }
+
+.ui-datepicker {
+    width: 17em;
+    padding: .2em .2em 0;
+    display: none;
+}
+.ui-datepicker .ui-datepicker-header {
+    position: relative;
+    padding: .2em 0;
+}
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+    position: absolute;
+    top: 2px;
+    width: 1.8em;
+    height: 1.8em;
+}
+.ui-datepicker .ui-datepicker-prev-hover,
+.ui-datepicker .ui-datepicker-next-hover {
+    top: 1px;
+}
+.ui-datepicker .ui-datepicker-prev {
+    left: 2px;
+}
+.ui-datepicker .ui-datepicker-next {
+    right: 2px;
+}
+.ui-datepicker .ui-datepicker-prev-hover {
+    left: 1px;
+}
+.ui-datepicker .ui-datepicker-next-hover {
+    right: 1px;
+}
+.ui-datepicker .ui-datepicker-prev span,
+.ui-datepicker .ui-datepicker-next span {
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin-left: -8px;
+    top: 50%;
+    margin-top: -8px;
+}
+.ui-datepicker .ui-datepicker-title {
+    margin: 0 2.3em;
+    line-height: 1.8em;
+    text-align: center;
+}
+.ui-datepicker .ui-datepicker-title select {
+    font-size: 1em;
+    margin: 1px 0;
+}
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year {
+    width: 45%;
+}
+.ui-datepicker table {
+    width: 100%;
+    font-size: .9em;
+    border-collapse: collapse;
+    margin: 0 0 .4em;
+}
+.ui-datepicker th {
+    padding: .7em .3em;
+    text-align: center;
+    font-weight: bold;
+    border: 0;
+}
+.ui-datepicker td {
+    border: 0;
+    padding: 1px;
+}
+.ui-datepicker td span,
+.ui-datepicker td a {
+    display: block;
+    padding: .2em;
+    text-align: right;
+    text-decoration: none;
+}
+.ui-datepicker .ui-datepicker-buttonpane {
+    background-image: none;
+    margin: .7em 0 0 0;
+    padding: 0 .2em;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+}
+.ui-datepicker .ui-datepicker-buttonpane button {
+    float: right;
+    margin: .5em .2em .4em;
+    cursor: pointer;
+    padding: .2em .6em .3em .6em;
+    width: auto;
+    overflow: visible;
+}
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
+    float: left;
+}
+.ui-datepicker * {
+    color: #ffffff !important;
+}
+.ui-datepicker {
+    background-color: #b1b1b1 !important;
+}
+/*: The outer container of the datepicker. If the datepicker is inline, this element will additionally have a ui-datepicker-inline class. If the isRTL option is set, this element will additionally have a class of ui-datepicker-rtl.*/
+.ui-datepicker-header {
+
+}
+/*: The container for the datepicker's header.*/
+.ui-datepicker-prev {
+    cursor: pointer !important;
+}
+/*: The control used to select previous months.*/
+.ui-datepicker-next {
+    cursor: pointer !important;
+}
+/*: The control used to select subsequent months.*/
+.ui-datepicker-title {
+
+}
+/*: The container for the datepicker's title containing the month and year.*/
+.ui-datepicker-month {
+    background: none !important;
+    border: none !important;
+    width: 30% !important;
+    margin-right: 3px !important;
+    -moz-appearance: none !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+}
+/*: The textual display of the month or a <select> element if the changeMonth option is set.*/
+.ui-datepicker-year {
+    background: none !important;
+    border: none !important;
+    width: 30% !important;
+    margin-left: 3px !important;
+    -moz-appearance: none !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+}
+/*: The textual display of the year or a <select> element if the changeYear option is set.*/
+.ui-datepicker-month option,
+.ui-datepicker-year option {
+    background-color: #aaaaaa !important;
+}
+.ui-datepicker-calendar {
+
+}
+/*: The table that contains the calendar itself.*/
+
+.ui-datepicker-calendar tr td a,
+.ui-datepicker-calendar tr td span {
+    text-align: center;
+}
+.ui-datepicker-calendar tr td.ui-datepicker-other-month span {
+    color: #cccccc !important;
+    color: #cccccc !important;
+}
+
+.ui-datepicker-calendar tr td {
+    border-top: 1px solid #818181;
+}
+.ui-datepicker-calendar tr:first-child td {
+    border-top: none;
+}
+.ui-datepicker-calendar tr td {
+    border-left: 1px solid #818181;
+}
+.ui-datepicker-calendar tr td:first-child {
+    border-left: none;
+}
+.ui-datepicker-week-end {
+
+}
+/*: Cells containing weekend days.*/
+.ui-datepicker-other-month {
+
+}
+/*: Cells containing days that occur in a month other than the currently selected month.*/
+.ui-datepicker-unselectable {
+
+}
+/*: Cells containing days that are not selectable by the user.*/
+.ui-datepicker-current-day {
+
+}
+/*: The cell containing the selected day.*/
+.ui-datepicker-today {
+
+}
+/*: The cell containing today's date.*/
+.ui-datepicker-buttonpane {
+
+}
+/*: The buttonpane that is used when the showButtonPanel option is set.*/
+.ui-datepicker-current {
+
+}
+/*: The button used to select today's date.*/
