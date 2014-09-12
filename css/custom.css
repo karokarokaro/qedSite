@@ -56,7 +56,9 @@
 .searchInput,
 .infoDiv,
 .top ul.adviceBox li.advice p,
-.ui-datepicker * {
+.ui-datepicker *,
+.newsTab,
+.newMiniMoreButton {
     font-family: 'PFDinDisplayPro-Thin';
 }
 .mainImage .container > div .uslList,
@@ -152,10 +154,10 @@ body {
     background-image: url('../img/images/waitImage.png');
 }
 .customMargin {
-    margin: 0% 1% 10px 1%;
+    margin: 0% 2% 10px 2%;
 }
 .customPadding {
-    padding: 10px 1% 10px 1%;
+    padding: 10px 2% 10px 2%;
     margin: 0px auto;
 }
 .newsDiv {
@@ -615,7 +617,7 @@ a:hover .addMenuText {
     padding: 3px 0px;
     background-image: url("../img/images/arrTop.png");
     background-repeat: no-repeat;
-    background-size: 40px 20px;
+    background-size: 30px 15px;
     background-position: right center;
 }
 .arrCollapsible .ui-collapsible-collapsed a.ui-collapsible-heading-toggle {
@@ -674,7 +676,7 @@ a:hover .addMenuText {
     position: absolute;
     z-index: 10000;
     margin: 0px;
-    right: 1%;
+    right: 2%;
     top: 67px;
     min-width: 256px;
     padding: 0px;
@@ -705,6 +707,47 @@ a:hover .addMenuText {
 }
 .top ul.adviceBox li.active {
     background-color: #cccccc;
+}
+.blockHeader {
+    border: none;
+    border-bottom: 1px solid white;
+}
+.newsTab {
+    display: block;
+    font-size: 16px;
+    width: 100%;
+    height: 20px;
+    color: white;
+    padding: 10px 0px;
+    text-align: center;
+    margin-top: 20px;
+}
+.newsTab:hover,
+.newsTab.active {
+    background-color: #840633;
+}
+.newsTab:active {
+    padding-top: 9px;
+    height: 21px;
+}
+.newsItem {
+    margin-top: 10px;
+}
+.newsItem .infoContainer-b {
+    text-align: justify;
+}
+/*.newsItem:hover {*/
+    /*background-color: #444444;*/
+/*}*/
+.newsMiniPhoto img {
+    max-width: 100%;
+}
+.newMiniMoreButton {
+    float: right;
+    color: #cccccc;
+    font-size: 14px;
+
+    cursor: pointer;
 }
 
 .ui-datepicker {

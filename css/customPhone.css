@@ -93,12 +93,41 @@
         color: black;
         background-color: #ffffff;
     }
-    .teamBlock .infoText p.detLink a:hover {
-        color: #840633;
-    }
     .teamBlock .infoText p.detLink a:active {
+        color: #840633;
         background-color: #aaaaaa;
 
+    }
+    .infoDivM .infoContainerM-a {
+        float: left;
+    }
+    .infoDivM-a .infoContainerM-b {
+        float: right;
+    }
+    .infoDivM-a .infoContainerM-a {
+        width: 48%;
+        padding-right: 2%;
+    }
+    .infoDivM-a .infoContainerM-b {
+        width: 48%;
+        padding-left: 2%;
+    }
+    /*.newsItem .infoContainerM-a {*/
+        /*width: 35%;*/
+    /*}*/
+    /*.newsItem .infoContainerM-b {*/
+        /*width: 61%;*/
+    /*}*/
+    .newMiniMoreButton {
+        display: block;
+        background-color: #333333;
+        padding: 7px 0px;
+        font-size: 16px;
+        width: 100%;
+        text-align: center;
+    }
+    .newMiniMoreButton:active {
+        background-color: #777777;
     }
 
 }

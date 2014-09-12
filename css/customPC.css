@@ -73,7 +73,7 @@
         padding-left: 2%;
     }
     .top {
-        padding: 10px 1% 10px 1%;
+        padding: 10px 2% 10px 2%;
     }
     .top1 {
         float: right;
@@ -101,4 +101,24 @@
     .teamBlock .infoText p.detLink a:hover {
         text-decoration: underline;
     }
+    .newsItem {
+        width: 78%;
+        float: left;
+    }
+    .newsItem .infoContainer-a {
+        width: 30%;
+    }
+    .newsItem .infoContainer-b {
+        width: 62%;
+        padding-left: 3%;
+        padding-right: 5%;
+    }
+    .newMiniMoreButton {
+        line-height: 1;
+        border-bottom: 1px dotted;
+    }
+    .newMiniMoreButton:hover {
+        color: #ffffff;
+    }
+
 }
