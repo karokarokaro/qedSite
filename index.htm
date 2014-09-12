@@ -23,11 +23,11 @@
     <div class="header">Меню</div>
     <div class="list">
         <a href=""><div class="item item-beuro">О бюро</div></a>
-        <a href=""><div class="item item-beuro">О команде</div></a>
-        <a href=""><div class="item item-beuro">Меропрития</div></a>
-        <a href=""><div class="item item-beuro">Партнеры</div></a>
-        <a href=""><div class="item item-beuro">Отзывы</div></a>
-        <a href=""><div class="item item-beuro">Контакты</div></a>
+        <a href=""><div class="item item-team">О команде</div></a>
+        <a href=""><div class="item item-events">Меропрития</div></a>
+        <a href=""><div class="item item-reviews">Отзывы</div></a>
+        <a href=""><div class="item item-contacts">Контакты</div></a>
+        <a href=""><div class="item item-search">Поиск</div></a>
     </div>
 </div>
 <div data-role="content" class="ui-content">
@@ -45,19 +45,19 @@
             </div>
         </div>
         <a href="#leftMenu" class="menuLink onlyPhone"></a>
-        <div class="onlyPC">
-            <form action="" method="post">
-                <input class="searchInput" data-mini="true" type="text" placeholder="Поиск..." >
-            </form>
-        </div>
+        <form class="searchBox onlyPC" action="" method="post">
+            <input class="searchInput" name="query" data-mini="true" type="text" placeholder="Поиск..." />
+            <input type="hidden" name="searchQuery"/>
+            <ul class="adviceBox"></ul>
+        </form>
     </div>
     <div class="top2 pull-left">
         <a href="."><img class="logo" src="img/images/Logo.png"/></a>
     </div>
     <div class="socLinks onlyPhone pull-right">
-        <a href=""><img src="img/images/Facebook-icon.png"/></a>
-        <a href=""><img src="img/images/LinkedIn-icon.png"/></a>
-        <a href=""><img src="img/images/Twitter-icon.png"/></a>
+    <a href=""><img src="img/images/Facebook-icon.png"/></a>
+    <a href=""><img src="img/images/LinkedIn-icon.png"/></a>
+    <a href=""><img src="img/images/Twitter-icon.png"/></a>
     </div>
 </div>
 <div data-role="collapsible-set" class="uslCollapsible onlyPhone">
@@ -127,15 +127,15 @@
     </div>
 </div>
 <div class="menuButtons onlyPC customPadding">
-    <a href="dsda" class="item qedButton" onclick="alert($(window).width());">
+    <a href="about.htm" class="item qedButton">
         <span>О бюро</span>
         <div class="redActive"></div>
     </a>
-    <a href="#" class="item qedButton">
+    <a href="team.htm" class="item qedButton">
         <span>О команде</span>
         <div class="redActive"></div>
     </a>
-    <a href="#" class="item qedButton">
+    <a href="events.htm" class="item qedButton">
         <span>Мероприятия</span>
         <div class="redActive"></div>
     </a>

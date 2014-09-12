@@ -201,7 +201,7 @@ TabEngine = {
 };
 MessageEngine = {
     error: function(msg) {
-        alert(msg);
+        console.log(msg);
     }
 };
 $(document).on("pagecreate", ".thisPage", function(e) {
