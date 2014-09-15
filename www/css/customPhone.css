@@ -1,0 +1,221 @@
+@media (max-width: 767px) {
+    .onlyPC {
+        display: none !important;
+    }
+    .footerDiv .level1 {
+        float: right;
+    }
+    .footerDiv .level2 {
+        float: left;
+        padding-top: 17px;
+    }
+    .presentText {
+        width: 95%;
+    }
+    .top1 {
+        background-color: #840633;
+        padding: 0px 1% 0px 1%;
+        overflow: hidden;
+        margin-bottom: 30px;
+    }
+    .top1 .links {
+        float: right;
+    }
+    .top .socLinks {
+        padding-top: 10px;
+        padding-right: 1%;
+    }
+    .footerDiv .info .socLinks > a.facebook:active {
+        background-image: url('../img/images/FacebookHover.png');
+    }
+    .footerDiv .info .socLinks > a.twitter:active {
+        background-image: url('../img/images/TwitterHover.png');
+    }
+    .footerDiv .info .socLinks > a.linkedin:active {
+        background-image: url('../img/images/LinkedInHover.png');
+    }
+    .presentText p.text {
+        font-size: 20px;
+    }
+
+    .profileLink:active {
+        text-decoration: underline;
+    }
+    .langDiv {
+        margin-top: 10px;
+    }
+    .langDiv a {
+        padding-right: 10px;
+    }
+    .langDiv a:active {
+        text-decoration: underline;
+    }
+    .qedButton:active > span,
+    .qedButton.active > span {
+        color: #840633;
+    }
+
+    .qedButton.active > .redActive {
+        background-color: #840633;
+    }
+    .top2 {
+        padding: 0px 1% 0px 1%;
+    }
+
+    .thisPage {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+    }
+    .contactsCont .contForm {
+        margin-bottom: 15px;
+    }
+    .pageHeader {
+        font-size: 34px;
+    }
+    .contactsCont .contInfo .infBlock {
+        margin: 0px 20px 10px 0px;
+        float: left;
+    }
+    .waitInfo .level1 {
+        font-size: 21px;
+        margin-bottom: 30px;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 20px;
+    }
+    .waitInfo .level2 {
+        font-size: 23px;
+        padding-left: 10%;
+        margin-bottom: 50px;
+        margin-left: 0px;
+        margin-right: 5%;
+    }
+    .waitInfo .level3 {
+        padding-left: 10%;
+        font-size: 17px;
+        float: left;
+        margin-left: 0px;
+        margin-bottom: 20px;
+    }
+    .waitInfo .level4 {
+        float: right;
+        background-image: url("../img/images/sign.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 28%;
+        height: 100px;
+        margin-right: 5%;
+    }
+    .teamBlock {
+        margin-bottom: 10px;
+    }
+    .teamBlock .infoText {
+        padding-left: 5%;
+    }
+    .teamBlock .infoText p.detLink {
+        text-align: center;
+    }
+    .teamBlock .infoText p.detLink a {
+        display: block;
+        padding: 5px;
+        color: black;
+        background-color: #ffffff;
+    }
+    .teamBlock .infoText p.detLink a:active {
+        color: #840633;
+        background-color: #aaaaaa;
+
+    }
+    .infoDivM .infoContainerM-a {
+        float: left;
+    }
+    .infoDivM-a .infoContainerM-b {
+        float: right;
+    }
+    .infoDivM-a .infoContainerM-a {
+        width: 48%;
+        padding-right: 2%;
+    }
+    .infoDivM-a .infoContainerM-b {
+        width: 48%;
+        padding-left: 2%;
+    }
+    /*.newsItem .infoContainerM-a {*/
+        /*width: 35%;*/
+    /*}*/
+    /*.newsItem .infoContainerM-b {*/
+        /*width: 61%;*/
+    /*}*/
+    .newMiniMoreButton {
+        display: block;
+        background-color: #333333;
+        padding: 7px 0px;
+        font-size: 16px;
+        width: 100%;
+        text-align: center;
+    }
+    .newMiniMoreButton:active {
+        background-color: #777777;
+    }
+    .mainImage .container > div .uslList a:active {
+        color: #840633;
+    }
+    .uslCollapsible .ui-collapsible-content p a:active {
+        color: #840633;
+    }
+    .arrCollapsible a.ui-collapsible-heading-toggle:active {
+        color: #840633;
+    }
+    .teamDiv .arrCollapsible .ui-collapsible-content p a:active {
+        color: #840633;
+    }
+    a:active .addMenuText {
+        color: #840633;
+    }
+    .menuLink:active {
+        opacity: 0.4;
+    }
+    .newsTab {
+        margin-top: 0px;
+    }
+    .newsTab:active {
+        background-color: #840633;
+    }
+    .footerDiv ul.footerMenu a:active {
+        color: #840633;
+    }
+    .footerDiv .level1,
+    .footerDiv .level2 {
+        float: none;
+        padding: 0px;
+    }
+    .footerDiv .info {
+        float: none;
+    }
+    .footerDiv .info p {
+        text-align: center;
+    }
+    .top {
+        margin-bottom: 10px;
+    }
+    #leftMenu .list a:active {
+        background-color: #eeeeee;
+    }
+
+    .ui-datepicker .ui-datepicker-prev-active,
+    .ui-datepicker .ui-datepicker-next-active {
+        top: 1px;
+    }
+    .ui-datepicker .ui-datepicker-prev-active {
+        left: 1px;
+    }
+    .ui-datepicker .ui-datepicker-next-active {
+        right: 1px;
+    }
+    .ui-datepicker-calendar tr td:active:not(.ui-datepicker-other-month) {
+        background-color: #c2c2c2 !important;
+    }
+}
