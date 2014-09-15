@@ -18,19 +18,19 @@
 
 </head>
 <body>
-<div data-role="page" class="thisPage" id="newsPage">
+<div data-role="page" class="thisPage newsPage">
 
-    <div data-role="panel" id="leftMenu" data-display="push" data-position="left">
-        <div class="header">Меню</div>
-        <div class="list">
-            <a href=""><div class="item item-beuro">О бюро</div></a>
-            <a href=""><div class="item item-beuro">О команде</div></a>
-            <a href=""><div class="item item-beuro">Меропрития</div></a>
-            <a href=""><div class="item item-beuro">Партнеры</div></a>
-            <a href=""><div class="item item-beuro">Отзывы</div></a>
-            <a href=""><div class="item item-beuro">Контакты</div></a>
-        </div>
+<div data-role="panel" id="leftMenu" data-display="push" data-position="left">
+    <div class="header">Меню</div>
+    <div class="list">
+        <a href=""><div class="item item-beuro">О бюро</div></a>
+        <a href=""><div class="item item-team">О команде</div></a>
+        <a href=""><div class="item item-events">Меропрития</div></a>
+        <a href=""><div class="item item-reviews">Отзывы</div></a>
+        <a href=""><div class="item item-contacts">Контакты</div></a>
+        <a href=""><div class="item item-search">Поиск</div></a>
     </div>
+</div>
     <div data-role="content" class="ui-content">
         <div class="top overflowHidden">
             <div class="top1">
@@ -45,12 +45,14 @@
                         </a>
                     </div>
                 </div>
-                <a href="#leftMenu" class="menuLink onlyPhone"></a>
-                <div class="onlyPC">
-                    <form action="" method="post">
-                        <input class="searchInput" data-mini="true" type="text" placeholder="Поиск..." >
-                    </form>
-                </div>
+                <a href="#leftMenu" class="menuLink onlyPhone">
+                    <div></div>
+                </a>
+                <form class="searchBox onlyPC" action="" method="post">
+                    <input class="searchInput" name="query" data-mini="true" type="text" placeholder="Поиск..." />
+                    <input type="hidden" name="searchQuery"/>
+                    <ul class="adviceBox"></ul>
+                </form>
             </div>
             <div class="top2 pull-left">
                 <a href="."><img class="logo" src="img/images/Logo.png"/></a>
@@ -59,17 +61,17 @@
                 <span>НОВОСТИ</span>
             </div>
             <!--<div class="socLinks onlyPhone pull-right">-->
-                <!--<a href=""><img src="img/images/Facebook-icon.png"/></a>-->
-                <!--<a href=""><img src="img/images/LinkedIn-icon.png"/></a>-->
-                <!--<a href=""><img src="img/images/Twitter-icon.png"/></a>-->
+            <!--<a href=""><img src="img/images/Facebook-icon.png"/></a>-->
+            <!--<a href=""><img src="img/images/LinkedIn-icon.png"/></a>-->
+            <!--<a href=""><img src="img/images/Twitter-icon.png"/></a>-->
             <!--</div>-->
         </div>
 
-        <div class="mainImage ui-grid-a onlyPC waitImage customPadding">
-            <div class="container ui-grid-a">
-            </div>
+        <div class="mainImage ui-grid-a onlyPC customPadding maxWidthIn">
+            <img src="img/images/waitImage.png" class="maxWidthIn"/>
+            <div class="container ui-grid-a"></div>
         </div>
-        <div class="menuButtons onlyPC customPadding">
+        <div class="menuButtons onlyPC customPadding maxWidthIn">
             <a href="about.htm" class="item qedButton">
                 <span>О бюро</span>
                 <div class="redActive"></div>
@@ -90,13 +92,13 @@
         <div class="pageHeader customPadding onlyPC">
             <span>НОВОСТИ</span>
         </div>
-        <div class="customPadding overflowHidden">
+        <div class="customPadding overflowHidden maxWidthIn">
             <div class="infoDiv infoDiv-e infoDivM infoDivM-a">
                 <div class="infoContainer infoContainer-a onlyPC">&nbsp;</div>
-                <div class="infoContainer infoContainer-b infoContainerM infoContainerM-a">
+                <div class="infoContainer infoContainer-b">
                     <a class="qed-tab newsTab blockHeader active" href="#news-tab-1">В Москве</a>
                 </div>
-                <div class="infoContainer infoContainer-c infoContainerM infoContainerM-b">
+                <div class="infoContainer infoContainer-c">
                     <a class="qed-tab newsTab blockHeader" href="#news-tab-2">В мире</a>
                 </div>
             </div>
@@ -205,12 +207,11 @@
                 </ul>
                 <div class="info">
                     <div class="socLinks onlyPC">
-                        <a href=""><img src="img/images/Facebook-icon.png"/></a>
-                        <a href=""><img src="img/images/LinkedIn-icon.png"/></a>
-                        <a href=""><img src="img/images/Twitter-icon.png"/></a>
+                        <a href="" class="twitter"></a>
+                        <a href="" class="linkedin"></a>
+                        <a href="" class="facebook"></a>
                     </div>
-                    <p>Тверская, 7</p>
-                    <p>123322, Москва, Россия</p>
+                    <p>115093, Москва, Серпуховской пер., д.5, стр.3</p>
                 </div>
             </div>
             <div class="level2">

@@ -58,7 +58,8 @@
 .top ul.adviceBox li.advice p,
 .ui-datepicker *,
 .newsTab,
-.newMiniMoreButton {
+.newMiniMoreButton,
+#leftMenu * {
     font-family: 'PFDinDisplayPro-Thin';
 }
 .mainImage .container > div .uslList,
@@ -74,21 +75,25 @@
 .pull-left {
     float: left !important;
 }
+
+.top2 .logo {
+    height: 65px;
+}
 body {
     background: none;
     background-image: url('../img/backgrounds/office.png');
 }
 .profileLink img {
-    height: 20px;
+    height: 18px;
 }
 .profileLink {
+    display: block;
+    padding-top: 2px;
     color: #939293;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
 }
-.profileLink:hover {
-    text-decoration: underline;
-}
+
 .langDiv {
     margin-left: 50px;
     margin-top: 6px;
@@ -96,18 +101,15 @@ body {
 }
 .langDiv a {
     color: white;
-    font-size: 18px;
-}
-.langDiv a:hover {
-    text-decoration: underline;
+    font-size: 16px;
 }
 .overflowHidden {
     overflow: hidden;
 }
 .searchInput {
     padding-right: 27px !important;
-    padding-top: 5px !important;
-    padding-bottom: 5px !important;
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
     line-height: 1 !important;
     min-height: 1em !important;
     font-size: 16px !important;
@@ -115,43 +117,63 @@ body {
     background-repeat: no-repeat !important;
     background-position: right center;
     background-size: 21px 15px;
+    background-color: #ffffff;
     border: none !important;
     color: black;
+    /*filter: Alpha(Opacity=0);*/
+    opacity: 0.3;
     width: 256px !important;
 }
+.mainSearch .searchInput {
+    width: 100% !important;
+}
+.searchInput:active,
+.searchInput:focus {
+    opacity: 1;
+}
 .mainImage {
-    height: 300px;
-    max-width: 1300px;
     margin: 10px auto;
     position: relative;
     padding: 0px;
 }
 .mainImage .container {
-    background-position: 0px 0px;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
     width: 100%;
     height: 100%;
     position: absolute;
     left: 0px;
     top: 0px;
+    z-index: 300;
 }
+.mainImage > img {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    z-index: 200;
+    width: 100%;
+}
+.homeImage {
+    height: 300px;
+}
+.homeImage >img {
+    width: auto;
+    height: 100%;
+}
+
 .maxVol {
     width: 100%;
     height: 100%;
 }
-.mainImage > div.whiteCont,
-.mainImage > div.whiteCont,
 .mainImage > div.whiteCont {
     background-color: white;
-    filter: Alpha(Opacity=0);
+    /*filter: Alpha(Opacity=0);*/
     opacity: 0;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
 }
-.homeImage .container {
-    background-image: url('../img/images/Columns.png');
-}
-.waitImage .container {
-    background-image: url('../img/images/waitImage.png');
+.mainImage > div.whiteCont.ui-block-b {
+    left: 50%;
 }
 .customMargin {
     margin: 0% 2% 10px 2%;
@@ -187,7 +209,7 @@ body {
 }
 .newsDiv .content .item p {
     margin: 0px 30px 0px 0px;
-    font-size: 14px;
+    font-size: 15px;
 }
 .newsDiv .content .item p.text {
     color: white;
@@ -209,17 +231,14 @@ body {
     font-weight: bold;
     padding-left: 30px;
     list-style: none;
-    filter: Alpha(Opacity=0);
+    /*filter: Alpha(Opacity=0);*/
     opacity: 0;
 }
 .mainImage .container > div .uslList a {
     color: #3c3b3b;
 }
-.mainImage .container > div .uslList a:hover {
-    color: #840633;
-}
 .mainImage .container > div.active .uslList {
-    filter: Alpha(Opacity=100);
+    /*filter: Alpha(Opacity=100);*/
     opacity: 1;
 }
 .mainImage .container > div .uslHeader {
@@ -247,12 +266,6 @@ body {
 .qedButton:active {
     background-color: #aaaaaa;
 }
-
-
-.qedButton.active > span,
-.qedButton:hover > span {
-    color: #840633;
-}
 .qedButton > .redActive {
     width: 100%;
     height: 4px;
@@ -260,10 +273,7 @@ body {
     left: 0px;
     bottom: 0px;
 }
-.qedButton.active > .redActive,
-.qedButton:hover > .redActive {
-    background-color: #840633;
-}
+
 .menuButtons {
     position: relative;
     overflow: hidden;
@@ -280,6 +290,12 @@ body {
 .menuButtons .item:first-child {
     margin-left: 0px;
 }
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
 .presentText {
     margin: 0px auto;
     color: #858585;
@@ -293,10 +309,12 @@ body {
     font-size: 24px;
     font-weight: bold;
     text-align: justify;
+    margin: 0px auto;
 }
 .presentText p.author {
     text-align: right;
     font-weight: bold;
+    margin: 0px auto;
 }
 .addMenu, .linkPanel {
     background-image: url('../img/backgrounds/subtle_zebra_3d.png');
@@ -350,9 +368,7 @@ body {
 /*.addMenuIcon.iconBag {*/
 /*background-image: url("../img/images/Warranty.png");*/
 /*}*/
-a:hover .addMenuText {
-    color: #840633;
-}
+
 .addMenuText {
     text-align: center;
     color: #939293;
@@ -371,14 +387,33 @@ a:hover .addMenuText {
 .footerDiv ul.footerMenu a {
     color: #939293;
 }
-.footerDiv ul.footerMenu a:hover {
-    color: #840633;
-}
+
 .footerDiv .info {
-    float: right;
+    overflow: hidden;
 }
 .footerDiv .info .socLinks{
     text-align: right;
+    overflow: hidden;
+}
+.footerDiv .info .socLinks > a.facebook {
+    background-image: url('../img/images/Facebook-icon.png');
+}
+.footerDiv .info .socLinks > a.twitter {
+    background-image: url('../img/images/Twitter-icon.png');
+}
+.footerDiv .info .socLinks > a.linkedin {
+    background-image: url('../img/images/LinkedIn-icon.png');
+}
+
+
+.footerDiv .info .socLinks > a {
+    position: relative;
+    display: block;
+    width: 41px;
+    height: 41px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    float: right;
 }
 .footerDiv .level1, .footerDiv .level2 {
     overflow: hidden;
@@ -392,12 +427,13 @@ a:hover .addMenuText {
     margin: 0px;
     color: #840633;
 }
+
 #leftMenu {
     background-color: #cccccc;
 }
 #leftMenu .header {
     color: #939293;
-    font-size: 17px;
+    font-size: 24px;
     background-color: white;
     text-align: center;
     padding: 10px 0px;
@@ -426,9 +462,7 @@ a:hover .addMenuText {
     background-position: left center;
     background-repeat: no-repeat;
 }
-#leftMenu .list a:hover {
-    background-color: #eeeeee;
-}
+
 #leftMenu .item-beuro {
     background-image: url("../img/images/o-buro.png");
     background-size: 31px 21px;
@@ -440,17 +474,20 @@ a:hover .addMenuText {
 #leftMenu .item-events {
     background-image: url("../img/images/Meropriyatiya.png");
     background-size: 21px 21px;
-    margin-left: 13px !important;
+    /*margin-left: 13px !important;*/
 }
 #leftMenu .item-reviews {
     background-image: url("../img/images/Otzivi.png");
     background-size: 21px 21px;
-    margin-left: 13px !important;
+    /*margin-left: 13px !important;*/
 }
 .menuLink {
     float: left;
     display: block;
-    margin: 10px;
+    margin: 6px;
+    padding: 4px;
+}
+.menuLink div {
     width: 40px;
     height: 30px;
     background-image: url('../img/images/Menu.png');
@@ -484,9 +521,7 @@ a:hover .addMenuText {
 .uslCollapsible .ui-collapsible-content p a {
     color: white;
 }
-.uslCollapsible .ui-collapsible-content p a:hover {
-    color: #840633;
-}
+
 .pageHeader {
     text-align: center;
     color: #ffffff;
@@ -513,6 +548,7 @@ a:hover .addMenuText {
     padding-top: 6px;
     float: right;
     min-width: 120px;
+    margin-top: 10px;
 }
 .contForm textarea {
     min-height: 100px;
@@ -593,9 +629,6 @@ a:hover .addMenuText {
     text-align: justify;
     margin: 0px 0px 10px 0px;
 }
-.maxWidthIn {
-
-}
 .maxWidthOut {
 
 }
@@ -623,9 +656,7 @@ a:hover .addMenuText {
 .arrCollapsible .ui-collapsible-collapsed a.ui-collapsible-heading-toggle {
     background-image: url("../img/images/arrBottom.png");
 }
-.arrCollapsible a.ui-collapsible-heading-toggle:hover {
-    color: #840633;
-}
+
 .arrCollapsible .ui-collapsible-content {
     padding: 0px;
 }
@@ -636,9 +667,7 @@ a:hover .addMenuText {
 .teamDiv .arrCollapsible .ui-collapsible-content p a {
     color: white;
 }
-.teamDiv .arrCollapsible .ui-collapsible-content p a:hover {
-    color: #840633;
-}
+
 .teamDiv .arrCollapsible .ui-collapsible-content .infoDiv {
     margin: 5px 0px;
 }
@@ -676,8 +705,8 @@ a:hover .addMenuText {
     position: absolute;
     z-index: 10000;
     margin: 0px;
-    right: 2%;
-    top: 67px;
+    right: 4%;
+    top: 60px;
     min-width: 256px;
     padding: 0px;
 }
@@ -696,7 +725,7 @@ a:hover .addMenuText {
 .top ul.adviceBox li.advice p.header {
     color: #000000;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 19px;
 }
 .top ul.adviceBox li.advice p.description {
     color: #666666;
@@ -720,9 +749,9 @@ a:hover .addMenuText {
     color: white;
     padding: 10px 0px;
     text-align: center;
+    background-color: #333333;
     margin-top: 20px;
 }
-.newsTab:hover,
 .newsTab.active {
     background-color: #840633;
 }
@@ -766,21 +795,11 @@ a:hover .addMenuText {
     width: 1.8em;
     height: 1.8em;
 }
-.ui-datepicker .ui-datepicker-prev-hover,
-.ui-datepicker .ui-datepicker-next-hover {
-    top: 1px;
-}
 .ui-datepicker .ui-datepicker-prev {
     left: 2px;
 }
 .ui-datepicker .ui-datepicker-next {
     right: 2px;
-}
-.ui-datepicker .ui-datepicker-prev-hover {
-    left: 1px;
-}
-.ui-datepicker .ui-datepicker-next-hover {
-    right: 1px;
 }
 .ui-datepicker .ui-datepicker-prev span,
 .ui-datepicker .ui-datepicker-next span {
@@ -905,9 +924,7 @@ a:hover .addMenuText {
 .ui-datepicker-calendar tr th {
     font-size: 12px;
 }
-.ui-datepicker-calendar tr td:hover:not(.ui-datepicker-other-month) {
-    background-color: #c2c2c2 !important;
-}
+
 .ui-datepicker-calendar tr td a,
 .ui-datepicker-calendar tr td span {
     text-align: center;

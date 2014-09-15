@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="css/customPhone.css" />
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/jquery.mobile.custom.js"></script>
+
+    <script src="js/config.js"></script>
     <script src="js/custom.js"></script>
 
 
@@ -44,7 +46,9 @@
                         </a>
                     </div>
                 </div>
-                <a href="#leftMenu" class="menuLink onlyPhone"></a>
+                <a href="#leftMenu" class="menuLink onlyPhone">
+                    <div></div>
+                </a>
                 <form class="searchBox onlyPC" action="" method="post">
                     <input class="searchInput" name="query" data-mini="true" type="text" placeholder="Поиск..." />
                     <input type="hidden" name="searchQuery"/>
@@ -64,11 +68,12 @@
             <!--</div>-->
         </div>
 
-        <div class="mainImage ui-grid-a onlyPC waitImage customPadding">
+        <div class="mainImage ui-grid-a onlyPC customPadding maxWidthIn">
+            <img src="img/images/waitImage.png" class="maxWidthIn"/>
             <div class="container ui-grid-a">
             </div>
         </div>
-        <div class="menuButtons onlyPC customPadding">
+        <div class="menuButtons onlyPC customPadding maxWidthIn">
             <a href="about.htm" class="item qedButton">
                 <span>О бюро</span>
                 <div class="redActive"></div>
@@ -89,8 +94,8 @@
         <div class="pageHeader customPadding onlyPC">
             <span>ПОИСК</span>
         </div>
-        <div class="infoDiv customPadding mainSearch">
-            <div class="infoContainer right">
+        <div class="infoDiv infoDiv-a customPadding mainSearch maxWidthIn">
+            <div class="infoContainer infoContainer-b">
                 <div data-role="collapsible-set" class="arrCollapsible">
                     <div data-role="collapsible" data-inset="false">
                         <h3>Критерии поиска</h3>
@@ -105,7 +110,7 @@
                     </div>
                 </div>
             </div>
-            <div class="infoContainer left">
+            <div class="infoContainer infoContainer-a left">
                 <form class="searchBox" action="" method="post">
                     <input class="searchInput" name="query" data-mini="true" type="text" placeholder="Поиск..." />
                     <input type="hidden" name="searchQuery"/>
@@ -113,7 +118,7 @@
                 </form>
             </div>
         </div>
-        <div class="newsDiv customPadding">
+        <div class="newsDiv customPadding maxWidthIn">
 
             <div class="newsContainer right">
                 <div class="header">Отзывы</div>
@@ -213,12 +218,11 @@
                 </ul>
                 <div class="info">
                     <div class="socLinks onlyPC">
-                        <a href=""><img src="img/images/Facebook-icon.png"/></a>
-                        <a href=""><img src="img/images/LinkedIn-icon.png"/></a>
-                        <a href=""><img src="img/images/Twitter-icon.png"/></a>
+                        <a href="" class="twitter"></a>
+                        <a href="" class="linkedin"></a>
+                        <a href="" class="facebook"></a>
                     </div>
-                    <p>Тверская, 7</p>
-                    <p>123322, Москва, Россия</p>
+                    <p>115093, Москва, Серпуховской пер., д.5, стр.3</p>
                 </div>
             </div>
             <div class="level2">

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/customPhone.css" />
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/jquery.mobile.custom.js"></script>
+    <script src="js/config.js"></script>
     <script src="js/custom.js"></script>
 
 
@@ -44,7 +45,9 @@
                 </a>
             </div>
         </div>
-        <a href="#leftMenu" class="menuLink onlyPhone"></a>
+        <a href="#leftMenu" class="menuLink onlyPhone">
+            <div></div>
+        </a>
         <form class="searchBox onlyPC" action="" method="post">
             <input class="searchInput" name="query" data-mini="true" type="text" placeholder="Поиск..." />
             <input type="hidden" name="searchQuery"/>
@@ -88,9 +91,10 @@
     </div>
 
 </div>
-<div class="mainImage ui-grid-a onlyPC homeImage">
+<div class="mainImage ui-grid-a onlyPC homeImage maxWidthIn">
     <div class="ui-block-a whiteCont maxVol"></div>
     <div class="ui-block-b whiteCont maxVol"> </div>
+    <img src="img/images/Columns.png" class="maxWidthIn"/>
     <div class="container ui-grid-a">
         <div class="ui-block-a maxVol">
             <ul class="uslList">
@@ -126,7 +130,7 @@
         </div>
     </div>
 </div>
-<div class="menuButtons onlyPC customPadding">
+<div class="menuButtons onlyPC customPadding maxWidthIn">
     <a href="about.htm" class="item qedButton">
         <span>О бюро</span>
         <div class="redActive"></div>
@@ -144,7 +148,7 @@
         <div class="redActive"></div>
     </a>
 </div>
-<div class="presentText customPadding">
+<div class="presentText customPadding maxWidthIn">
     <p class="header">"Что и требовалось доказать"</p>
     <p class="text">Адвокаты Бюро на протяжении многих лет входят в российские и международные рейтинги.
         Адвокаты Бюро накопили значительный опыт, оказывая юридическую помощь доверителям по
@@ -217,7 +221,7 @@
         </div>
     </div>
 </div>
-<div class="newsDiv customPadding">
+<div class="newsDiv customPadding maxWidthIn">
     <div class="newsContainer left">
         <div class="header">Новости</div>
         <div class="content">
@@ -330,12 +334,11 @@
         </ul>
         <div class="info">
             <div class="socLinks onlyPC">
-                <a href=""><img src="img/images/Facebook-icon.png"/></a>
-                <a href=""><img src="img/images/LinkedIn-icon.png"/></a>
-                <a href=""><img src="img/images/Twitter-icon.png"/></a>
+                <a href="" class="twitter"></a>
+                <a href="" class="linkedin"></a>
+                <a href="" class="facebook"></a>
             </div>
-            <p>Тверская, 7</p>
-            <p>123322, Москва, Россия</p>
+            <p>115093, Москва, Серпуховской пер., д.5, стр.3</p>
         </div>
     </div>
     <div class="level2">

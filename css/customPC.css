@@ -6,14 +6,48 @@
         float: left;
         width: 50%;
     }
+    .socLinks > a:active {
+        top: 1px;
+    }
+    .socLinks > a:active {
+        top: 1px;
+    }
+    .footerDiv .info .socLinks > a.facebook:hover {
+        background-image: url('../img/images/FacebookHover.png');
+    }
+    .footerDiv .info .socLinks > a.twitter:hover {
+        background-image: url('../img/images/TwitterHover.png');
+    }
+    .footerDiv .info .socLinks > a.linkedin:hover {
+        background-image: url('../img/images/LinkedInHover.png');
+    }
+
     .profileDiv {
         float: left;
     }
     .langDiv {
         float: right;
     }
+    .langDiv a:hover {
+        text-decoration: underline;
+    }
     .presentText {
         width: 80%;
+    }
+    .presentText .text,
+    .presentText .author {
+        max-width: 75%;
+    }
+    .profileLink:hover {
+        text-decoration: underline;
+    }
+    .qedButton.active > span,
+    .qedButton:hover > span {
+        color: #840633;
+    }
+    .qedButton.active > .redActive,
+    .qedButton:hover > .redActive {
+        background-color: #840633;
     }
     .newsDiv .newsContainer,
     .infoDiv .infoContainer {
@@ -64,22 +98,19 @@
         padding-left: 0%;
     }
 
-    .newsDiv .newsContainer.left,
-    .infoDiv .infoContainer.left {
+    .newsDiv .newsContainer.left {
         padding-right: 2%;
+        width: 48%;
     }
-    .newsDiv .newsContainer.right,
-    .infoDiv .infoContainer.right {
+    .newsDiv .newsContainer.right {
         padding-left: 2%;
+        width: 48%;
     }
     .top {
-        padding: 10px 2% 10px 2%;
+        padding: 10px 4% 10px 4%;
     }
     .top1 {
         float: right;
-    }
-    .top2 .logo {
-        height: 90px;
     }
     .contactsCont .contForm,
     .contactsCont .contInfo {
@@ -101,6 +132,10 @@
     .teamBlock .infoText p.detLink a:hover {
         text-decoration: underline;
     }
+    .eventsDiv {
+        width: 78%;
+        float: left;
+    }
     .newsItem {
         width: 78%;
         float: left;
@@ -120,5 +155,54 @@
     .newMiniMoreButton:hover {
         color: #ffffff;
     }
+    .mainImage .container > div .uslList a:hover {
+        color: #840633;
+    }
+    a:hover .addMenuText {
+        color: #840633;
+    }
+    .footerDiv ul.footerMenu a:hover {
+        color: #840633;
+    }
+    #leftMenu .list a:hover {
+        background-color: #eeeeee;
+    }
+    .uslCollapsible .ui-collapsible-content p a:hover {
+        color: #840633;
+    }
+    .arrCollapsible a.ui-collapsible-heading-toggle:hover {
+        color: #840633;
+    }
+    .teamDiv .arrCollapsible .ui-collapsible-content p a:hover {
+        color: #840633;
+    }
+    .newsTab:hover {
+        background-color: #840633;
+    }
+    .ui-datepicker .ui-datepicker-prev-hover,
+    .ui-datepicker .ui-datepicker-next-hover {
+        top: 1px;
+    }
+    .ui-datepicker .ui-datepicker-prev-hover {
+        left: 1px;
+    }
+    .ui-datepicker .ui-datepicker-next-hover {
+        right: 1px;
+    }
+    .ui-datepicker-calendar tr td:hover:not(.ui-datepicker-other-month) {
+        background-color: #c2c2c2 !important;
+    }
+}
+@media (min-width: 768px) and (max-width: 1450px) {
+    .maxWidthIn {
+        max-width: 1100px;
+    }
 
 }
+@media (min-width: 1451px) {
+    .maxWidthIn {
+        max-width: 1400px;
+    }
+
+}
+

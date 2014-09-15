@@ -25,12 +25,43 @@
         padding-top: 10px;
         padding-right: 1%;
     }
+    .footerDiv .info .socLinks > a.facebook:active {
+        background-image: url('../img/images/FacebookHover.png');
+    }
+    .footerDiv .info .socLinks > a.twitter:active {
+        background-image: url('../img/images/TwitterHover.png');
+    }
+    .footerDiv .info .socLinks > a.linkedin:active {
+        background-image: url('../img/images/LinkedInHover.png');
+    }
+    .presentText p.text {
+        font-size: 20px;
+    }
+
+    .profileLink:active {
+        text-decoration: underline;
+    }
+    .langDiv {
+        margin-top: 10px;
+    }
+    .langDiv a {
+        padding-right: 10px;
+    }
+    .langDiv a:active {
+        text-decoration: underline;
+    }
+    .qedButton:active > span,
+    .qedButton.active > span {
+        color: #840633;
+    }
+
+    .qedButton.active > .redActive {
+        background-color: #840633;
+    }
     .top2 {
         padding: 0px 1% 0px 1%;
     }
-    .top2 .logo {
-        height: 65px;
-    }
+
     .thisPage {
         -webkit-user-select: none;
         -moz-user-select: none;
@@ -129,5 +160,62 @@
     .newMiniMoreButton:active {
         background-color: #777777;
     }
+    .mainImage .container > div .uslList a:active {
+        color: #840633;
+    }
+    .uslCollapsible .ui-collapsible-content p a:active {
+        color: #840633;
+    }
+    .arrCollapsible a.ui-collapsible-heading-toggle:active {
+        color: #840633;
+    }
+    .teamDiv .arrCollapsible .ui-collapsible-content p a:active {
+        color: #840633;
+    }
+    a:active .addMenuText {
+        color: #840633;
+    }
+    .menuLink:active {
+        opacity: 0.4;
+    }
+    .newsTab {
+        margin-top: 0px;
+    }
+    .newsTab:active {
+        background-color: #840633;
+    }
+    .footerDiv ul.footerMenu a:active {
+        color: #840633;
+    }
+    .footerDiv .level1,
+    .footerDiv .level2 {
+        float: none;
+        padding: 0px;
+    }
+    .footerDiv .info {
+        float: none;
+    }
+    .footerDiv .info p {
+        text-align: center;
+    }
+    .top {
+        margin-bottom: 10px;
+    }
+    #leftMenu .list a:active {
+        background-color: #eeeeee;
+    }
 
+    .ui-datepicker .ui-datepicker-prev-active,
+    .ui-datepicker .ui-datepicker-next-active {
+        top: 1px;
+    }
+    .ui-datepicker .ui-datepicker-prev-active {
+        left: 1px;
+    }
+    .ui-datepicker .ui-datepicker-next-active {
+        right: 1px;
+    }
+    .ui-datepicker-calendar tr td:active:not(.ui-datepicker-other-month) {
+        background-color: #c2c2c2 !important;
+    }
 }
