@@ -117,11 +117,11 @@ body {
     background-repeat: no-repeat !important;
     background-position: right center;
     background-size: 21px 15px;
-    background-color: #ffffff;
+    background-color: #ebebeb;
     border: none !important;
     color: black;
     /*filter: Alpha(Opacity=0);*/
-    opacity: 0.3;
+    opacity: 0.5;
     width: 256px !important;
 }
 .mainSearch .searchInput {
@@ -141,8 +141,11 @@ body {
     height: 100%;
     position: absolute;
     left: 0px;
-    top: 0px;
+    bottom: 0px;
     z-index: 300;
+}
+.homeImage .container {
+    height: 300px;
 }
 .mainImage > img {
     position: relative;
@@ -168,9 +171,12 @@ body {
     /*filter: Alpha(Opacity=0);*/
     opacity: 0;
     position: absolute;
-    top: 0px;
+    bottom: 0px;
     left: 0px;
     z-index: 100;
+}
+.homeImage > div.whiteCont {
+    height: 300px;
 }
 .mainImage > div.whiteCont.ui-block-b {
     left: 50%;
@@ -200,10 +206,7 @@ body {
 .newsDiv .toolbar {
     text-align: right;
 }
-.newsDiv .toolbar a {
-    color: white;
-    text-decoration: underline
-}
+
 .newsDiv .content .item {
     margin: 10px 0px 15px 0px;
 }
@@ -215,7 +218,7 @@ body {
     color: white;
 }
 .newsDiv .content .item p.date {
-    color: #840633;
+    color: #747474;
     font-weight: bold;
 }
 .mainImage .container > div {
@@ -391,22 +394,22 @@ body {
 .footerDiv .info {
     overflow: hidden;
 }
-.footerDiv .info .socLinks{
+.socLinks {
     text-align: right;
     overflow: hidden;
 }
-.footerDiv .info .socLinks > a.facebook {
+.socLinks > a.facebook {
     background-image: url('../img/images/Facebook-icon.png');
 }
-.footerDiv .info .socLinks > a.twitter {
+.socLinks > a.twitter {
     background-image: url('../img/images/Twitter-icon.png');
 }
-.footerDiv .info .socLinks > a.linkedin {
+.socLinks > a.linkedin {
     background-image: url('../img/images/LinkedIn-icon.png');
 }
 
 
-.footerDiv .info .socLinks > a {
+.socLinks > a {
     position: relative;
     display: block;
     width: 41px;
@@ -432,7 +435,7 @@ body {
     background-color: #cccccc;
 }
 #leftMenu .header {
-    color: #939293;
+    color: #840633;
     font-size: 24px;
     background-color: white;
     text-align: center;
@@ -446,7 +449,7 @@ body {
 #leftMenu .list a {
     display: block;
     padding-right: 30px;
-    background-image: url('../img/images/menuArr.png');
+    background-image: url('../img/images/arr-grey.png');
     background-position: right center;
     background-repeat: no-repeat;
     background-size: 20px 20px;
@@ -455,7 +458,7 @@ body {
 #leftMenu .list .item {
     margin: 0px 0px 0px 8px;
     padding: 10px 0px 10px 42px;
-    color: #840633;
+    color: #767676;
     font-weight: bold;
     font-size: 20px;
     text-align: left;
@@ -484,7 +487,7 @@ body {
 .menuLink {
     float: left;
     display: block;
-    margin: 6px;
+    margin: 6px 1px;
     padding: 4px;
 }
 .menuLink div {
@@ -536,7 +539,7 @@ body {
 .contactsCont .contForm input,
 .contactsCont .contForm textarea {
     color: #000000;
-    background-color: #c8c8c8;
+    background-color: #ebebeb;
     margin-bottom: 5px;
     font-size: 16px;
     min-height: 1.2em;
@@ -701,7 +704,7 @@ body {
     /*position: relative;*/
 }
 .top ul.adviceBox {
-    background-color: #ffffff;
+    background-color: #ebebeb;
     position: absolute;
     z-index: 10000;
     margin: 0px;
@@ -775,7 +778,6 @@ body {
     float: right;
     color: #cccccc;
     font-size: 14px;
-
     cursor: pointer;
 }
 
@@ -975,3 +977,9 @@ body {
 
 }
 /*: The button used to select today's date.*/
+
+input, textarea {
+    -webkit-box-shadow: 0 1px 3px /*{global-box-shadow-size}*/ 		rgba(0,0,0,.15) /*{global-box-shadow-color}*/ inset;
+    -moz-box-shadow: 0 1px 3px /*{global-box-shadow-size}*/ 		rgba(0,0,0,.15) /*{global-box-shadow-color}*/ inset;
+    box-shadow: 0 1px 3px /*{global-box-shadow-size}*/ 				rgba(0,0,0,.15) /*{global-box-shadow-color}*/ inset;
+}

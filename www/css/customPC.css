@@ -12,13 +12,13 @@
     .socLinks > a:active {
         top: 1px;
     }
-    .footerDiv .info .socLinks > a.facebook:hover {
+    .socLinks > a.facebook:hover {
         background-image: url('../img/images/FacebookHover.png');
     }
-    .footerDiv .info .socLinks > a.twitter:hover {
+    .socLinks > a.twitter:hover {
         background-image: url('../img/images/TwitterHover.png');
     }
-    .footerDiv .info .socLinks > a.linkedin:hover {
+    .socLinks > a.linkedin:hover {
         background-image: url('../img/images/LinkedInHover.png');
     }
 
@@ -38,7 +38,7 @@
     .presentText .author {
         max-width: 75%;
     }
-    .profileLink:hover {
+    .profileLink span:hover {
         text-decoration: underline;
     }
     .qedButton.active > span,
@@ -108,6 +108,10 @@
     }
     .top {
         padding: 10px 4% 10px 4%;
+        position: fixed;
+        width: 92%;
+        background-image: url('../img/backgrounds/office.png');
+        z-index: 100000;
     }
     .top1 {
         float: right;
@@ -155,6 +159,9 @@
     .newMiniMoreButton:hover {
         color: #ffffff;
     }
+    .mainImage {
+        padding-top: 100px;
+    }
     .mainImage .container > div .uslList a:hover {
         color: #840633;
     }
@@ -166,6 +173,11 @@
     }
     #leftMenu .list a:hover {
         background-color: #eeeeee;
+        background-image: url("../img/images/menuArr.png");
+
+    }
+    #leftMenu .list a:hover .item {
+        color: #840633;
     }
     .uslCollapsible .ui-collapsible-content p a:hover {
         color: #840633;
