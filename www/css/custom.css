@@ -765,6 +765,17 @@ body {
 .newsItem {
     margin-top: 10px;
 }
+.newsItem p {
+    margin: 0px;
+}
+.newsItem p.text {
+    color: white;
+}
+.newsItem p.date {
+    color: #747474;
+}
+
+
 .newsItem .infoContainer-b {
     text-align: justify;
 }
