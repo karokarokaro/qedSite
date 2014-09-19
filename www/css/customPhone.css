@@ -20,6 +20,9 @@
         width: 98%;
         z-index: 100000;
     }
+    .aboutDiv .infoContainer-b {
+        display: none;
+    }
     .top1 .links {
         float: right;
     }

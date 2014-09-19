@@ -140,16 +140,28 @@
         width: 78%;
         float: left;
     }
+    .eventInfoDiv {
+
+    }
+    .eventInfoDiv .headerDiv {
+        width: 33%;
+        float: left;
+    }
+    .eventInfoDiv .textDiv {
+        width: 67%;
+        float: right;
+    }
+
     .newsItem {
         width: 78%;
         float: left;
     }
     .newsItem .infoContainer-a {
-        width: 30%;
+        width: 29%;
     }
     .newsItem .infoContainer-b {
         width: 62%;
-        padding-left: 3%;
+        padding-left: 4%;
         padding-right: 5%;
     }
     .newMiniMoreButton {

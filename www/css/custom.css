@@ -59,11 +59,16 @@
 .ui-datepicker *,
 .newsTab,
 .newMiniMoreButton,
-#leftMenu * {
+#leftMenu *,
+.eventItem .header,
+.eventItem .info,
+.eventInfoDiv .headerDiv {
     font-family: 'PFDinDisplayPro-Thin';
 }
 .mainImage .container > div .uslList,
-.uslCollapsible .ui-collapsible-content {
+.uslCollapsible .ui-collapsible-content,
+.eventItem .image .descr,
+.eventInfoDiv .textDiv {
     font-family: 'PFDinDisplayPro-ThinItal';
 }
 .linkPanel > p.header {
@@ -334,10 +339,13 @@ body {
     width: 70%;
 }
 .linkPanel .container .item {
-    width: 20%;
+    width: 50%;
     text-align: center;
     float: left;
     overflow: hidden;
+}
+.linkPanel .container .item img {
+    height: 100px;
 }
 .addMenuIcon {
     margin: 10px auto;
@@ -790,6 +798,125 @@ body {
     color: #cccccc;
     font-size: 14px;
     cursor: pointer;
+}
+.qedItemGallery {
+    position: relative;
+
+}
+.qedItemGallery .lArr,
+.qedItemGallery .rArr {
+    position: absolute;
+    width: 21px;
+    height: 50px;
+    top: 45%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+.qedItemGallery .lArr {
+    left: -21px;
+}
+.qedItemGallery .rArr {
+    left: 96%;
+}
+.qedItemGallery .cont {
+    position: relative;
+    overflow: hidden;
+}
+.qedItemGallery .outer {
+    position: relative;
+    width: 95%;
+    bottom: -20px;
+    left: 0px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+.qedItemGallery .inner {
+
+}
+.eventItem {
+    float: left;
+    margin: 0px 20px 0px 0px;
+    width: 300px;
+}
+.eventItem .header {
+    color: #727272;
+    font-size: 30px;
+}
+.eventItem .info {
+    font-size: 16px;
+}
+.eventItem .info.type1 {
+    color: #bfbfbf;
+}
+.eventItem .info.type2 {
+    color: white;
+}
+.eventItem .image {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+}
+.eventItem .image img {
+    position: relative;
+    z-index: 100;
+    display: block;
+    width: 100%;
+
+    height: 190px
+}
+.eventItem .image .descr {
+    padding: 15px;
+    position: absolute;
+    width: 270px;
+    height: 160px;
+    z-index: 200;
+    background-image: url("../img/backgrounds/back1.png");
+    background-repeat: repeat;
+    overflow: hidden;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    color: #414141;
+    font-size: 24px;
+}
+.eventItem .image .descr .redActive {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 5px;
+    background-color: #840633;
+    opacity: 0;
+}
+.eventInfoDiv {
+    background-image: url("../img/backgrounds/back1.png");
+    background-repeat: repeat;
+    overflow: hidden;
+}
+
+.eventInfoDiv .headerDiv,
+.eventInfoDiv .textDiv {
+    color: white;
+}
+.eventInfoDiv .headerDiv .header {
+    font-size: 35px;
+    text-align: center;
+    margin: 0px;
+}
+.eventInfoDiv .headerDiv .date {
+    font-size: 16px;
+    text-align: center;
+    margin: 0px;
+}
+.eventInfoDiv .textDiv {
+    font-size: 16px;
+    text-align: justify;
+    padding: 10px 10px 10px 0px;
+}
+.eventInfoDiv .textDiv p {
+    margin: 0px;
 }
 
 .ui-datepicker {

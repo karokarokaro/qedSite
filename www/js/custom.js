@@ -215,6 +215,33 @@ $(document).on("pagecreate", ".thisPage", function(e) {
             hoverMainImageItem(this, false)
         }
     );
+    $(".aboutDiv .newMiniMoreButton").on("click", function(e){
+        var $but = $(e.target);
+        $but.closest(".infoDiv").find(".infoContainer-b").slideDown();
+        $but.hide();
+    });
+    $(".eventItem .image").on("mouseenter",
+        function(e) {
+            var $descr = $(e.currentTarget).find(".descr, .descr .redActive");
+            $descr.stop(true);
+            $descr.animate({
+                opacity: 1
+            }, 300);
+        }
+    );
+    $(".eventItem .image").on("mouseleave",
+        function(e) {
+            var $descr = $(e.currentTarget).find(".descr, .descr .redActive");
+            $descr.stop(true);
+            $descr.animate({
+                opacity: 0
+            }, 300);
+        }
+    );
+    $(".qedItemGallery .lArr, .qedItemGallery .rArr").on("click", function(e) {
+        var isLeft = $(e.currentTarget).hasClass("lArr");
+
+    });
     if (e.target.id != "contPage") {
         $(document).on("swiperight", ".thisPage", function(e) {
             // We check if there is no open panel on the page because otherwise
