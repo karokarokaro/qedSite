@@ -199,6 +199,57 @@ TabEngine = {
         })
     }
 };
+EventsEngine = {
+    _cache: {},
+    _refreshCache: function(){
+        var cache = ObjectCache.get(Config.cacheEventsInfo);
+        if (cache != null) this._cache = cache;
+    },
+    init: function(thisPage) {
+        var $gallery = $(thisPage).find(".outEventGallery");
+        $gallery.find(".eventItem").on("click", function(e) {
+            var eItem = $(e.currentTarget);
+            var id = eItem.attr("eventId");
+            if (typeof id != "undefined") {
+                EventsEngine._refreshCache();
+                if (typeof EventsEngine._cache[id] != "undefined") {
+                    var eventInfoObject = EventsEngine._cache[id];
+                    showEventInfo(eventInfoObject);
+                } else {
+                    $.ajax({
+                        url: Config.URLajaxEventsInfo,
+                        dataType: "json",
+                        data: {
+                            id: id
+                        },
+                        success: function(response) {
+                            if (typeof response.result != "undefined") {
+                                TabEngine._cache[response.id] = response;
+                                ObjectCache.set(Config.cacheSearch, SearchEngine._cache);
+                                showEventInfo(response);
+                            }
+                        },
+                        error: function(response) {
+//                            response = {
+//                                id: href.substr(1),
+//                                result: href + ": dfgdfgdfg dfgd fgdf gdf"
+//                            };
+//                            if (typeof response.result != "undefined") {
+//                                if (!cacheDisabled) {
+//                                    TabEngine._cache["#" + response.id] = response;
+//                                    ObjectCache.set(Config.cacheTabs, TabEngine._cache);
+//                                }
+//                                $(href).html(response.result);
+//                            }
+//                            MessageEngine.error("nonnonno");
+                            showEventInfo(response);
+                        }
+                    });
+                }
+            }
+        });
+    }
+};
 MessageEngine = {
     error: function(msg) {
         console.log(msg);
@@ -239,10 +290,15 @@ $(document).on("pagecreate", ".thisPage", function(e) {
         }
     );
     $(".qedItemGallery .lArr, .qedItemGallery .rArr").on("click", function(e) {
-        var isLeft = $(e.currentTarget).hasClass("lArr");
+        handleGalleryArr(e);
 
     });
-    if (e.target.id != "contPage") {
+    $(".eventInfoDiv .closeButton").on("click", function(e) {
+        hideEventInfo();
+
+    });
+    if (e.target.id != "contPage"
+        && e.target.id != "eventsPage") {
         $(document).on("swiperight", ".thisPage", function(e) {
             // We check if there is no open panel on the page because otherwise
             // a swipe to close the left panel would also open the right panel (and v.v.).
@@ -252,11 +308,13 @@ $(document).on("pagecreate", ".thisPage", function(e) {
             }
         });
     }
-    SearchEngine.init($(e.target));
-    TabEngine.init($(e.target));
-    initSearch($($(e.target).find(".searchBox")[0]));
-    if (e.target.id == "searchPage") {
-        initSearch($($(e.target).find(".searchBox")[1]));
+    SearchEngine.init($(e.currentTarget));
+    TabEngine.init($(e.currentTarget));
+    EventsEngine.init($(e.currentTarget));
+
+    initSearch($($(e.currentTarget).find(".searchBox")[0]));
+    if (e.currentTarget.id == "searchPage") {
+        initSearch($($(e.currentTarget).find(".searchBox")[1]));
     }
 });
 function createAdviceLi(advice) {
@@ -434,3 +492,36 @@ function initSearch(searchBox) {
         e.stopPropagation();
     });
 }
+function handleGalleryArr(e) {
+    var step = 300;
+    var animationDelay = 250;
+    var isLeft = $(e.currentTarget).hasClass("lArr");
+    var gallery = $(e.currentTarget).closest(".qedItemGallery");
+    var outer = gallery.find(".outer");
+    var inner = gallery.find(".inner");
+    var scrollWidth = inner.width() - outer.width();
+    if (isLeft) {
+        if (outer.scrollLeft() > 0) {
+            outer.stop(true);
+            outer.animate({
+                scrollLeft: outer.scrollLeft() > step ? outer.scrollLeft()-step : 0
+            }, animationDelay);
+        }
+    } else {
+        if (outer.scrollLeft() < scrollWidth) {
+            outer.stop(true);
+            outer.animate({
+                scrollLeft: outer.scrollLeft() < scrollWidth-step ? outer.scrollLeft()+step : scrollWidth
+            }, animationDelay);
+        }
+    }
+
+}
+function showEventInfo(infoObject) {
+    //set Event Info
+    $(".eventInfoDiv").slideDown();
+}
+function hideEventInfo() {
+    $(".eventInfoDiv").slideUp();
+}
+

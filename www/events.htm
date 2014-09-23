@@ -18,7 +18,7 @@
     <script src="js/custom.js"></script>
 </head>
 <body>
-<div data-role="page" class="thisPage" id="mainPage">
+<div data-role="page" class="thisPage" id="eventsPage">
 
     <div data-role="panel" id="leftMenu" data-display="push" data-position="left">
         <div class="header">Меню</div>
@@ -32,7 +32,7 @@
         </div>
     </div>
     <div data-role="content" class="ui-content">
-        <div class="top">
+        <div class="top overflowHidden">
             <div class="top1">
                 <div class="links overflowHidden">
                     <div class="langDiv">
@@ -45,29 +45,25 @@
                         </a>
                     </div>
                 </div>
-                <a href="#leftMenu" class="menuLink onlyPhone"></a>
+                <a href="#leftMenu" class="menuLink onlyPhone">
+                    <div></div>
+                </a>
                 <form class="searchBox onlyPC" action="" method="post">
                     <input class="searchInput" name="query" data-mini="true" type="text" placeholder="Поиск..." />
                     <input type="hidden" name="searchQuery"/>
                     <ul class="adviceBox"></ul>
                 </form>
             </div>
-            <div class="top2 pull-left">
+            <div class="top2">
                 <a href="."><img class="logo" src="img/images/Logo.png"/></a>
             </div>
-            <div class="pageHeader customPadding onlyPhone pull-right">
+            <div class="pageHeader customPadding onlyPhone">
                 <span>МЕРОПРИЯТИЯ</span>
             </div>
-            <!--<div class="socLinks onlyPhone pull-right">-->
-                <!--<a href=""><img src="img/images/Facebook-icon.png"/></a>-->
-                <!--<a href=""><img src="img/images/LinkedIn-icon.png"/></a>-->
-                <!--<a href=""><img src="img/images/Twitter-icon.png"/></a>-->
-            <!--</div>-->
         </div>
 
-        <div class="mainImage ui-grid-a onlyPC waitImage customPadding">
-            <div class="container ui-grid-a">
-            </div>
+        <div class="mainImage ui-grid-a onlyPC waitImage customPadding maxWidthIn">
+            <img src="img/images/waitImage.png" class="maxWidthIn"/>
         </div>
         <div class="menuButtons onlyPC customPadding">
             <a href="about.htm" class="item qedButton">
@@ -90,15 +86,22 @@
         <div class="pageHeader customPadding onlyPC">
             <span>МЕРОПРИЯТИЯ</span>
         </div>
-        <div class="customPadding">
+        <div class="customPadding overflowHidden">
+        <div class="rightEventsPanel">
+            <div id="datepicker"></div>
+
+            <script>
+                $( "#datepicker" ).datepicker();
+            </script>
+        </div>
             <div class="eventsDiv">
-                <div class="qedItemGallery">
+                <div class="qedItemGallery outEventGallery">
                     <img class="lArr" src="img/images/arrLeft.png"/>
                     <img class="rArr" src="img/images/arrRight.png"/>
                     <div class="cont">
                         <div class="outer">
-                            <div class="inner" style="width: 1280px;">
-                                <div class="eventItem">
+                            <div class="inner" style="width: 2540px;">
+                                <div class="eventItem" eventId="1">
                                     <div class="image">
                                         <img src="img/images/news1.jpg"/>
                                         <div class="descr">
@@ -112,7 +115,7 @@
                                         <span class="right">23 июля 2013</span>
                                     </div>
                                 </div>
-                                <div class="eventItem">
+                                <div class="eventItem" eventId="2">
                                     <div class="image">
                                         <img src="img/images/news1.jpg"/>
                                         <div class="descr">
@@ -126,7 +129,7 @@
                                         <span class="right">23 июля 2013</span>
                                     </div>
                                 </div>
-                                <div class="eventItem">
+                                <div class="eventItem" eventId="3">
                                     <div class="image">
                                         <img src="img/images/news1.jpg"/>
                                         <div class="descr">
@@ -134,157 +137,212 @@
                                             <div class="redActive"></div>
                                         </div>
                                     </div>
+                                    <div class="header">Мероприятие 3</div>
+                                    <div class="info type1">
+                                        <span class="left">Состоялось</span>
+                                        <span class="right">23 июля 2013</span>
+                                    </div>
                                 </div>
-                                <div class="eventItem">
+                                <div class="eventItem" eventId="4">
                                     <div class="image">
                                         <img src="img/images/news1.jpg"/>
                                         <div class="descr">
                                             Это описание заголовок данного мероприятия.
                                             <div class="redActive"></div>
                                         </div>
+                                    </div>
+                                    <div class="header">Мероприятие 4</div>
+                                    <div class="info type1">
+                                        <span class="left">Состоялось</span>
+                                        <span class="right">23 июля 2013</span>
+                                    </div>
+                                </div>
+                                <div class="eventItem" eventId="5">
+                                    <div class="image">
+                                        <img src="img/images/news1.jpg"/>
+                                        <div class="descr">
+                                            Это описание заголовок данного мероприятия.
+                                            <div class="redActive"></div>
+                                        </div>
+                                    </div>
+                                    <div class="header">Мероприятие 5</div>
+                                    <div class="info type1">
+                                        <span class="left">Состоялось</span>
+                                        <span class="right">23 июля 2013</span>
+                                    </div>
+                                </div>
+                                <div class="eventItem" eventId="6">
+                                    <div class="image">
+                                        <img src="img/images/news1.jpg"/>
+                                        <div class="descr">
+                                            Это описание заголовок данного мероприятия.
+                                            <div class="redActive"></div>
+                                        </div>
+                                    </div>
+                                    <div class="header">Мероприятие 6</div>
+                                    <div class="info type1">
+                                        <span class="left">Состоялось</span>
+                                        <span class="right">23 июля 2013</span>
+                                    </div>
+                                </div>
+                                <div class="eventItem" eventId="7">
+                                    <div class="image">
+                                        <img src="img/images/news1.jpg"/>
+                                        <div class="descr">
+                                            Это описание заголовок данного мероприятия.
+                                            <div class="redActive"></div>
+                                        </div>
+                                    </div>
+                                    <div class="header">Мероприятие 7</div>
+                                    <div class="info type1">
+                                        <span class="left">Состоялось</span>
+                                        <span class="right">23 июля 2013</span>
+                                    </div>
+                                </div>
+                                <div class="eventItem" eventId="8">
+                                    <div class="image">
+                                        <img src="img/images/news1.jpg"/>
+                                        <div class="descr">
+                                            Это описание заголовок данного мероприятия.
+                                            <div class="redActive"></div>
+                                        </div>
+                                    </div>
+                                    <div class="header">Мероприятие 8</div>
+                                    <div class="info type1">
+                                        <span class="left">Состоялось</span>
+                                        <span class="right">23 июля 2013</span>
                                     </div>
                                 </div>
                             </div>
+                            <div class="scrollHider"></div>
                         </div>
                     </div>
                 </div>
-                <div class="eventInfoDiv">
-                    <div class="qedItemGallery">
+                <div class="eventInfoDiv" eventId="1">
+                    <a href="#" class="closeButton">x</a>
+                    <div class="qedItemGallery in">
                         <img class="lArr" src="img/images/arrLeft.png"/>
                         <img class="rArr" src="img/images/arrRight.png"/>
                         <div class="cont">
                             <div class="outer">
-                                <div class="inner" style="width: 1280px;">
+                                <div class="inner" style="width: 1260px;">
                                     <div class="eventItem">
                                         <div class="image">
                                             <img src="img/images/news1.jpg"/>
-                                            <div class="descr">
-                                                Это описание заголовок данного мероприятия.
-                                                <div class="redActive"></div>
-                                            </div>
+                                            <!--<div class="descr">-->
+                                                <!--Это описание заголовок данного мероприятия.-->
+                                                <!--<div class="redActive"></div>-->
+                                            <!--</div>-->
                                         </div>
-                                        <div class="header">Мероприятие 1</div>
-                                        <div class="info type1">
-                                            <span class="left">Состоялось</span>
-                                            <span class="right">23 июля 2013</span>
+                                        <!--<div class="header">Мероприятие 1</div>-->
+                                        <!--<div class="info type1">-->
+                                            <!--<span class="left">Состоялось</span>-->
+                                            <!--<span class="right">23 июля 2013</span>-->
+                                        <!--</div>-->
+                                    </div>
+                                    <div class="eventItem">
+                                        <div class="image">
+                                            <img src="img/images/news1.jpg"/>
+                                            <!--<div class="descr">-->
+                                                <!--Это описание заголовок данного мероприятия.-->
+                                                <!--<div class="redActive"></div>-->
+                                            <!--</div>-->
+                                        </div>
+                                        <!--<div class="header">Мероприятие 2</div>-->
+                                        <!--<div class="info type2">-->
+                                            <!--<span class="left">Состоится</span>-->
+                                            <!--<span class="right">23 июля 2013</span>-->
+                                        <!--</div>-->
+                                    </div>
+                                    <div class="eventItem">
+                                        <div class="image">
+                                            <img src="img/images/news1.jpg"/>
+                                            <!--<div class="descr">-->
+                                                <!--Это описание заголовок данного мероприятия.-->
+                                                <!--<div class="redActive"></div>-->
+                                            <!--</div>-->
                                         </div>
                                     </div>
                                     <div class="eventItem">
                                         <div class="image">
                                             <img src="img/images/news1.jpg"/>
-                                            <div class="descr">
-                                                Это описание заголовок данного мероприятия.
-                                                <div class="redActive"></div>
-                                            </div>
-                                        </div>
-                                        <div class="header">Мероприятие 2</div>
-                                        <div class="info type2">
-                                            <span class="left">Состоится</span>
-                                            <span class="right">23 июля 2013</span>
-                                        </div>
-                                    </div>
-                                    <div class="eventItem">
-                                        <div class="image">
-                                            <img src="img/images/news1.jpg"/>
-                                            <div class="descr">
-                                                Это описание заголовок данного мероприятия.
-                                                <div class="redActive"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="eventItem">
-                                        <div class="image">
-                                            <img src="img/images/news1.jpg"/>
-                                            <div class="descr">
-                                                Это описание заголовок данного мероприятия.
-                                                <div class="redActive"></div>
-                                            </div>
+                                            <!--<div class="descr">-->
+                                                <!--Это описание заголовок данного мероприятия.-->
+                                                <!--<div class="redActive"></div>-->
+                                            <!--</div>-->
                                         </div>
                                     </div>
                                 </div>
+                                <div class="scrollHider"></div>
                             </div>
                         </div>
                     </div>
-                    <div class="headerDiv">
-                        <p class="header">МЕРОПРИЯТИЕ 1</p>
-                        <p class="date">1 июля 2012 года</p>
-                    </div>
-                    <div class="textDiv">
-                        <p>ghjdgfhjgfjhgvh jsgdfshfjsdh hfsjh jh jfh sdjfhjd hkjshf jsdhf ksdh fjsd fsd
-                         fsjh fjsdhf jsdhfjhsdfh sd jhf kjdhfjh djhif sjdhf kjhsd fdj hfj hsdf sd fd
-                            f sdf jdsh fjdshf djf sdh fd j fdf jkds jfsdh fjdfsd fsd hjsdfkjsd fsd f
-                            dsds fsdsj d</p>
-                        <p>ghjdgfhjgfjhgvh jsgdfshfjsdh hfsjh jh jfh sdjfhjd hkjshf jsdhf ksdh fjsd fsd
-                         fsjh fjsdhf jsdhfjhsdfh sd jhf kjdhfjh djhif sjdhf kjhsd fdj hfj hsdf sd fd
-                            f sdf jdsh fjdshf djf sdh fd j fdf jkds jfsdh fjdfsd fsd hjsdfkjsd fsd f
-                            dsds fsdsj d</p>
-                        <p>ghjdgfhjgfjhgvh jsgdfshfjsdh hfsjh jh jfh sdjfhjd hkjshf jsdhf ksdh fjsd fsd
-                         fsjh fjsdhf jsdhfjhsdfh sd jhf kjdhfjh djhif sjdhf kjhsd fdj hfj hsdf sd fd
-                            f sdf jdsh fjdshf djf sdh fd j fdf jkds jfsdh fjdfsd fsd hjsdfkjsd fsd f
-                            dsds fsdsj d</p>
-                        <p>ghjdgfhjgfjhgvh jsgdfshfjsdh hfsjh jh jfh sdjfhjd hkjshf jsdhf ksdh fjsd fsd
-                         fsjh fjsdhf jsdhfjhsdfh sd jhf kjdhfjh djhif sjdhf kjhsd fdj hfj hsdf sd fd
-                            f sdf jdsh fjdshf djf sdh fd j fdf jkds jfsdh fjdfsd fsd hjsdfkjsd fsd f
-                            dsds fsdsj d</p>
+                    <table>
+                        <tr>
+                            <td colspan="2" class="headerCell onlyPhone">
+                                <p class="header">МЕРОПРИЯТИЕ 1</p>
+                                <p class="date">1 июля 2012 года</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="headerCell onlyPC">
+                                <p class="header">МЕРОПРИЯТИЕ 1</p>
+                                <p class="date">1 июля 2012 года</p>
+                            </td>
+                            <td class="textCell">
+                                <p>ghjdgfhjgfjhgvh jsgdfshfjsdh hfsjh jh jfh sdjfhjd hkjshf jsdhf ksdh fjsd fsd
+                                    fsjh fjsdhf jsdhfjhsdfh sd jhf kjdhfjh djhif sjdhf kjhsd fdj hfj hsdf sd fd
+                                    f sdf jdsh fjdshf djf sdh fd j fdf jkds jfsdh fjdfsd fsd hjsdfkjsd fsd f
+                                    dsds fsdsj d</p>
+                                <p>ghjdgfhjgfjhgvh jsgdfshfjsdh hfsjh jh jfh sdjfhjd hkjshf jsdhf ksdh fjsd fsd
+                                    fsjh fjsdhf jsdhfjhsdfh sd jhf kjdhfjh djhif sjdhf kjhsd fdj hfj hsdf sd fd
+                                    f sdf jdsh fjdshf djf sdh fd j fdf jkds jfsdh fjdfsd fsd hjsdfkjsd fsd f
+                                    dsds fsdsj d</p>
+                                <p>ghjdgfhjgfjhgvh jsgdfshfjsdh hfsjh jh jfh sdjfhjd hkjshf jsdhf ksdh fjsd fsd
+                                    fsjh fjsdhf jsdhfjhsdfh sd jhf kjdhfjh djhif sjdhf kjhsd fdj hfj hsdf sd fd
+                                    f sdf jdsh fjdshf djf sdh fd j fdf jkds jfsdh fjdfsd fsd hjsdfkjsd fsd f
+                                    dsds fsdsj d</p>
+                                <p>ghjdgfhjgfjhgvh jsgdfshfjsdh hfsjh jh jfh sdjfhjd hkjshf jsdhf ksdh fjsd fsd
+                                    fsjh fjsdhf jsdhfjhsdfh sd jhf kjdhfjh djhif sjdhf kjhsd fdj hfj hsdf sd fd
+                                    f sdf jdsh fjdshf djf sdh fd j fdf jkds jfsdh fjdfsd fsd hjsdfkjsd fsd f
+                                    dsds fsdsj d</p>
 
-                    </div>
+                            </td>
+                        </tr>
+                    </table>
 
                 </div>
             </div>
+
+
         </div>
+
         <div class="linkPanel customPadding">
             <p class="header">Наши партнеры</p>
             <div class="container">
                 <div class="item">
-                    <a href="">
-                        <img src="img/images/Umbrella.png"/>
-                    </a>
+                    <div>
+                        <a href="">
+                            <img src="img/images/partner1.png"/>
+                        </a>
+                    </div>
+                    <div class="text">
+                        ГАЗПРОМ
+                    </div>
+
                 </div>
                 <div class="item">
-                    <a href="">
-                        <img src="img/images/Umbrella.png"/>
-                    </a>
+                    <div>
+                        <a href="">
+                            <img src="img/images/partner2.png"/>
+                        </a>
+                    </div>
+                    <div class="text">
+                        СТРОЙКОНТРОЛЬ
+                    </div>
+
                 </div>
-                <div class="item">
-                    <a href="">
-                        <img src="img/images/Umbrella.png"/>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="">
-                        <img src="img/images/Umbrella.png"/>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="">
-                        <img src="img/images/Umbrella.png"/>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="">
-                        <img src="img/images/Umbrella.png"/>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="">
-                        <img src="img/images/Umbrella.png"/>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="">
-                        <img src="img/images/Umbrella.png"/>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="">
-                        <img src="img/images/Umbrella.png"/>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="">
-                        <img src="img/images/Umbrella.png"/>
-                    </a>
-                </div>
+
             </div>
         </div>
 
@@ -292,9 +350,9 @@
         <div class="footerDiv customPadding">
             <div class="level1">
                 <ul class="footerMenu onlyPC">
-                    <li><a href="">Услуги</a></li>
-                    <li><a href="">О нас</a></li>
-                    <li><a href="">Наша команда</a></li>
+                    <li><a href="">О бюро</a></li>
+                    <li><a href="">О команде</a></li>
+                    <li><a href="">Мероприятия</a></li>
                     <li><a href="cont.htm">Контакты</a></li>
                 </ul>
                 <ul class="footerMenu onlyPC">
@@ -304,7 +362,7 @@
                     <li><a href="">Клиентское предложение</a></li>
                 </ul>
                 <div class="info">
-                    <div class="socLinks onlyPC">
+                    <div class="socLinks">
                         <a href="" class="twitter"></a>
                         <a href="" class="linkedin"></a>
                         <a href="" class="facebook"></a>
@@ -319,3 +377,4 @@
     </div>
 </div>
 </body>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        

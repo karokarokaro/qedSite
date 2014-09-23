@@ -52,7 +52,7 @@
     </div>
 </div>
 <div data-role="content" class="ui-content">
-<div class="top overflowHidden">
+<div class="top">
     <div class="top1">
         <div class="links overflowHidden">
             <div class="langDiv">
@@ -68,16 +68,16 @@
         <a href="#leftMenu" class="menuLink onlyPhone">
             <div></div>
         </a>
-        <div class="onlyPC">
-            <form action="" method="post">
-                <input class="searchInput" data-mini="true" type="text" placeholder="Поиск..." >
-            </form>
-        </div>
+        <form class="searchBox onlyPC" action="" method="post">
+            <input class="searchInput" name="query" data-mini="true" type="text" placeholder="Поиск..." />
+            <input type="hidden" name="searchQuery"/>
+            <ul class="adviceBox"></ul>
+        </form>
     </div>
-    <div class="top2 pull-left">
+    <div class="top2">
         <a href="."><img class="logo" src="img/images/Logo.png"/></a>
     </div>
-    <div class="pageHeader customPadding onlyPhone pull-right">
+    <div class="pageHeader customPadding onlyPhone">
         <span>КОНТАКТЫ</span>
     </div>
     <!--<div class="socLinks onlyPhone pull-right">-->
@@ -106,12 +106,12 @@
             <span>Мероприятия</span>
             <div class="redActive"></div>
         </a>
-        <a href="cont.htm" class="item qedButton" data-ajax="false">
+        <a href="cont.htm" class="item qedButton active">
             <span>Контакты</span>
             <div class="redActive"></div>
         </a>
     </div>
-<div class="pageHeader customPadding">
+<div class="pageHeader customPadding onlyPC">
     <span>КОНТАКТЫ</span>
 </div>
 <div class="contactsCont customPadding overflowHidden maxWidthIn">
@@ -155,33 +155,33 @@
     </div>
 </div>
 <div id="contMap"></div>
-<div class="footerDiv customPadding">
-    <div class="level1">
-        <ul class="footerMenu onlyPC">
-            <li><a href="">Услуги</a></li>
-            <li><a href="">О нас</a></li>
-            <li><a href="">Наша команда</a></li>
-            <li><a href="cont.htm">Контакты</a></li>
-        </ul>
-        <ul class="footerMenu onlyPC">
-            <li><a href="">Физическим лицам</a></li>
-            <li><a href="">Юридическим лицам</a></li>
-            <li><a href="">Акции</a></li>
-            <li><a href="">Клиентское предложение</a></li>
-        </ul>
-        <div class="info">
-            <div class="socLinks onlyPC">
-                <a href="" class="twitter"></a>
-                <a href="" class="linkedin"></a>
-                <a href="" class="facebook"></a>
+    <div class="footerDiv customPadding">
+        <div class="level1">
+            <ul class="footerMenu onlyPC">
+                <li><a href="">Услуги</a></li>
+                <li><a href="">О нас</a></li>
+                <li><a href="">Наша команда</a></li>
+                <li><a href="cont.htm">Контакты</a></li>
+            </ul>
+            <ul class="footerMenu onlyPC">
+                <li><a href="">Физическим лицам</a></li>
+                <li><a href="">Юридическим лицам</a></li>
+                <li><a href="">Акции</a></li>
+                <li><a href="">Клиентское предложение</a></li>
+            </ul>
+            <div class="info">
+                <div class="socLinks">
+                    <a href="" class="twitter"></a>
+                    <a href="" class="linkedin"></a>
+                    <a href="" class="facebook"></a>
+                </div>
+                <p>115093, Москва, Серпуховской пер., д.5, стр.3</p>
             </div>
-            <p>115093, Москва, Серпуховской пер., д.5, стр.3</p>
+        </div>
+        <div class="level2">
+            <span>Copyright 2014 QED Beuro</span>
         </div>
     </div>
-    <div class="level2">
-        <span>Copyright 2014 QED Beuro</span>
-    </div>
-</div>
 </div>
 </div>
 

@@ -140,18 +140,24 @@
         width: 78%;
         float: left;
     }
-    .eventInfoDiv {
-
-    }
-    .eventInfoDiv .headerDiv {
-        width: 33%;
-        float: left;
-    }
-    .eventInfoDiv .textDiv {
-        width: 67%;
+    .rightEventsPanel {
+        width: 22%;
         float: right;
     }
+    .eventInfoDiv {
+        width: 95%;
+    }
+    .eventInfoDiv .headerCell {
+        width: 33%;
 
+    }
+    .eventInfoDiv .textCell {
+        width: 67%;
+    }
+    .outEventGallery {
+        width: 95%;
+        margin-bottom: 20px;
+    }
     .newsItem {
         width: 78%;
         float: left;

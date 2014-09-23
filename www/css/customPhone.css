@@ -42,7 +42,13 @@
     .presentText p.text {
         font-size: 20px;
     }
-
+    .teamDiv .arrCollapsible .ui-collapsible-content p {
+        font-size: 15px;
+    }
+    .qedItemGallery {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
     .profileLink span:active {
         text-decoration: underline;
     }
@@ -59,7 +65,9 @@
     .qedButton.active > span {
         color: #840633;
     }
-
+    .linkPanel .container {
+        width: 90%;
+    }
     .qedButton.active > .redActive {
         background-color: #840633;
     }

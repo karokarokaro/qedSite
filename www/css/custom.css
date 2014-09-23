@@ -63,12 +63,13 @@
 #leftMenu *,
 .eventItem .header,
 .eventItem .info,
-.eventInfoDiv .headerDiv {
+.eventInfoDiv .headerCell,
+.linkPanel .text {
     font-family: 'PFDinDisplayPro-Thin';
 }
 .uslCollapsible .ui-collapsible-content,
 .eventItem .image .descr,
-.eventInfoDiv .textDiv {
+.eventInfoDiv .textCell {
     font-family: 'PFDinDisplayPro-ThinItal';
 }
 .linkPanel > p.header {
@@ -342,13 +343,17 @@ body {
 }
 .linkPanel .container {
     margin: 0px auto 10px auto;
-    width: 70%;
+    width: 40%;
 }
 .linkPanel .container .item {
     width: 50%;
     text-align: center;
     float: left;
     overflow: hidden;
+}
+.linkPanel .container .item .text {
+    font-size: 20px;
+    color: #b3b3b3;
 }
 .linkPanel .container .item img {
     height: 100px;
@@ -819,12 +824,13 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
     cursor: pointer;
+    z-index: 1000;
 }
 .qedItemGallery .lArr {
-    left: -21px;
+    left: -24px;
 }
 .qedItemGallery .rArr {
-    left: 96%;
+    right: -24px;
 }
 .qedItemGallery .cont {
     position: relative;
@@ -832,19 +838,32 @@ body {
 }
 .qedItemGallery .outer {
     position: relative;
-    width: 95%;
     bottom: -20px;
     left: 0px;
     overflow-y: hidden;
     overflow-x: scroll;
 }
 .qedItemGallery .inner {
-
+    overflow: hidden;
+}
+.scrollHider {
+    width: 100%;
+    height: 20px;
+}
+.qedItemGallery.in {
+    margin-left: 24px;
+    margin-right: 24px;
+}
+.outEventGallery {
+    margin-bottom: 20px;
 }
 .eventItem {
     float: left;
-    margin: 0px 20px 0px 0px;
+    margin: 0px 0px 0px 20px;
     width: 300px;
+}
+.eventItem:first-child {
+    margin: 0px;
 }
 .eventItem .header {
     color: #727272;
@@ -901,31 +920,44 @@ body {
     background-image: url("../img/backgrounds/back1.png");
     background-repeat: repeat;
     overflow: hidden;
+    position: relative;
+    display: none;
 }
 
-.eventInfoDiv .headerDiv,
-.eventInfoDiv .textDiv {
+.eventInfoDiv .headerCell,
+.eventInfoDiv .textCell {
     color: white;
+    vertical-align: middle;
 }
-.eventInfoDiv .headerDiv .header {
+.eventInfoDiv .headerCell .header {
     font-size: 35px;
     text-align: center;
     margin: 0px;
 }
-.eventInfoDiv .headerDiv .date {
+.eventInfoDiv .headerCell .date {
     font-size: 16px;
     text-align: center;
     margin: 0px;
 }
-.eventInfoDiv .textDiv {
+.eventInfoDiv .textCell {
     font-size: 16px;
     text-align: justify;
-    padding: 10px 10px 10px 0px;
+    padding: 20px;
 }
-.eventInfoDiv .textDiv p {
+.eventInfoDiv .textCell p {
     margin: 0px;
 }
-
+.eventInfoDiv .closeButton {
+    display: block;
+    background-color: grey;
+    width: 20px;
+    height: 20px;
+    top: 0px;
+    right: 0px;
+    position: absolute;
+    color: #840633;
+    text-align: center;
+}
 .ui-datepicker {
     width: 17em;
     padding: .2em .2em 0;
@@ -1127,4 +1159,10 @@ input, textarea {
     -webkit-box-shadow: 0 1px 3px /*{global-box-shadow-size}*/ 		rgba(0,0,0,.15) /*{global-box-shadow-color}*/ inset;
     -moz-box-shadow: 0 1px 3px /*{global-box-shadow-size}*/ 		rgba(0,0,0,.15) /*{global-box-shadow-color}*/ inset;
     box-shadow: 0 1px 3px /*{global-box-shadow-size}*/ 				rgba(0,0,0,.15) /*{global-box-shadow-color}*/ inset;
+}
+
+
+
+#datepicker {
+    margin: 24px;
 }
