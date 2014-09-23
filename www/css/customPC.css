@@ -172,7 +172,7 @@
         color: #ffffff;
     }
     .mainImage {
-        padding-top: 100px;
+        /*padding-top: 100px;*/
     }
     .mainImage .container > div .uslList a:hover {
         color: #840633;

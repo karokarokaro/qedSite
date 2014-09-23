@@ -43,6 +43,7 @@
 .newsDiv .toolbar {
     font-family: 'PFDinDisplayPro-XThinIt';
 }
+.mainImage .container > div .uslList,
 .uslHeader,
 .menuButtons .item > span,
 .uslCollapsible a.ui-collapsible-heading-toggle,
@@ -65,7 +66,6 @@
 .eventInfoDiv .headerDiv {
     font-family: 'PFDinDisplayPro-Thin';
 }
-.mainImage .container > div .uslList,
 .uslCollapsible .ui-collapsible-content,
 .eventItem .image .descr,
 .eventInfoDiv .textDiv {
@@ -159,13 +159,13 @@ body {
     z-index: 200;
     width: 100%;
 }
-.homeImage {
-    height: 300px;
-}
-.homeImage >img {
-    width: auto;
-    height: 100%;
-}
+/*.homeImage {*/
+    /*height: 300px;*/
+/*}*/
+/*.homeImage >img {*/
+    /*width: auto;*/
+    /*height: 100%;*/
+/*}*/
 
 .maxVol {
     width: 100%;
@@ -285,15 +285,21 @@ body {
 .menuButtons {
     position: relative;
     overflow: hidden;
+    margin-top: 90px;
 }
 .menuButtons .item {
     width: 22%;
     height: 30px;
     margin-left: 4%;
     padding-top: 11px;
+    background: none;
+    border-top: 1px solid #888888;
 }
-.menuButtons .item > span {
+.menuButtons .item > span,
+.menuButtons .item:hover > span,
+.menuButtons .item.active > span {
     font-size: 18px;
+    color: white;
 }
 .menuButtons .item:first-child {
     margin-left: 0px;
@@ -546,8 +552,9 @@ body {
 }
 .contactsCont .contForm input,
 .contactsCont .contForm textarea {
-    color: #000000;
-    background-color: #ebebeb;
+    color: white;
+    border: none;
+    background-color: #424242;
     margin-bottom: 5px;
     font-size: 16px;
     min-height: 1.2em;
