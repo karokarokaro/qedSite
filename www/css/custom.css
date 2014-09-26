@@ -65,12 +65,14 @@
 .eventItem .info,
 .eventInfoDiv .headerCell,
 .linkPanel .text,
-.calendarAnchor * {
+.calendarAnchor *,
+.addMenu h1 {
     font-family: 'PFDinDisplayPro-Thin';
 }
 .uslCollapsible .ui-collapsible-content,
 .eventItem .image .descr,
-.eventInfoDiv .textCell {
+.eventInfoDiv .textCell,
+.addMenu p {
     font-family: 'PFDinDisplayPro-ThinItal';
 }
 .linkPanel > p.header {
@@ -318,11 +320,12 @@ body {
 }
 .presentText p.header {
     text-align: center;
-    font-size: 36px;
+    font-size: 23px;
     font-weight: bold;
+    color: white;
 }
 .presentText p.text {
-    font-size: 24px;
+    font-size: 19px;
     font-weight: bold;
     text-align: justify;
     margin: 0px auto;
@@ -392,7 +395,35 @@ body {
 /*background-image: url("../img/images/Warranty.png");*/
 /*}*/
 .addMenu {
+    /*background-image: url("../img/backgrounds/subtle_zebra_3d.png");*/
+    max-width: 1100px;
+}
+.addMenu .infoDiv {
+    border-top: 1px solid #840633;
+    border-bottom: 1px solid #840633;
+}
+.addMenu .infoContainer a {
+    display: block;
+    padding-left: 100px;
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+.addMenu .infoContainer-a a {
+    background-image: url("../img/images/LinkedIn-icon.png");
+}
+.addMenu .infoContainer-b a {
+    background-image: url("../img/images/LinkedIn-icon.png");
+}
 
+
+.addMenu h1 {
+    color: #840633;
+    font-size: 24px;
+}
+.addMenu p {
+    color: #555555;
+    font-size: 14px;
 }
 
 .footerDiv {
@@ -917,16 +948,28 @@ body {
     opacity: 0;
 }
 .eventInfoDiv {
+
+    position: relative;
+    display: none;
+    overflow: hidden;
+}
+.eventInfoDiv .level1, .eventInfoDiv .level2 {
+    width: 100%;
+    overflow: hidden;
+}
+.eventInfoDiv .level1 {
+    height: 28px;
+}
+.eventInfoDiv .level2 {
     background-image: url("../img/backgrounds/back1.png");
     background-repeat: repeat;
     position: relative;
-    display: none;
 }
 .eventInfoDiv .corner {
-    position: absolute;
+    position: relative;
     width: 55px;
     height: 28px;
-    top: -28px;
+    top: 0px;
     left: 50px;
 }
 .eventInfoDiv .headerCell,
@@ -957,11 +1000,12 @@ body {
     background-color: grey;
     width: 20px;
     height: 20px;
-    top: 0px;
+    top: 28px;
     right: 0px;
     position: absolute;
     color: #840633;
     text-align: center;
+    z-index: 300;
 }
 .ui-datepicker {
     width: 100%;
@@ -1076,7 +1120,7 @@ body {
 .ui-datepicker-month {
     background: none !important;
     border: none !important;
-    width: 30% !important;
+    width: 3em !important;
     margin-right: 3px !important;
     font-size: 18px !important;
     font-weight: bold !important;
@@ -1089,7 +1133,7 @@ body {
 .ui-datepicker-year {
     background: none !important;
     border: none !important;
-    width: 30% !important;
+    width: 4em !important;
     margin-left: 3px !important;
     font-size: 18px !important;
     font-weight: bold !important;
@@ -1116,8 +1160,7 @@ body {
     font-size: 14px;
 }
 .ui-datepicker-calendar tr td.ui-datepicker-other-month span {
-    color: #cccccc !important;
-    color: #cccccc !important;
+    color: white !important;
 }
 
 .ui-datepicker-calendar tr td {

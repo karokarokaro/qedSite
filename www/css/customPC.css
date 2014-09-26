@@ -189,9 +189,6 @@
     .footerDiv ul.footerMenu a:hover {
         color: #840633;
     }
-    .calendarAnchor td.info .hasEvent a:hover {
-        text-decoration: underline;
-    }
     #leftMenu .list a:hover {
         background-color: #eeeeee;
         background-image: url("../img/images/menuArr.png");
@@ -224,6 +221,9 @@
     }
     .ui-datepicker-calendar tr td:hover:not(.ui-datepicker-other-month) {
         background-color: #c2c2c2 !important;
+    }
+    .addMenu .infoContainer a:hover h1 {
+        text-decoration: underline;
     }
 }
 @media (min-width: 768px) and (max-width: 1450px) {
