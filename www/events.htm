@@ -62,9 +62,6 @@
             </div>
         </div>
 
-        <div class="mainImage ui-grid-a onlyPC waitImage customPadding maxWidthIn">
-            <img src="img/images/waitImage.png" class="maxWidthIn"/>
-        </div>
         <div class="menuButtons onlyPC customPadding">
             <a href="about.htm" class="item qedButton">
                 <span>О бюро</span>
@@ -83,16 +80,36 @@
                 <div class="redActive"></div>
             </a>
         </div>
+        <div class="mainImage ui-grid-a onlyPC waitImage customPadding maxWidthIn">
+            <img src="img/images/waitImage.png" class="maxWidthIn"/>
+        </div>
         <div class="pageHeader customPadding onlyPC">
             <span>МЕРОПРИЯТИЯ</span>
         </div>
         <div class="customPadding overflowHidden">
         <div class="rightEventsPanel">
-            <div id="datepicker"></div>
 
-            <script>
-                $( "#datepicker" ).datepicker();
-            </script>
+
+            <div id="datepicker" class="datepicker"></div>
+            <div class="calendarAnchor">
+                <table>
+                    <tr>
+                        <td class="day">
+                            <div>23</div>
+                        </td>
+                        <td class="info">
+                            <div>
+                                <div class="weekDay">СРЕДА</div>
+                                <div class="hasEvent active">
+                                    <a href="#">sdjh fdjshf ksd sdf</a>
+                                    <a href="#">sdjh fdjshf ksd sdf</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="calendarIcon"></div>
+            </div>
         </div>
             <div class="eventsDiv">
                 <div class="qedItemGallery outEventGallery">
@@ -220,6 +237,7 @@
                 </div>
                 <div class="eventInfoDiv" eventId="1">
                     <a href="#" class="closeButton">x</a>
+                    <img class="corner" src="img/images/corner.png"/>
                     <div class="qedItemGallery in">
                         <img class="lArr" src="img/images/arrLeft.png"/>
                         <img class="rArr" src="img/images/arrRight.png"/>

@@ -64,7 +64,8 @@
 .eventItem .header,
 .eventItem .info,
 .eventInfoDiv .headerCell,
-.linkPanel .text {
+.linkPanel .text,
+.calendarAnchor * {
     font-family: 'PFDinDisplayPro-Thin';
 }
 .uslCollapsible .ui-collapsible-content,
@@ -332,7 +333,7 @@ body {
     margin: 0px auto;
 }
 .addMenu, .linkPanel {
-    background-image: url('../img/backgrounds/subtle_zebra_3d.png');
+    /*background-image: url('../img/backgrounds/subtle_zebra_3d.png');*/
     overflow: hidden;
 }
 .linkPanel > p.header {
@@ -358,43 +359,42 @@ body {
 .linkPanel .container .item img {
     height: 100px;
 }
-.addMenuIcon {
-    margin: 10px auto;
-    width: 50px;
-    height: 50px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center center;
-}
-.addMenuIcon.iconBag {
-    background-image: url("../img/images/Suit-case.png");
-}
-.addMenuIcon.iconDialog {
-    background-image: url("../img/images/Dialog-cloud.png");
-}
-.addMenuIcon.iconUmbrella {
-    background-image: url("../img/images/Umbrella.png");
-}
-.addMenuIcon.iconChart {
-    background-image: url("../img/images/Pie-chart.png");
-}
-.addMenuIcon.iconBooks {
-    background-image: url("../img/images/Books.png");
-}
-.addMenuIcon.iconColumns {
-    background-image: url("../img/images/Column-building.png");
-}
+/*.addMenuIcon {*/
+    /*margin: 10px auto;*/
+    /*width: 50px;*/
+    /*height: 50px;*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: contain;*/
+    /*background-position: center center;*/
+/*}*/
 /*.addMenuIcon.iconBag {*/
-/*background-image: url("../img/images/Warranty.png");*/
+    /*background-image: url("../img/images/Suit-case.png");*/
+/*}*/
+/*.addMenuIcon.iconDialog {*/
+    /*background-image: url("../img/images/Dialog-cloud.png");*/
+/*}*/
+/*.addMenuIcon.iconUmbrella {*/
+    /*background-image: url("../img/images/Umbrella.png");*/
+/*}*/
+/*.addMenuIcon.iconChart {*/
+    /*background-image: url("../img/images/Pie-chart.png");*/
+/*}*/
+/*.addMenuIcon.iconBooks {*/
+    /*background-image: url("../img/images/Books.png");*/
+/*}*/
+/*.addMenuIcon.iconColumns {*/
+    /*background-image: url("../img/images/Column-building.png");*/
 /*}*/
 /*.addMenuIcon.iconBag {*/
 /*background-image: url("../img/images/Warranty.png");*/
 /*}*/
+/*.addMenuIcon.iconBag {*/
+/*background-image: url("../img/images/Warranty.png");*/
+/*}*/
+.addMenu {
 
-.addMenuText {
-    text-align: center;
-    color: #939293;
 }
+
 .footerDiv {
 
 }
@@ -919,11 +919,16 @@ body {
 .eventInfoDiv {
     background-image: url("../img/backgrounds/back1.png");
     background-repeat: repeat;
-    overflow: hidden;
     position: relative;
     display: none;
 }
-
+.eventInfoDiv .corner {
+    position: absolute;
+    width: 55px;
+    height: 28px;
+    top: -28px;
+    left: 50px;
+}
 .eventInfoDiv .headerCell,
 .eventInfoDiv .textCell {
     color: white;
@@ -959,9 +964,10 @@ body {
     text-align: center;
 }
 .ui-datepicker {
-    width: 17em;
-    padding: .2em .2em 0;
+    width: 100%;
+    padding: 0px;
     display: none;
+    margin: auto;
 }
 .ui-datepicker .ui-datepicker-header {
     position: relative;
@@ -1006,7 +1012,7 @@ body {
     width: 100%;
     font-size: .9em;
     border-collapse: collapse;
-    margin: 0 0 .4em;
+    margin: 0px;
 }
 .ui-datepicker th {
     padding: .7em .3em;
@@ -1161,8 +1167,61 @@ input, textarea {
     box-shadow: 0 1px 3px /*{global-box-shadow-size}*/ 				rgba(0,0,0,.15) /*{global-box-shadow-color}*/ inset;
 }
 
-
-
+.rightEventsPanel {
+    padding-top: 20px;
+}
 #datepicker {
-    margin: 24px;
+    display: none;
+}
+.calendarAnchor {
+    background-color: white;
+
+}
+.calendarAnchor {
+    cursor: pointer;
+}
+.calendarAnchor * {
+    color: #840633;
+}
+
+.calendarAnchor table {
+    width: 100%;
+}
+.calendarAnchor table td {
+    vertical-align: middle;
+}
+
+.calendarAnchor td.day {
+    padding: 10px 15px;
+    width: 1px;
+}
+.calendarAnchor td.day div {
+    margin: auto;
+    font-size: 80px;
+
+}
+.calendarAnchor td.info {
+
+}
+.calendarAnchor td.info > div {
+    border-left: 1px solid #840633;
+    padding-left: 10px;
+}
+.calendarAnchor td.info .weekDay {
+    font-size: 20px;
+}
+.calendarAnchor td.info .hasEvent {
+    
+}
+.calendarAnchor td.info .hasEvent a {
+    font-size: 12px;
+    display: block;
+}
+.calendarAnchor td.info .hasEvent.active {
+    padding-left: 18px;
+    margin-left: 3px;
+    background-image: url("../img/images/Meropriyatiya.png");
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position: left top;
 }

@@ -230,6 +230,13 @@
         color: #840633;
     }
 
+    .calendarAnchor td.info .hasEvent a:active {
+        text-decoration: underline;
+    }
+    .rightEventsPanel {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
     .ui-datepicker .ui-datepicker-prev-active,
     .ui-datepicker .ui-datepicker-next-active {
         top: 1px;

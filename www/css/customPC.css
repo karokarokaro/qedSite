@@ -189,6 +189,9 @@
     .footerDiv ul.footerMenu a:hover {
         color: #840633;
     }
+    .calendarAnchor td.info .hasEvent a:hover {
+        text-decoration: underline;
+    }
     #leftMenu .list a:hover {
         background-color: #eeeeee;
         background-image: url("../img/images/menuArr.png");

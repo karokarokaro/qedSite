@@ -308,6 +308,36 @@ $(document).on("pagecreate", ".thisPage", function(e) {
             }
         });
     }
+    //calendar start
+    if (e.target.id == "eventsPage") {
+        $(e.target).find(".calendarAnchor").on("click", function(e){
+            $(e.currentTarget).closest(".rightEventsPanel").find(".datepicker").slideToggle();
+        });
+        $(e.target).find(".calendarAnchor .hasEvent a").on("click", function(e){
+            e.preventDefault();
+            e.stopPropagation();
+        });
+        $(e.target).find("#datepicker").datepicker({
+            changeMonth: true,
+            changeYear: true,
+            showOtherMonths: true,
+            prevText: "<-",
+            nextText: "->",
+            monthNames: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+            monthNamesShort: ["Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"],
+            dayNames: ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"],
+            dayNamesMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+            dayNamesShort: ["Вск", "Пон", "Втр", "Сре", "Чтв", "Пят", "Суб"],
+            dateFormat: "dd-mm-yy-DD",
+            onSelect: function(date, datepicker) {
+                var data = date.split("-");
+                var anchor = $(this).closest(".rightEventsPanel").find(".calendarAnchor");
+                anchor.find(".day div").html(data[0]);
+                anchor.find(".weekDay").html(data[3].toUpperCase());
+            }
+        });
+    }
+    //calendar end
     SearchEngine.init($(e.currentTarget));
     TabEngine.init($(e.currentTarget));
     EventsEngine.init($(e.currentTarget));
