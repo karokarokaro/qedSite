@@ -225,6 +225,11 @@
     .addMenu .infoContainer a:hover h1 {
         text-decoration: underline;
     }
+    .addMenu .infoContainer {
+        width: 44%;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
 }
 @media (min-width: 768px) and (max-width: 1450px) {
     .maxWidthIn {

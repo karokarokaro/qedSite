@@ -210,7 +210,7 @@ EventsEngine = {
         $gallery.find(".eventItem").on("click", function(e) {
             var eItem = $(e.currentTarget);
             var id = eItem.attr("eventId");
-            if (typeof id != "undefined") {
+            if (typeof id != "undefined" && id != $gallery.find(".eventInfoDiv").attr("eventId")) {
                 EventsEngine._refreshCache();
                 if (typeof EventsEngine._cache[id] != "undefined") {
                     var eventInfoObject = EventsEngine._cache[id];
@@ -291,7 +291,6 @@ $(document).on("pagecreate", ".thisPage", function(e) {
     );
     $(".qedItemGallery .lArr, .qedItemGallery .rArr").on("click", function(e) {
         handleGalleryArr(e);
-
     });
     $(".eventInfoDiv .closeButton").on("click", function(e) {
         hideEventInfo();
@@ -549,9 +548,12 @@ function handleGalleryArr(e) {
 }
 function showEventInfo(infoObject) {
     //set Event Info
+    $(".eventInfoDiv").attr("eventId", infoObject.id);
     $(".eventInfoDiv").slideDown();
 }
 function hideEventInfo() {
+    $(".eventInfoDiv").attr("eventId", "");
     $(".eventInfoDiv").slideUp();
+
 }
 

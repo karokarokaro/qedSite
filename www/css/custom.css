@@ -204,7 +204,6 @@ body {
     height: 30px;
     margin: 0px;
     padding: 10px 0px 10px 50px;
-    background-image: url("../img/images/News-icon.png");
     background-repeat: no-repeat;
     background-position: left top;
     border-bottom: 1px solid #dddddd;
@@ -212,6 +211,13 @@ body {
     font-weight: bold;
     font-size: 18px
 }
+.newsDiv .newsContainer.left .header {
+    background-image: url("../img/images/News-icon.png");
+}
+.newsDiv .newsContainer.right .header {
+    background-image: url("../img/images/References-icon.png");
+}
+
 .newsDiv .toolbar {
     text-align: right;
 }
@@ -396,29 +402,32 @@ body {
 /*}*/
 .addMenu {
     /*background-image: url("../img/backgrounds/subtle_zebra_3d.png");*/
+    margin-top: 30px;
+    margin-bottom: 30px;
     max-width: 1100px;
 }
 .addMenu .infoDiv {
     border-top: 1px solid #840633;
     border-bottom: 1px solid #840633;
+    padding: 10px 0px;
 }
 .addMenu .infoContainer a {
     display: block;
     padding-left: 100px;
-    background-size: 50px 50px;
+    background-size: 80px 80px;
     background-repeat: no-repeat;
     background-position: left center;
 }
 .addMenu .infoContainer-a a {
-    background-image: url("../img/images/LinkedIn-icon.png");
+    background-image: url("../img/images/link2.png");
 }
 .addMenu .infoContainer-b a {
-    background-image: url("../img/images/LinkedIn-icon.png");
+    background-image: url("../img/images/link1.png");
 }
 
 
 .addMenu h1 {
-    color: #840633;
+    color: #999999;
     font-size: 24px;
 }
 .addMenu p {
@@ -517,21 +526,33 @@ body {
 }
 
 #leftMenu .item-beuro {
-    background-image: url("../img/images/o-buro.png");
-    background-size: 31px 21px;
+    background-image: url("../img/images/menu4.png");
+    background-size: 31px 31px;
 }
 #leftMenu .item-team {
-    background-image: url("../img/images/o-komande.png");
-    background-size: 32px 21px;
+    background-image: url("../img/images/menu5.png");
+    background-size: 32px 31px;
+}
+#leftMenu .item-news {
+    background-image: url("../img/images/menu3.png");
+    background-size: 32px 26px;
+}
+#leftMenu .item-search {
+    background-image: url("../img/images/menu7.png");
+    background-size: 32px 31px;
+}
+#leftMenu .item-cont {
+    background-image: url("../img/images/menu1.png");
+    background-size: 32px 24px;
 }
 #leftMenu .item-events {
-    background-image: url("../img/images/Meropriyatiya.png");
-    background-size: 21px 21px;
+    background-image: url("../img/images/menu2.png");
+    background-size: 31px 31px;
     /*margin-left: 13px !important;*/
 }
 #leftMenu .item-reviews {
-    background-image: url("../img/images/Otzivi.png");
-    background-size: 21px 21px;
+    background-image: url("../img/images/menu6.png");
+    background-size: 31px 31px;
     /*margin-left: 13px !important;*/
 }
 .menuLink {
@@ -1262,8 +1283,7 @@ input, textarea {
 }
 .calendarAnchor td.info .hasEvent.active {
     padding-left: 18px;
-    margin-left: 3px;
-    background-image: url("../img/images/Meropriyatiya.png");
+    background-image: url("../img/images/ring.png");
     background-size: 15px 15px;
     background-repeat: no-repeat;
     background-position: left top;
