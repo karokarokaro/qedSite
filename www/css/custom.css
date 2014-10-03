@@ -368,6 +368,13 @@ body {
 .linkPanel .container .item img {
     height: 100px;
 }
+.linkPanel .container .item img.normal {
+    display: inline;
+}
+.linkPanel .container .item img.active {
+    display: none;
+}
+
 /*.addMenuIcon {*/
     /*margin: 10px auto;*/
     /*width: 50px;*/
@@ -985,6 +992,7 @@ body {
     background-image: url("../img/backgrounds/back1.png");
     background-repeat: repeat;
     position: relative;
+    padding-top: 5px;
 }
 .eventInfoDiv .corner {
     position: relative;
@@ -1018,11 +1026,12 @@ body {
 }
 .eventInfoDiv .closeButton {
     display: block;
-    background-color: grey;
+    background-image: url("../img/images/Cross.png");
+    background-size: contain;
     width: 20px;
     height: 20px;
-    top: 28px;
-    right: 0px;
+    top: 30px;
+    right: 2px;
     position: absolute;
     color: #840633;
     text-align: center;
